@@ -1,0 +1,1 @@
+/* Index block has a linked list or some data structure that holds all the locations of the blocks/
