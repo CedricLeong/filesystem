@@ -1,49 +1,55 @@
 #include i_node.h
 #include blockio.h
 
-#define BUFFER 1024
+short int file_blockno[8][64];
+short int file_pointer[64]; 
+short int file_refcount[64];
+short int fd_table[64];
 
-inode* new_inode()
+int put_inode_table():
 {
-	int file_location = 0;
-	time_t created = time(NULL);
-	int file_size = 0;
-	int index_block = 0;
-	int UserID = 0;
-	int GroupID = 0;
-	char name = ""; 
-}
-
-inode* get_inode(int location){
-char* buf = (char*)calloc(1024, sizeof((char));
-int success = get_block(int location, char *buf)
-	if (success < 0)
+	int blockno = 0;
+	int j = 2;
+    // Block Number
+	while (j < 10)
 	{
-		perror(Error!);
-	}
+		int *buf;
+    	int = calloc(64, sizeof(int));
+		// Byte numbers
+        for(int i=0; i < 64; i++) 
+        {
+        	buf[i] = blockno;
+        	blockno++;
 
-return (inode*) buf;
+        }
+        int writeintable = put_block(j, buf);
+    }
+    return 1;
 }
 
-int get_size(int location){
-char* buf = (char*)calloc(128, sizeof((char));
-int success = get_block(int location, char *buf)
-	if (success < 0)
-	{
-		perror(Error!);
-	}
-
-return ((inode*) buf) -> file_size;
+int get_file_pointer(int i_number,int* file_ptr)
+{
+	file_ptr = blockno[2][i_number];
+	return 1; 
 }
 
-boolean file_exist(int location){
-char* buf = (char*)calloc(128, sizeof((char));
-int success = get_block(int location, char *buf)
-	if (success < 0)
-	{
-		return false;
-	}
+int parse_dir_entry(int component_no, char 
+*component, int *i_number)
+{
 
-return true;
 }
+
+int alloc_block_tofile(int i_number, int 
+*allocated_blkno)
+{
+	int *buf;
+    buf = calloc(128, sizeof(int));
+    int load = get_block( i_number +2, buf);
+    int numblks = get_file_pointer(i_number);
+    if (numblks > 8)
+    	return 0;
+    allocated_blockno = get_super_blk();
+    int load = get_block( 10, buf);
+    // add 1 to the entry in block 10; 
+    return 1; 
 }
