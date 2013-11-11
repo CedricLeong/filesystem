@@ -11,56 +11,60 @@
 
   This program is very simple.  It does minimal error checking
    and recovery.  All data written to and read from files passes
-   through a single buffer (io_buffer).  Only printable ASCII
-   characters may be written to files.  Non-printable characters
+   through a single buffer (io_buffer).  Only printable ASCI
+I   characters may be written to files.  Non-printable characters
    read from files will not be displayed properly.
 
   You are free to make a copy of this program and to modify your
    copy for the purposes of testing your file system implementation.
 ******************************************************/
 #include <stdio.h>
-
+#include "initialization.h"
 /*****************************************************
    templates for the sfs interface functions
 ******************************************************/
 
 int
-sfs_open(char *pathname);
+sfs_open(char *pathname)
+{}
 
 int
 sfs_read(int fd,
 	 int start,
 	 int length,
-	 char *mem_pointer);
+	 char *mem_pointer)
+{}
 
 int
 sfs_write(int fd,
 	  int start,
 	  int length,
-	  char *mem_pointer);
+	  char *mem_pointer)
+{}
 
 int
 sfs_readdir(int fd,
-	    char *mem_pointer);
+	    char *mem_pointer)
+{}
 
 int
-sfs_close(int fd);
+sfs_close(int fd)
+{}
 
 int
-sfs_delete(char *pathname);
+sfs_delete(char *pathname)
+{}
 
 int
 sfs_create(char *pathname,
-	   int type);
+	   int type)
+{}
 
 int
-sfs_getsize(char *pathname);
+sfs_getsize(char *pathname){}
 
 int
-sfs_gettype(char *pathname);
-
-int
-sfs_initialize(int erase);
+sfs_gettype(char *pathname){}
 
 
 

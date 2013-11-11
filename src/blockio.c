@@ -8,6 +8,7 @@
 #include <limits.h>
 #include <unistd.h>
 #include <stdio.h>
+#include "blockio.h"
 
 /* file for storing simulated disk's data */
 #define DISKFILE "simdisk.data"
@@ -32,8 +33,7 @@ static int diskfd = -1;
 *       newly created files read as all zeros
 *     - returns 0 for success, -1 otherwise
 *************************************************/
-static int
-init_disk()
+static int init_disk()
 {
   char garbage;
 
@@ -70,8 +70,7 @@ init_disk()
 *    - Returns 0 if successful, -1 otherwise
 *************************************************/
 int
-get_block(int blknum,
-	  char *buf)
+get_block(int blknum, char *buf)
 {
   if (blknum >= NUMBLKS || blknum < 0) {
     fprintf(stderr,"get_block: invalid block number: %d\n",blknum);
@@ -107,8 +106,7 @@ get_block(int blknum,
 *    - Returns 0 if successful, -1 otherwise
 *************************************************/
 int
-put_block(int blknum,
-	  char *buf)
+put_block(int blknum, char *buf)
 {
   if (blknum >= NUMBLKS || blknum < 0) {
     fprintf(stderr,"put_block: invalid block number: %d\n",blknum);

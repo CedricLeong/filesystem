@@ -1,8 +1,10 @@
-extern int
-get_block(int blknum,    /* which disk block to retrieve */
-	  char *buf);    /* where in memory to put retrieved data */
+#ifndef BLOCKIO_H_   /* Include guard */
+#define BLOCKIO_H_
 
-extern int
-put_block(int blknum,    /* which disk block to update */
-	  char *buf);    /* where in memory to get new disk block contents */
 
+extern int get_block(int blknum,char *buf);    /* where in memory to put retrieved data */
+
+extern int put_block(int blknum,char *buf);    /* where in memory to get new disk block contents */
+
+
+#endif
