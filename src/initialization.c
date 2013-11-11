@@ -4,21 +4,36 @@
 #include "super_block.h"
 #include <stdint.h>
 #include <stdlib.h>
+#include <string.h>
+
 
 int sfs_initialize(int erase)
 {
 	if (erase == 1)
 	{
+		// new file system
 		int works = new_filesystem();
-		if (works == 1)
+		// new super block
+		super_block superblk;
+		superblk.size = 512;
+		superblk.blocksize = 128;
+		superblk.free_blocks = 512;
+		superblk.root = 0;
+		unsigned char* buffer =NULL;
+		buffer = (unsigned char*) calloc(128, sizeof(unsigned char));
+		buffer = (unsigned char*) memcpy(buffer,(unsigned char*) &superblk, sizeof(superblk));
+		int writesb = put_block(0,buffer);
+		printf("superblock made\n");
+		// init free blocks 
+
+
+		
+
+		if (works == 1 && writesb == 1)
 		return 1;
 	}
 	else
 		return 0;
-
-	// initialize the superblock 
-	super_block superblk = {512,128,0,0};
-	put_super_blk();
 
 
 	// initlialize free blocks list
