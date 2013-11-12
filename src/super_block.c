@@ -70,7 +70,9 @@ int get_empty_blk(int *free_blk_no) {
 		if (disk_bitmap[i] == 0) {
 			disk_bitmap[i] = 1;
 			put_super_blk();
-			return i;
+
+			*free_blk_no = i;
+			return 0;
 		}
 	}
 }

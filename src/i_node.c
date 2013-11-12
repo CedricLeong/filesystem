@@ -95,3 +95,15 @@ int get_file(int i_number, int *type, char* buffer)
 	}
 	return 0;
 }
+
+int get_next_i_number(char *i_number) {
+    for(int i = 0; i<64; i++) {
+        if (i_numbers[i] == 0) {
+            i_numbers[i] = 1;
+
+            // Make sure the i_number is 2 digits
+            sprintf(i_number, "%02d", i);
+            return 0;
+        }
+    }
+}
