@@ -1,20 +1,17 @@
 #ifndef I_NODE_H_   /* Include guard */
 #define I_NODE_H_
 
-typedef struct {
-	int* file_location;
-	int date;
-	int file_size;
-	int index_block;
-	char* name; 
-} inode;
+extern short int file_blockno[8][64];
+extern short int file_pointer[64]; 
+extern short int file_refcount[64];
+extern short int fd_table[64];
+extern char pathname_parse[6][64];
 
-extern inode* new_inode();
 
-extern inode* get_inode(int location);
+extern int put_inode_table();
+extern int get_file_pointer(int i_number,int* file_ptr);
+extern int alloc_block_tofile(int i_number, int *allocated_blkno);
+extern int parse_pathname(char *path,int i_number);
 
-extern int get_size(int location);
-
-extern boolean file_exist(int location);
 
 #endif
