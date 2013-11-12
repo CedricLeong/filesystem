@@ -7,35 +7,35 @@ short int file_blockno[8][64];
 short int file_pointer[64]; 
 short int file_refcount[64];
 short int fd_table[64];
-char pathname_parse[6][64];
-
+short int index_block[8][64]; 
+char pathname_parse[7][64];
+char* buf;
+buf = calloc(1024, sizeof(char));
+j
 /* Creates the index numbers in memory then in the disk itself
 Each file gets around 16 bytes so each block can hold 8 inodes*/
-int put_inode_table():
+int put_inode_table()
 {
-	for (int a = 1; a < 65; a++)
-	{
-		file_blockno[0][a-1] = a;
-	}
-	int inum =1; 
-	int blockno = 0;
+
+	int x,y=0; 
 	int j = 2;
     // Block Number
 	while (j < 10)
 	{
 		int *buf;
     	buf = calloc(64, sizeof(int));
-		// Byte numbers
+   		// Byte numbers
         for(int i=1; i < 129; i++) 
         {
-        	if ((i % 8) == 0)
+        	if (x == 8)
         	{
-        		buf[i-1]= inum;
-        		inum++;
+        		y++;
+        		x=0;
+        		if (y == 64)
+        			return 1;
         	}
-        	else
-        		buf[i-1]= 0;
-
+        	buff[i-1] = file_blockno[x][y];
+        	x++;
         }
         int writeintable = put_block(j, buf);
     }
@@ -63,7 +63,6 @@ int alloc_block_tofile(int i_number, int *allocated_blkno)
 }
 
 /* Saves the path name in an array so it can be used for comparison later.*/ 
-
 int parse_pathname(char *path,int i_number)
 {
 	for (int i =0; i < 5; i++)
@@ -72,4 +71,30 @@ int parse_pathname(char *path,int i_number)
 	}
 	pathname_parse[5] = '\0';
 
-} 
+}
+
+
+int put_file(int i_number, int file_ptr, int type)
+{
+	// 
+	int works = put_block(i, buffer);
+
+}
+
+int get_file(int i_number, int *type)
+{
+	char* tempbuffer; 
+	int blk = 0; 
+	for (int i = 0; i < 7; i ++)
+	{
+		blk = file_blockno[i][i_number];
+		if (blk > 0)
+		{
+			tempbuffer = (buf + (i*128)); 
+			int works = get_block(blk, tempbuffer);
+			if (works == 0)
+				return 1; 
+		}
+	}
+	return 0;
+}
