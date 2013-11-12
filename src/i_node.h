@@ -1,10 +1,12 @@
 #ifndef I_NODE_H_   /* Include guard */
 #define I_NODE_H_
 
+#include <time.h>
+
 #define MAX_NAME_LENGTH 5
 
 extern short int file_blockno[8][64];
-extern short int file_pointer[64]; 
+extern short int file_pointer[64];
 extern short int file_refcount[64];
 extern short int fd_table[64];
 extern char pathname_parse[7][64];
@@ -20,10 +22,11 @@ extern int get_next_i_number(char *i_number);
 
 typedef struct {
     char name[MAX_NAME_LENGTH];
-    char *time_created;
-    char *time_last_accessed;
-    char *time_last_modified;
-    int file_size;
+    char *i_number;
+    time_t *time_created;
+    time_t *time_last_accessed;
+    time_t *time_last_modified;
+    double file_size;
     int index_blk_location;
 } inode;
 
