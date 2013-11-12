@@ -3,15 +3,12 @@
 #include <math.h>
 
 // Global data that should be visible to inode and super block
-short int file_blockno[8][64];
+short int file_blockno[21][64];
 short int file_pointer[64]; 
 short int file_refcount[64];
 short int fd_table[64];
 short int index_block[8][64]; 
 char pathname_parse[7][64];
-char* buf;
-buf = calloc(1024, sizeof(char));
-j
 /* Creates the index numbers in memory then in the disk itself
 Each file gets around 16 bytes so each block can hold 8 inodes*/
 int put_inode_table()
@@ -22,12 +19,12 @@ int put_inode_table()
     // Block Number
 	while (j < 10)
 	{
-		int *buf;
-    	buf = calloc(64, sizeof(int));
+		char* buf;
+    	buf = calloc(128, sizeof(char));
    		// Byte numbers
         for(int i=1; i < 129; i++) 
         {
-        	if (x == 8)
+        	if (x == 21)
         	{
         		y++;
         		x=0;
@@ -81,7 +78,7 @@ int put_file(int i_number, int file_ptr, int type)
 
 }
 
-int get_file(int i_number, int *type)
+int get_file(int i_number, int *type, char* buffer)
 {
 	char* tempbuffer; 
 	int blk = 0; 
@@ -90,7 +87,7 @@ int get_file(int i_number, int *type)
 		blk = file_blockno[i][i_number];
 		if (blk > 0)
 		{
-			tempbuffer = (buf + (i*128)); 
+			tempbuffer = (buffer + (i*128));
 			int works = get_block(blk, tempbuffer);
 			if (works == 0)
 				return 1; 
