@@ -4,7 +4,7 @@
 extern int sfs_create(char *pathname, int type);
 extern int sfs_open(char *pathname);
 
-extern int sfs_read(int fd,int start, int length, char *mem_pointer);
+extern int sfs_read(int fd,int start, int length, char *buffer);
 
 extern int sfs_write(int fd, int start, int length, char *mem_pointer);
 
