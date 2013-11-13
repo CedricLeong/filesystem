@@ -19,9 +19,12 @@ int error(ERROR error) {
         	return -1;
         case BLK_ALLOCATED:
         	printf("%s\n", "A block has been successfully allocated to the file.\nReturn value: 0");
-        	return -1;
+        	return 0;
         case FAIL_ALLOCATE:
         	printf("%s\n", "A block has been unsuccessfully allocated to the file.\nReturn value: -1");
         	return -1;
+        case ERROR_WRITING_INODE_TO_DISK:
+            printf("%s\n", "CWriting inode to disk failed\nReturn value: -1");
+            return -1;
     }
 }

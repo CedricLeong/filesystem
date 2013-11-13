@@ -9,34 +9,128 @@ short int file_refcount[64];
 short int fd_table[64];
 short int index_block[8][64]; 
 char pathname_parse[7][64];
+int i_numbers[64] = {0};
+inode inode_table[64];
+int inode_blocks = 0;
 /* Creates the index numbers in memory then in the disk itself
 Each file gets around 16 bytes so each block can hold 8 inodes*/
-int put_inode_table()
+int put_inode_table(void)
 {
+    // Root inode
+    inode root;
+    strcpy(root.name, "/");
+    root.i_number = "00";
+    i_numbers[0] = 1;
+    time_t currentTime  = time(NULL);
+    root.time_created = asctime(localtime(&currentTime));
+    root.time_last_accessed = root.time_created;
+    root.time_last_modified = root.time_created;
+    root.type = 1;
+    root.file_size = "0";
 
-	int x,y=0; 
-	int j = 2;
-    // Block Number
-	while (j < 10)
-	{
-		char* buf;
-    	buf = calloc(128, sizeof(char));
-   		// Byte numbers
-        for(int i=1; i < 129; i++) 
-        {
-        	if (x == 21)
-        	{
-        		y++;
-        		x=0;
-        		if (y == 64)
-        			return 1;
-        	}
-        	buff[i-1] = file_blockno[x][y];
-        	x++;
-        }
-        int writeintable = put_block(j, buf);
+    inode_table[0] = root;
+
+    char *buf = calloc(128, sizeof(char));
+    sprintf(buf, "%d_%s_%s_%d_%s_%s_%s_%s", 0,(char *) root.name, (char *) root.i_number, root.type, (char *) root.time_created, (char *) root.time_last_accessed, (char *) root.time_last_modified, root.file_size, (char *) root.index_blk_location);
+
+    if (put_block(2, buf) == 0) {
+        set_disk_bitmap_busy(2);
+        inode_blocks = 1;
+    } else {
+        error(ERROR_WRITING_INODE_TO_DISK);
+        return -1;
     }
-    return 1;
+
+    return 0;
+}
+
+int add_new_inode(inode *new_inode) {
+
+    int i_number = atoi((*new_inode).i_number);
+    inode_table[i_number] = *new_inode;
+
+    char *all_inode_info = calloc(128, sizeof(char));
+
+    for(int i=0; i<64; i++) {
+        char *buf = calloc(400, sizeof(char));
+        inode current_inode = inode_table[i];
+        if(strlen(current_inode.name) == 0) {
+            continue;
+        }
+
+        sprintf(buf, "%d_%s_%s_%d_%s_%s_%s_%s_%d", i,(char *) current_inode.name, (char *) current_inode.i_number, current_inode.type, (char *) current_inode.time_created, (char *) current_inode.time_last_accessed, (char *) current_inode.time_last_modified, current_inode.file_size, current_inode.index_blk_location);
+        strcat(all_inode_info, buf);
+    }
+
+    // Check how many blocks we need
+    if (strlen(all_inode_info) > 128) {
+        char *buf;
+        double parts = ceil((double) strlen(all_inode_info)/(double)128);
+        inode_blocks = parts;
+        for (int i=0; i<parts; i++) {
+            strncpy(buf, all_inode_info+i*128, 128);
+            put_block(2+i, buf);
+            set_disk_bitmap_busy(2+i);
+        }
+
+    }
+    return 0;
+}
+
+int get_inode_table_from_disk(void) {
+
+    char *all_inode_info = calloc(8192, sizeof(char));
+
+    char *buf;
+    for (int i=0; i<inode_blocks; i++) {
+        buf = calloc(128, sizeof(char));
+        get_block(2+i, buf);
+
+        strcat(all_inode_info, buf);
+    }
+
+    char *tok = strtok(buf, "_");
+
+    int counter = 0;
+    inode i_node;
+    int inum;
+    while (tok != NULL) {
+        printf("%s\n", tok);
+        if (counter == 9) {
+            counter = 0;
+            inode_table[inum] = i_node;
+        }
+        switch(counter) {
+            case 0:
+                inum = atoi(tok);
+                break;
+            case 1:
+                strcpy(i_node.name, tok);
+                break;
+            case 2:
+                i_node.i_number = tok;
+                break;
+            case 3:
+                i_node.type = atoi(tok);
+                break;
+            case 4:
+                i_node.time_created = tok;
+                break;
+            case 5:
+                i_node.time_last_accessed = tok;
+                break;
+            case 6:
+                i_node.time_last_modified = tok;
+                break;
+            case 7:
+                i_node.file_size = tok;
+                break;
+            case 8:
+                i_node.index_blk_location = tok;
+        }
+        counter++;
+        tok = strtok(0, "_");
+    }
 }
 
 /* Retrieves the file pointer from memory, it will be changed to disk soon*/

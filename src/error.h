@@ -8,6 +8,7 @@ typedef enum {
     PUT_BLOCK_FAIL,
     BLK_ALLOCATED,
     FAIL_ALLOCATE,
-    GET_BLOCK_FAIL
+    GET_BLOCK_FAIL,
+    ERROR_WRITING_INODE_TO_DISK
 } ERROR;
 #endif
