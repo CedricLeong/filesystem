@@ -236,3 +236,79 @@ int get_next_i_number(char *i_number) {
         }
     }
 }
+
+int find_file(char *pathname) {
+    char *tok = strtok(pathname, "/");
+
+    for (int i=0; i<64; i++) {
+        if (strcmp(inode_table[i].name,tok) == 0) {
+            // file exists
+            return 0;
+        }
+    }
+
+    // file was not found
+    return -1;
+
+}
+
+int get_file_contents(char *name, char *contents) {
+    contents = "";
+    for (int i=0; i<64; i++) {
+        if (strcmp(inode_table[i].name,name) == 0) {
+            int index_block = inode_table[i].index_blk_location;
+            char *blocks = calloc(128, sizeof(char));
+            get_block(index_block, blocks);
+            if (strlen(blocks) == 0) {
+                return 0;
+            } else {
+                // Get each block
+                char *tok = strtok(blocks, "_");
+
+                while(tok != NULL) {
+                    int block_num = atoi(tok);
+
+                    char *buf = calloc(128, sizeof(char));
+                    get_block(block_num, buf);
+
+                    strcat(contents, buf);
+                    tok = strtok(0, "_");
+                }
+                return 0;
+            }
+
+        }
+    }
+
+    // File was not found in the inode tabel
+    error(FILE_NOT_FOUND);
+    return -1;
+}
+
+int save_file_contents(char *contents, char *name) {
+
+    for (int i=0; i<64; i++) {
+        if(strcmp(inode_table[i].name,name) == 0) {
+            int index_block = inode_table[i].index_blk_location;
+            char *blocks = calloc(128, sizeof(char));
+            get_block(index_block, blocks);
+            double parts = ceil((double) strlen(contents)/(double)128);
+            char *tok = strtok(blocks, "_");
+
+
+            for (int i=0; i<parts; i++) {
+                int *blk_num = calloc(3, sizeof(int));
+                if (strlen(tok) == 0) {
+                    get_empty_blk(blk_num);
+                } else {
+                    blk_num = atoi(tok);
+                }
+                char *part = calloc(128, sizeof(char));
+                strncpy(part, contents+i*128, 128);
+                put_block(*blk_num, part);
+
+                tok = strtok(0, "_");
+            }
+        }
+    }
+}

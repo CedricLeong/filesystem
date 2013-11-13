@@ -24,7 +24,19 @@ int error(ERROR error) {
         	printf("%s\n", "A block has been unsuccessfully allocated to the file.\nReturn value: -1");
         	return -1;
         case ERROR_WRITING_INODE_TO_DISK:
-            printf("%s\n", "CWriting inode to disk failed\nReturn value: -1");
+            printf("%s\n", "Writing inode to disk failed\nReturn value: -1");
+            return -1;
+        case FILE_OPENED_LIMIT_HAS_BEEN_REACHED:
+            printf("%s\n", "Could not open the file since it has been opened 4 times already\nReturn value: -1");
+            return -1;
+        case FILE_NOT_FOUND_IN_OPEN_TABLE:
+            printf("%s\n", "Specified file was not found in the open file table\nReturn value: -1");
+            return -1;
+        case FILE_NOT_FOUND:
+            printf("%s\n", "Specified file was not found.\nReturn value: -1");
+            return -1;
+        case FILE_WITH_NAME_EXISTS:
+            printf("%s\n", "File with the same name already exists.\nReturn value: -1");
             return -1;
     }
 }
