@@ -142,47 +142,54 @@ int get_file_pointer(int i_number,int* file_ptr)
 	return 1;
 }
 
-/* Allocates the block by retrieving the file pointer from memory
-Then looking at the value of the pointer it sees how many blocks
-the file has. If it can it will assign a new block to the file*/
+
 int alloc_block_tofile(inode inode)
 {
-	int numblks;
-	int freeblk;
+        int numblks;
+        int freeblk;
     int indexblock;
     indexblock = inode.index_blk_location;
     char* buffer = calloc(128,sizeof(char));
-    printf("%s\n", buffer);
+
     // This is where it reads the index block
     int success = get_block(indexblock,buffer);
-   	if (success == -1)
-    	return error(GET_BLOCK_FAIL);
-    printf("%s\n", buffer);
+           if (success == -1)
+            return error(GET_BLOCK_FAIL);
+
+    //Check if there are eight blocks already allocated to the file
+    char* check;
+    int filecount =0 ;
+    check = strchr(buffer,'0');
+    while (check!=NULL)
+    {
+    	check=strchr(check+1,'_');
+    	filecount++;
+    	if (filecount >= 8)
+    		return error(FULL_FILE);
+    }
 
     char* pch;
     pch = strchr(buffer,'0');
     // Find a 0 indicating there is free space
     if (pch != NULL)
-    {    	char c[2];
+    {            char c[2];
 
-    	success = get_empty_blk(&freeblk);
-    	sprintf(c, "%d", freeblk);
-    	ptrdiff_t idx = pch - buffer;
-    	char temp[128];
-    	//printf("%s\n",c);
-    	strncpy(temp, buffer, idx);
-
-    	printf("%s\n","works!");
-    	strcat(temp,"_");
-    	strcat(temp,c);
-    	while (strlen(temp)!= 128)
-    	{
-    		strcat(temp,"0");
-    	}
-		printf("%s\n",temp);
+            success = get_empty_blk(&freeblk);
+            sprintf(c, "%d", freeblk);
+            ptrdiff_t idx = pch - buffer;
+            char temp[128];
+            strncpy(temp, buffer, idx);
+            strcat(temp,c);
+            strcat(temp,"_");
+            while (strlen(temp)!= 128)
+            {
+                    strcat(temp,"0");
+            }
+                printf("%s\n",temp);
+        // write to index block if there is space
         success = put_block(indexblock,temp);
         if (success == -1)
-        	return error(PUT_BLOCK_FAIL);
+                return error(PUT_BLOCK_FAIL);
         return error(BLK_ALLOCATED);
     }
     return error(FAIL_ALLOCATE);
