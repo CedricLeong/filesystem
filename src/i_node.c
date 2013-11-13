@@ -1,13 +1,15 @@
-#include i_node.h
-#include blockio.h
+#include "i_node.h"
+#include "blockio.h"
+#include "error.h"
 #include <math.h>
+#include <stddef.h>
 
 // Global data that should be visible to inode and super block
 short int file_blockno[21][64];
-short int file_pointer[64]; 
+short int file_pointer[64];
 short int file_refcount[64];
 short int fd_table[64];
-short int index_block[8][64]; 
+short int index_block[8][64];
 char pathname_parse[7][64];
 int i_numbers[64] = {0};
 inode inode_table[64];
@@ -137,18 +139,18 @@ int get_inode_table_from_disk(void) {
 int get_file_pointer(int i_number,int* file_ptr)
 {
 	file_ptr = file_blockno[2][i_number];
-	return 1; 
+	return 1;
 }
 
 /* Allocates the block by retrieving the file pointer from memory
-Then looking at the value of the pointer it sees how many blocks 
+Then looking at the value of the pointer it sees how many blocks
 the file has. If it can it will assign a new block to the file*/
 int alloc_block_tofile(inode inode)
 {
 	int numblks;
 	int freeblk;
     int indexblock;
-    indexblock = inode->index_blk_location;
+    indexblock = inode.index_blk_location;
     char* buffer = calloc(128,sizeof(char));
     printf("%s\n", buffer);
     // This is where it reads the index block
@@ -187,29 +189,28 @@ int alloc_block_tofile(inode inode)
 }
 
 
-/* Saves the path name in an array so it can be used for comparison later.*/ 
+/* Saves the path name in an array so it can be used for comparison later.*/
 int parse_pathname(char *path,int i_number)
 {
 	for (int i =0; i < 5; i++)
 	{
 		pathname_parse[i][i_number] = path[i];
 	}
-	pathname_parse[5] = '\0';
+	//ERROR: pathname_parse[5] = '\0';
 
 }
 
 
 int put_file(int i_number, int file_ptr, int type)
 {
-	// 
-	int works = put_block(i, buffer);
+	//ERROR: int works = put_block(i, buffer);
 
 }
 
 int get_file(int i_number, int *type, char* buffer)
 {
-	char* tempbuffer; 
-	int blk = 0; 
+	char* tempbuffer;
+	int blk = 0;
 	for (int i = 0; i < 7; i ++)
 	{
 		blk = file_blockno[i][i_number];
@@ -218,7 +219,7 @@ int get_file(int i_number, int *type, char* buffer)
 			tempbuffer = (buffer + (i*128));
 			int works = get_block(blk, tempbuffer);
 			if (works == 0)
-				return 1; 
+				return 1;
 		}
 	}
 	return 0;
