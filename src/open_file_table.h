@@ -65,7 +65,9 @@ extern int close_file(int fd);
  * @copyright GNU Public License.
  *
  ***************************************************************************/
-int get_opened_file(int fd, char *pathname);
+extern int get_opened_file(int fd, char *pathname);
+
+extern int get_opened_file_fd(char *pathname);
 
 
 

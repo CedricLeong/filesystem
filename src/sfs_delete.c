@@ -3,12 +3,12 @@
 #include "i_node.h"
 int sfs_delete(char *pathname) {
 	// deletle pathname
-	int fd = get_opened_file(pathname);
+	int fd = get_opened_file_fd(pathname);
 	int close;
-	char* inumber; 
+	int inumber;
 	while (close != -1)
 	 {
-	 	close = close_file(fd); 
+	 	close = close_file(fd);
 	 }
 
 	// deletle inumber
@@ -19,15 +19,9 @@ int sfs_delete(char *pathname) {
     for (int i=0; i<64; i++) {
         if (strcmp(inode_table[i].name,tok) == 0) {
             inumber = inode_table[i].i_number;
-            inode_table[i] = NULL;
-        }
-    }
-
-
-    for (int i=0; i<64; i++) {
-        if (i_number[i]) == 0) {
-			i_number[i] = NULL;
-            return 0;
+            i_numbers[inumber] = 0;
+            strcpy(inode_table[i].name, "");
+            inode_table[i].file_size = "0";
         }
     }
 

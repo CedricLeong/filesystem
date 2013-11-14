@@ -72,3 +72,15 @@ int get_opened_file(int fd, char *pathname) {
     error(FILE_NOT_FOUND_IN_OPEN_TABLE);
     return -1;
 }
+
+int get_opened_file_fd(char *pathname) {
+    for(int i=0; i<64; i++) {
+        if(strcmp(all_opened_files[i].pathname, pathname) == 0) {
+            return all_opened_files[i].fd;
+        }
+    }
+
+    // File was not found
+    error(FILE_NOT_FOUND_IN_OPEN_TABLE);
+    return -1;
+}
