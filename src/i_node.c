@@ -258,7 +258,7 @@ int find_file(char *pathname) {
 
 }
 
-int get_file_contents(char *name, char *contents) {
+int get_file_contents(char *name, int start, int length, char *contents) {
     for (int i=0; i<64; i++) {
         if (strcmp(inode_table[i].name,name) == 0) {
             int index_block = inode_table[i].index_blk_location;
@@ -272,14 +272,14 @@ int get_file_contents(char *name, char *contents) {
                 char *tok = strtok(blocks, "_");
 
                 int blk_counter = 0;
-                while(tok != NULL) {
+                while(tok != NULL && strcmp(tok, "0") != 0) {
                     int block_num = atoi(tok);
 
                     char *buf = calloc(128, sizeof(char));
                     get_block(block_num, buf);
 
                     if (blk_counter==0) {
-                        strcpy(contents, buf);
+                        strncpy(contents, buf+start, length);
                     } else {
                         strcat(contents, buf);
                     }
@@ -297,15 +297,27 @@ int get_file_contents(char *name, char *contents) {
     return -1;
 }
 
-int save_file_contents(char *contents, char *name) {
+int save_file_contents(char *contents, char *name, int start, int length) {
 
     for (int i=0; i<64; i++) {
         if(strcmp(inode_table[i].name,name) == 0) {
             int index_block = inode_table[i].index_blk_location;
             char *blocks = calloc(128, sizeof(char));
             get_block(index_block, blocks);
-            double parts = ceil((double) strlen(contents)/(double)128);
+            int parts = ceil((double) length/(double)128);
             char *tok = strtok(blocks, "_");
+            int lengths[parts];
+            if (parts > 1) {
+                for (int l=0; l<parts; l++) {
+                    if(i<length-1) {
+                        lengths[l] = 128;
+                    } else {
+                        lengths[l] = length-i*128;
+                    }
+                }
+            } else {
+                lengths[parts] = length;
+            }
 
 
             for (int j=0; j<parts; j++) {
@@ -313,12 +325,16 @@ int save_file_contents(char *contents, char *name) {
                 if (tok == NULL || strlen(tok) == 0) {
                     get_empty_blk(&blk_num);
                 } else {
-                    //TODO: get the index_blk
                     blk_num = atoi(tok);
                 }
-                char *part = calloc(128, sizeof(char));
-                strncpy(part, contents+j*128, 128);
+
+                char *part = calloc(lengths[j], sizeof(char));
+                strncpy(part, contents+j*128, length);
+
+                // TODO: add -1 start
+
                 if(put_block(blk_num, part) == 0) {
+                    change_size(name, strlen(part));
                     int index_blk[8] = {0};
                     index_blk[0] = blk_num;
                     char *char_index_blk = calloc(128, sizeof(char));
@@ -343,3 +359,29 @@ int save_file_contents(char *contents, char *name) {
         }
     }
 }
+
+int change_size(char *name, int bytes) {
+    for (int i=0; i<64; i++) {
+        if(strcmp(inode_table[i].name, name) == 0) {
+            inode_table[i].file_size = calloc(3, sizeof(char));
+            sprintf(inode_table[i].file_size, "%d", bytes);
+            return 0;
+        }
+    }
+
+    error(FILE_NOT_FOUND);
+    return -1;
+}
+
+int get_size(char *name) {
+    for (int i=0; i<64; i++) {
+        if(strcmp(inode_table[i].name, name) == 0) {
+            printf("%s %s", "The file size is:", inode_table[i].file_size);
+            return 0;
+        }
+    }
+
+    error(FILE_NOT_FOUND);
+    return -1;
+}
+

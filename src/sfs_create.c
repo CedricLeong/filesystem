@@ -20,7 +20,7 @@ int sfs_create(char *pathname, int type) {
             inode new_inode;
             strcpy(new_inode.name, tok);
 
-            new_inode.file_size = 0;
+            new_inode.file_size = "0" ;
 
             char *i_number = calloc(2, sizeof(int));
             get_next_i_number(i_number);
@@ -37,7 +37,6 @@ int sfs_create(char *pathname, int type) {
             new_inode.time_last_modified = time;
 
             new_inode.type = type;
-            new_inode.file_size = 0;
 
             //TODO: Add the inode to i_node table and save it to disk
             add_new_inode(&new_inode);

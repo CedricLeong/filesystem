@@ -21,6 +21,7 @@ extern int put_file(int i_number, int file_ptr, int type);
 extern int get_file(int i_number, int *type, char* buffer);
 extern int get_next_i_number(char *i_number);
 extern int get_inode_table_from_disk(void);
+extern int get_size(char *name);
 
 typedef struct {
     char name[MAX_NAME_LENGTH];

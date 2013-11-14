@@ -10,8 +10,7 @@ int sfs_open(char *pathname)
 	if(find_file(name) == 0) {
         int fd = add_opened_file(name);
         if(fd >= 0) {
-            printf("%s%d\n", "The file was opened with fd: ", fd);
-            return 0;
+            return fd;
         } else {
             return -1;
         }
