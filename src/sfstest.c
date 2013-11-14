@@ -1,7 +1,7 @@
 /****************************************************
   This is a simple interactive test program for use
-  with the file system interface functions.   
-  To use this program, compile it and link 
+  with the file system interface functions.
+  To use this program, compile it and link
   it with your implementation of the
   file system functions, and with the blockio functions.
 
@@ -11,60 +11,20 @@
 
   This program is very simple.  It does minimal error checking
    and recovery.  All data written to and read from files passes
-   through a single buffer (io_buffer).  Only printable ASCI
-I   characters may be written to files.  Non-printable characters
+   through a single buffer (io_buffer).  Only printable ASCII
+   characters may be written to files.  Non-printable characters
    read from files will not be displayed properly.
 
   You are free to make a copy of this program and to modify your
    copy for the purposes of testing your file system implementation.
 ******************************************************/
 #include <stdio.h>
-#include "initialization.h"
-/*****************************************************
-   templates for the sfs interface functions
-******************************************************/
+#include "super_block.h"
+#include "sfs_write.h"
+#include "sfs_open.h"
+#include "sfs_read.h"
+#include "sfs_create.h"
 
-int
-sfs_open(char *pathname)
-{}
-
-int
-sfs_read(int fd,
-	 int start,
-	 int length,
-	 char *mem_pointer)
-{}
-
-int
-sfs_write(int fd,
-	  int start,
-	  int length,
-	  char *mem_pointer)
-{}
-
-int
-sfs_readdir(int fd,
-	    char *mem_pointer)
-{}
-
-int
-sfs_close(int fd)
-{}
-
-int
-sfs_delete(char *pathname)
-{}
-
-int
-sfs_create(char *pathname,
-	   int type)
-{}
-
-int
-sfs_getsize(char *pathname){}
-
-int
-sfs_gettype(char *pathname){}
 
 
 
@@ -111,6 +71,8 @@ int p1,p2,p3;
 
 main()
 {
+    clear_disk();
+    put_super_blk();
   int i;
   int retval;  /* used to hold return values of file system calls */
 
@@ -127,13 +89,13 @@ main()
     printf("o: open a file\n");
     printf("r: read from a file\n");
     printf("w: write to a file\n");
-    printf("R: read from a directory\n");
+    //printf("R: read from a directory\n");
     printf("c: close a file\n");
     printf("m: create (make) a new file\n");
     printf("d: delete a file\n");
     printf("s: get the size of a file\n");
-    printf("t: get the type of a file\n");
-    printf("i: initialize the file system\n");
+    //printf("t: get the type of a file\n");
+    //printf("i: initialize the file system\n");
     printf("q: quit - exit this program\n");
     /* read in the next command */
     printf("\nCommand? ");
@@ -186,7 +148,7 @@ main()
       printf("Enter %d characters to be written: ",p3);
       scanf(IO_BUF_FORMAT,io_buffer);
       retval = sfs_write(p1,p2,p3,io_buffer);
-      if (retval > 0) {
+      if (retval >= 0) {
 	printf("Write succeeded.\n");
 	printf("Wrote %s to the disk\n",io_buffer);
       }
@@ -194,23 +156,23 @@ main()
 	printf("Error.  Return value was %d\n",retval);
       }
       break;
-    case 'R':
+ //   case 'R':
       /* Read from a directory */
-      printf("Enter file descriptor number: ");
-      scanf("%d",&p1);
-      retval = sfs_readdir(p1,io_buffer);
-      if (retval > 0) {
-	printf("sfs_readdir succeeded.\n");
-	printf("Directory entry is: %s\n",io_buffer);
-      }
-      else if (retval == 0) {
-	printf("sfs_readdir succeeded.\n");
-	printf("No more entries in this directory\n");
-      }
-      else {
-	printf("Error.  Return value was %d\n",retval);
-      }
-      break;
+   //   printf("Enter file descriptor number: ");
+   //   scanf("%d",&p1);
+  //   retval = sfs_readdir(p1,io_buffer);
+   //   if (retval > 0) {
+//	printf("sfs_readdir succeeded.\n");
+	////printf("Directory entry is: %s\n",io_buffer);
+    //  }
+    //  else if (retval == 0) {
+	//printf("sfs_readdir succeeded.\n");
+	//printf("No more entries in this directory\n");
+     // }
+     // else {
+	//printf("Error.  Return value was %d\n",retval);
+    //  }
+   //   break;
     case 'c':
       /* Close a file */
       printf("Enter file descriptor number: ");
@@ -230,7 +192,7 @@ main()
       printf("Enter 0 for regular file, 1 for directory: ");
       scanf("%d",&p1);
       retval = sfs_create(data_buffer_1,p1);
-      if (retval > 0) {
+      if (retval >= 0) {
 	printf("sfs_create succeeded.\n");
       }
       else {
@@ -262,39 +224,39 @@ main()
 	printf("Error.  Return value was %d\n",retval);
       }
       break;
-    case 't':
+    //case 't':
       /* Get the type of a file */
-      printf("Enter full path name of file: ");
-      scanf(INPUT_BUF_FORMAT,data_buffer_1);
-      retval = sfs_gettype(data_buffer_1);
-      if (retval >= 0) {
-	printf("sfs_gettype succeeded.\n");
-	if (retval == 0) {
-	  printf("file type is REGULAR\n");
-	}
-	else if (retval == 1) {
-	  printf("file type is DIRECTORY\n");
-	}
-	else {
-	  printf("file has unknown type %d\n",retval);
-	}
-      }
-      else {
-	printf("Error.  Return value was %d\n",retval);
-      }
-      break;
-    case 'i':
+     // printf("Enter full path name of file: ");
+     // scanf(INPUT_BUF_FORMAT,data_buffer_1);
+     // retval = sfs_gettype(data_buffer_1);
+      //if (retval >= 0) {
+	//printf("sfs_gettype succeeded.\n");
+	//if (retval == 0) {
+	//  printf("file type is REGULAR\n");
+	//}
+	//else if (retval == 1) {
+	//  printf("file type is DIRECTORY\n");
+	//}
+	//else {
+	//  printf("file has unknown type %d\n",retval);
+	//}
+   //   }
+     // else {
+	//printf("Error.  Return value was %d\n",retval);
+     // }
+     // break;
+    //case 'i':
       /* Initialize the file system */
-      printf("Enter 1 to erase disk while initializing, 0 otherwise: ");
-      scanf("%d",&p1);
-      retval = sfs_initialize(p1);
-      if (retval > 0) {
-	printf("sfs_initialize succeeded.\n");
-      }
-      else {
-	printf("Error.  Return value was %d\n",retval);
-      }
-      break;
+      //printf("Enter 1 to erase disk while initializing, 0 otherwise: ");
+    //  scanf("%d",&p1);
+     // retval = sfs_initialize(p1);
+    //  if (retval > 0) {
+	//printf("sfs_initialize succeeded.\n");
+    //  }
+    //  else {
+	//printf("Error.  Return value was %d\n",retval);
+    //  }
+    //  break;
     case 'q':
       /* Quit this program */
       break;
@@ -307,4 +269,4 @@ main()
     gets(command_buffer);
   }
 }
-      
+
