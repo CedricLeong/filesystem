@@ -3,6 +3,7 @@
 #include "error.h"
 #include <math.h>
 #include <stddef.h>
+#include <string.h>
 
 // Global data that should be visible to inode and super block
 short int file_blockno[21][64];
@@ -75,6 +76,9 @@ int add_new_inode(inode *new_inode) {
             set_disk_bitmap_busy(2+i);
         }
 
+    } else {
+        put_block(2, all_inode_info);
+        set_disk_bitmap_busy(2);
     }
     return 0;
 }
@@ -142,54 +146,47 @@ int get_file_pointer(int i_number,int* file_ptr)
 	return 1;
 }
 
-
+/* Allocates the block by retrieving the file pointer from memory
+Then looking at the value of the pointer it sees how many blocks
+the file has. If it can it will assign a new block to the file*/
 int alloc_block_tofile(inode inode)
 {
-        int numblks;
-        int freeblk;
+	int numblks;
+	int freeblk;
     int indexblock;
     indexblock = inode.index_blk_location;
     char* buffer = calloc(128,sizeof(char));
-
+    printf("%s\n", buffer);
     // This is where it reads the index block
     int success = get_block(indexblock,buffer);
-           if (success == -1)
-            return error(GET_BLOCK_FAIL);
-
-    //Check if there are eight blocks already allocated to the file
-    char* check;
-    int filecount =0 ;
-    check = strchr(buffer,'0');
-    while (check!=NULL)
-    {
-    	check=strchr(check+1,'_');
-    	filecount++;
-    	if (filecount >= 8)
-    		return error(FULL_FILE);
-    }
+   	if (success == -1)
+    	return error(GET_BLOCK_FAIL);
+    printf("%s\n", buffer);
 
     char* pch;
     pch = strchr(buffer,'0');
     // Find a 0 indicating there is free space
     if (pch != NULL)
-    {            char c[2];
+    {    	char c[2];
 
-            success = get_empty_blk(&freeblk);
-            sprintf(c, "%d", freeblk);
-            ptrdiff_t idx = pch - buffer;
-            char temp[128];
-            strncpy(temp, buffer, idx);
-            strcat(temp,c);
-            strcat(temp,"_");
-            while (strlen(temp)!= 128)
-            {
-                    strcat(temp,"0");
-            }
-                printf("%s\n",temp);
-        // write to index block if there is space
+    	success = get_empty_blk(&freeblk);
+    	sprintf(c, "%d", freeblk);
+    	ptrdiff_t idx = pch - buffer;
+    	char temp[128];
+    	//printf("%s\n",c);
+    	strncpy(temp, buffer, idx);
+
+    	printf("%s\n","works!");
+    	strcat(temp,"_");
+    	strcat(temp,c);
+    	while (strlen(temp)!= 128)
+    	{
+    		strcat(temp,"0");
+    	}
+		printf("%s\n",temp);
         success = put_block(indexblock,temp);
         if (success == -1)
-                return error(PUT_BLOCK_FAIL);
+        	return error(PUT_BLOCK_FAIL);
         return error(BLK_ALLOCATED);
     }
     return error(FAIL_ALLOCATE);
@@ -245,7 +242,9 @@ int get_next_i_number(char *i_number) {
 }
 
 int find_file(char *pathname) {
-    char *tok = strtok(pathname, "/");
+    char path[strlen(pathname) + 1];
+    strcpy(path, pathname);
+    char *tok = strtok(path, "/");
 
     for (int i=0; i<64; i++) {
         if (strcmp(inode_table[i].name,tok) == 0) {
@@ -260,26 +259,32 @@ int find_file(char *pathname) {
 }
 
 int get_file_contents(char *name, char *contents) {
-    contents = "";
     for (int i=0; i<64; i++) {
         if (strcmp(inode_table[i].name,name) == 0) {
             int index_block = inode_table[i].index_blk_location;
             char *blocks = calloc(128, sizeof(char));
             get_block(index_block, blocks);
             if (strlen(blocks) == 0) {
-                return 0;
+                error(FILE_IS_EMPTY);
+                return -1;
             } else {
                 // Get each block
                 char *tok = strtok(blocks, "_");
 
+                int blk_counter = 0;
                 while(tok != NULL) {
                     int block_num = atoi(tok);
 
                     char *buf = calloc(128, sizeof(char));
                     get_block(block_num, buf);
 
-                    strcat(contents, buf);
+                    if (blk_counter==0) {
+                        strcpy(contents, buf);
+                    } else {
+                        strcat(contents, buf);
+                    }
                     tok = strtok(0, "_");
+                    blk_counter++;
                 }
                 return 0;
             }
@@ -303,16 +308,35 @@ int save_file_contents(char *contents, char *name) {
             char *tok = strtok(blocks, "_");
 
 
-            for (int i=0; i<parts; i++) {
-                int *blk_num = calloc(3, sizeof(int));
-                if (strlen(tok) == 0) {
-                    get_empty_blk(blk_num);
+            for (int j=0; j<parts; j++) {
+                int blk_num;
+                if (tok == NULL || strlen(tok) == 0) {
+                    get_empty_blk(&blk_num);
                 } else {
+                    //TODO: get the index_blk
                     blk_num = atoi(tok);
                 }
                 char *part = calloc(128, sizeof(char));
-                strncpy(part, contents+i*128, 128);
-                put_block(*blk_num, part);
+                strncpy(part, contents+j*128, 128);
+                if(put_block(blk_num, part) == 0) {
+                    int index_blk[8] = {0};
+                    index_blk[0] = blk_num;
+                    char *char_index_blk = calloc(128, sizeof(char));
+                    for (int k=0; k<8; k++) {
+                        char *buf = calloc(10, sizeof(char));
+                        if (k==0) {
+                            sprintf(buf, "%d", index_blk[k]);
+                        } else {
+                            sprintf(buf, "_%d", index_blk[k]);
+                        }
+
+                        strcat(char_index_blk, buf);
+                    }
+
+                    put_block(index_block, char_index_blk);
+
+                    printf("%s %d %s\n", "Data to block", blk_num, "has been written.");
+                }
 
                 tok = strtok(0, "_");
             }

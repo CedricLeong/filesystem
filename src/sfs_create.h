@@ -17,7 +17,7 @@
  * @copyright GNU Public License.
  *
  ***************************************************************************/
-int sfs_create(char *pathname, int type)
+extern int sfs_create(char *pathname, int type);
 
 
 #endif

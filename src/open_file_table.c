@@ -9,22 +9,24 @@ int add_opened_file(char *pathname) {
 
     // Check if the file is already opened
     for (int i=0; i<64; i++) {
-        if (strcmp(all_opened_files[i].pathname,pathname) == 0) {
+        if (all_opened_files[i].pathname != NULL) {
+            if (strcmp(all_opened_files[i].pathname,pathname) == 0) {
 
-            // Make sure the file is not opened 4 times
-            if (all_opened_files[i].opened != 4) {
-                all_opened_files[i].opened++;
-                return i;
-            } else {
-                error(FILE_OPENED_LIMIT_HAS_BEEN_REACHED);
-                return -1;
+                // Make sure the file is not opened 4 times
+                if (all_opened_files[i].opened != 4) {
+                    all_opened_files[i].opened++;
+                    return i;
+                } else {
+                    error(FILE_OPENED_LIMIT_HAS_BEEN_REACHED);
+                    return -1;
+                }
             }
         }
     }
 
     // The file is not opened yet so add it to the table
     openfile file;
-    file.pathname = pathname;
+    strcpy(file.pathname, pathname);
     file.opened = 1;
 
     // Find fd for the file
@@ -32,10 +34,10 @@ int add_opened_file(char *pathname) {
         if (all_fd[i] != 1) {
             file.fd = i;
             all_fd[i] = 1;
+            all_opened_files[i] = file;
+            return file.fd;
         }
     }
-
-    return file.fd;
 }
 
 int close_file(int fd) {
@@ -58,10 +60,10 @@ int close_file(int fd) {
     return -1;
 }
 
-int get_opened_file(int fd, int *pathname) {
+int get_opened_file(int fd, char *pathname) {
     for(int i=0; i<64; i++) {
         if(fd == all_opened_files[i].fd) {
-            pathname = all_opened_files[i].pathname;
+            strcpy(pathname, all_opened_files[i].pathname);
             return 0;
         }
     }

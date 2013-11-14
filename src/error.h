@@ -13,6 +13,9 @@ typedef enum {
     FILE_OPENED_LIMIT_HAS_BEEN_REACHED,
     FILE_NOT_FOUND_IN_OPEN_TABLE,
     FILE_NOT_FOUND,
-    FILE_WITH_NAME_EXISTS
+    FILE_WITH_NAME_EXISTS,
+    FILE_IS_EMPTY
 } ERROR;
+
+extern int error(ERROR error);
 #endif

@@ -38,5 +38,8 @@ int error(ERROR error) {
         case FILE_WITH_NAME_EXISTS:
             printf("%s\n", "File with the same name already exists.\nReturn value: -1");
             return -1;
+        case FILE_IS_EMPTY:
+            printf("%s\n", "The file is empty.\nReturn value: -1");
+            return -1;
     }
 }

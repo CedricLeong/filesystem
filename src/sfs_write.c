@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "i_node.h"
 
 int sfs_write(int fd, int start, int length, char *mem_pointer) {
 
@@ -6,9 +7,7 @@ int sfs_write(int fd, int start, int length, char *mem_pointer) {
     if (get_opened_file(fd, pathname) == 0) {
         char *name = strtok(pathname, "/");
 
-        // get files index_block
-        // get all blocks of the file
-        // concat all of them
+        save_file_contents(mem_pointer, name);
     } else {
         return -1;
     }
