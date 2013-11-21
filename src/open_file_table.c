@@ -17,8 +17,7 @@ int add_opened_file(char *pathname) {
                     all_opened_files[i].opened++;
                     return i;
                 } else {
-                    error(FILE_OPENED_LIMIT_HAS_BEEN_REACHED);
-                    return -1;
+                    return error(FILE_OPENED_LIMIT_HAS_BEEN_REACHED);
                 }
             }
         }
@@ -26,6 +25,7 @@ int add_opened_file(char *pathname) {
 
     // The file is not opened yet so add it to the table
     openfile file;
+    file.pathname = calloc(30, sizeof(char));
     strcpy(file.pathname, pathname);
     file.opened = 1;
 
