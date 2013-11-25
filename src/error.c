@@ -41,5 +41,17 @@ int error(ERROR error) {
         case FILE_IS_EMPTY:
             printf("%s\n", "The file is empty.\nReturn value: -1");
             return -1;
+        case INVALID_FILE_NAME:
+            printf("%s\n", "The filename is invalid.\nReturn value: -1");
+            return -1;
+        case FOUND_TYPE:
+            printf("%s\n", "The File type is found.\nReturn value: 0");
+            return 0;
+        case WRITING_TO_DIR:
+            printf("%s\n", "You are trying to write to a directory!");
+            return -1;
+        case READING_FROM_DIR:
+            printf("%s\n", "You are trying to read from a directory!");
+            return -1;
     }
 }

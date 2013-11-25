@@ -5,24 +5,6 @@
 
 #define MAX_NAME_LENGTH 5
 
-extern short int file_blockno[21][64];
-extern short int file_pointer[64];
-extern short int file_refcount[64];
-extern short int fd_table[64];
-extern char pathname_parse[7][64];
-extern int i_numbers[64];
-extern int inode_blocks;
-
-
-extern int put_inode_table(void);
-extern int get_file_pointer(int i_number,int* file_ptr);
-extern int parse_pathname(char *path,int i_number);
-extern int put_file(int i_number, int file_ptr, int type);
-extern int get_file(int i_number, int *type, char* buffer);
-extern int get_next_i_number(char *i_number);
-extern int get_inode_table_from_disk(void);
-extern int get_size(char *name);
-
 typedef struct {
     char name[MAX_NAME_LENGTH];
     char *i_number;
@@ -34,9 +16,18 @@ typedef struct {
     int index_blk_location;
 } inode;
 
+extern short int fd_table[64];
+extern int i_numbers[64];
 extern inode inode_table[64];
 extern int add_new_inode(inode *new_inode);
-extern int alloc_block_tofile(inode inode);
+extern int alloc_block_tofile(inode *inode);
+
+
+extern int put_inode_table(void);
+extern int get_next_i_number(char *i_number);
+extern int get_inode_table_from_disk(void);
+extern int get_size(char *name);
+extern int save_file_contents(char *contents, char *name, int start, int length);
 
 
 #endif
