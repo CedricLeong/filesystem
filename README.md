@@ -8,6 +8,7 @@ Change the inode names such that untokenized strings work with get_type.</p>
 <p>sfs_readdir</p>
 <p>Making a tree structure for dir</p>
 <p>Allocating files to a dir</p>
+<p> sfs_delete doesn't delete inode from disk </p>
 
 
 <h2> Special notes </h2>
@@ -16,4 +17,4 @@ If you try to enter a length over 128 or start + length over 128 it will give yo
 Also, do not run the program in code::blocks some functions don't work in xterm. 
 
 <h2>Finished work</h2>
-sfs_write, sfs_read and sfs_gettype all works for files and dir
+sfs_write, sfs_read and sfs_gettype sfs_close sfs_open all works for files and dir
