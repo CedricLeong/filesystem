@@ -6,9 +6,6 @@
 #include <string.h>
 
 // Global data that should be visible to inode and super block
-short int file_blockno[21][64];
-short int file_pointer[64];
-short int file_refcount[64];
 short int fd_table[64];
 short int index_block[8][64];
 char pathname_parse[7][64];
@@ -55,7 +52,7 @@ int add_new_inode(inode *new_inode) {
     char *all_inode_info = calloc(128, sizeof(char));
 
     for(int i=0; i<64; i++) {
-        char *buf = calloc(400, sizeof(char));
+        char *buf = calloc(128, sizeof(char));
         inode current_inode = inode_table[i];
         if(strlen(current_inode.name) == 0) {
             continue;
@@ -64,10 +61,10 @@ int add_new_inode(inode *new_inode) {
         sprintf(buf, "%d_%s_%s_%d_%s_%s_%s_%s_%d", i,(char *) current_inode.name, (char *) current_inode.i_number, current_inode.type, (char *) current_inode.time_created, (char *) current_inode.time_last_accessed, (char *) current_inode.time_last_modified, current_inode.file_size, current_inode.index_blk_location);
         strcat(all_inode_info, buf);
     }
-
     // Check how many blocks we need
     if (strlen(all_inode_info) > 128) {
         char *buf;
+        buf = calloc (128, sizeof(char));
         double parts = ceil((double) strlen(all_inode_info)/(double)128);
         inode_blocks = parts;
         for (int i=0; i<parts; i++) {
@@ -93,7 +90,7 @@ int get_inode_table_from_disk(void) {
         get_block(2+i, buf);
 
         strcat(all_inode_info, buf);
-    }
+        }
 
     char *tok = strtok(buf, "_");
 
@@ -101,7 +98,6 @@ int get_inode_table_from_disk(void) {
     inode i_node;
     int inum;
     while (tok != NULL) {
-        printf("%s\n", tok);
         if (counter == 9) {
             counter = 0;
             inode_table[inum] = i_node;
@@ -137,24 +133,15 @@ int get_inode_table_from_disk(void) {
         counter++;
         tok = strtok(0, "_");
     }
+    return 0;
 }
 
-/* Retrieves the file pointer from memory, it will be changed to disk soon*/
-int get_file_pointer(int i_number,int* file_ptr)
-{
-	file_ptr = file_blockno[2][i_number];
-	return 1;
-}
-
-/* Allocates the block by retrieving the file pointer from memory
-Then looking at the value of the pointer it sees how many blocks
-the file has. If it can it will assign a new block to the file*/
 int alloc_block_tofile(inode *inode)
 {
-        int numblks;
-        int freeblk;
+    int numblks;
+    int freeblk;
     int indexblock;
-    indexblock = inode.index_blk_location;
+    indexblock = atoi((*inode).i_number);
     char* buffer = calloc(128,sizeof(char));
 
     // This is where it reads the index block
@@ -173,54 +160,65 @@ int alloc_block_tofile(inode *inode)
     	if (filecount >= 8)
     		return error(FULL_FILE);
     }
-          get_empty_blk(&freeblk);
-            strcat(buffer,freeblk);
-            strcat(buffer,"_");
 
-        // write to index block if there is space
-        success = put_block(indexblock,buffer);
-        if (success == -1)
-                return error(PUT_BLOCK_FAIL);
-        return error(BLK_ALLOCATED);
+    // add block
+    get_empty_blk(&freeblk);
+    char str[sizeof(freeblk)];
+    sprintf(str, "%d", freeblk);
+    strcat(buffer,str);
+    strcat(buffer,"_");
+
+    // write to index block if there is space
+    success = put_block(indexblock,buffer);
+    if (success == -1)
+            return error(PUT_BLOCK_FAIL);
+    return error(BLK_ALLOCATED);
+
+    return (error(FAIL_ALLOCATE));
+}
+
+int alloc_file_todir(inode *inode)
+{
+    int numblks;
+    int freeblk;
+    int indexblock;
+    indexblock = atoi((*inode).i_number);
+    char* buffer = calloc(128,sizeof(char));
+
+    // This is where it reads the index block
+    int success = get_block(indexblock,buffer);
+           if (success == -1)
+            return error(GET_BLOCK_FAIL);
+
+    //Check if there are eight blocks already allocated to the file
+    char* check;
+    int filecount =0 ;
+    check = strchr(buffer,'0');
+    while (check!=NULL)
+    {
+    	check=strchr(check+1,'_');
+    	filecount++;
+    	if (filecount >= 8)
+    		return error(FULL_FILE);
     }
-    return error(FAIL_ALLOCATE);
+
+    // add block
+    get_empty_blk(&freeblk);
+    char str[sizeof(freeblk)];
+    sprintf(str, "%d", freeblk);
+    strcat(buffer,str);
+    strcat(buffer,"_");
+
+    // write to index block if there is space
+    success = put_block(indexblock,buffer);
+    if (success == -1)
+            return error(PUT_BLOCK_FAIL);
+    return error(BLK_ALLOCATED);
+
+    return (error(FAIL_ALLOCATE));
 }
 
-/* Saves the path name in an array so it can be used for comparison later.*/
-int parse_pathname(char *path,int i_number)
-{
-	for (int i =0; i < 5; i++)
-	{
-		pathname_parse[i][i_number] = path[i];
-	}
-	//ERROR: pathname_parse[5] = '\0';
 
-}
-
-
-int put_file(int i_number, int file_ptr, int type)
-{
-	//ERROR: int works = put_block(i, buffer);
-
-}
-
-int get_file(int i_number, int *type, char* buffer)
-{
-	char* tempbuffer;
-	int blk = 0;
-	for (int i = 0; i < 7; i ++)
-	{
-		blk = file_blockno[i][i_number];
-		if (blk > 0)
-		{
-			tempbuffer = (buffer + (i*128));
-			int works = get_block(blk, tempbuffer);
-			if (works == 0)
-				return 1;
-		}
-	}
-	return 0;
-}
 
 int get_next_i_number(char *i_number) {
     for(int i = 0; i<64; i++) {
@@ -239,6 +237,8 @@ int find_file(char *pathname) {
     strcpy(path, pathname);
     char *tok = strtok(path, "/");
 
+    if (tok == NULL)
+        return error(INVALID_FILE_NAME);
     for (int i=0; i<64; i++) {
         if (strcmp(inode_table[i].name,tok) == 0) {
             // file exists
@@ -247,8 +247,7 @@ int find_file(char *pathname) {
     }
 
     // file was not found
-    return -1;
-
+return error(FILE_NOT_FOUND);
 }
 
 int get_file_contents(char *name, int start, int length, char *contents) {
@@ -258,8 +257,7 @@ int get_file_contents(char *name, int start, int length, char *contents) {
             char *blocks = calloc(128, sizeof(char));
             get_block(index_block, blocks);
             if (strlen(blocks) == 0) {
-                error(FILE_IS_EMPTY);
-                return -1;
+                return error(FILE_IS_EMPTY);
             } else {
                 // Get each block
                 char *tok = strtok(blocks, "_");
@@ -286,15 +284,15 @@ int get_file_contents(char *name, int start, int length, char *contents) {
     }
 
     // File was not found in the inode tabel
-    error(FILE_NOT_FOUND);
-    return -1;
+    return error(FILE_NOT_FOUND);
 }
 
 int save_file_contents(char *contents, char *name, int start, int length) {
 
+
     for (int i=0; i<64; i++) {
         if(strcmp(inode_table[i].name,name) == 0) {
-            int index_block = inode_table[i].index_blk_location;
+           int index_block = inode_table[i].index_blk_location;
             char *blocks = calloc(128, sizeof(char));
             get_block(index_block, blocks);
             int parts = ceil((double) length/(double)128);
@@ -362,8 +360,7 @@ int change_size(char *name, int bytes) {
         }
     }
 
-    error(FILE_NOT_FOUND);
-    return -1;
+    return error(FILE_NOT_FOUND);
 }
 
 int get_size(char *name) {
@@ -374,7 +371,19 @@ int get_size(char *name) {
         }
     }
 
-    error(FILE_NOT_FOUND);
-    return -1;
+    return error(FILE_NOT_FOUND);
 }
+
+int get_type(char *name, int* type) {
+    for (int i=0; i<64; i++) {
+        if(strcmp(inode_table[i].name, name) == 0) {
+            *type = inode_table[i].type;
+
+            return 0;
+        }
+    }
+
+    return error(FILE_NOT_FOUND);
+}
+
 

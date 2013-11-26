@@ -14,7 +14,11 @@ typedef enum {
     FILE_NOT_FOUND_IN_OPEN_TABLE,
     FILE_NOT_FOUND,
     FILE_WITH_NAME_EXISTS,
-    FILE_IS_EMPTY
+    FILE_IS_EMPTY,
+    INVALID_FILE_NAME,
+    FOUND_TYPE,
+    WRITING_TO_DIR,
+    READING_FROM_DIR
 } ERROR;
 
 extern int error(ERROR error);
