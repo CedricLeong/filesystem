@@ -27,7 +27,7 @@ extern int put_inode_table(void);
 extern int get_next_i_number(char *i_number);
 extern int get_inode_table_from_disk(void);
 extern int get_size(char *name);
-extern int save_file_contents(char *contents, char *name, int start, int length);
+extern int save_file_contents(char *contents, char *name);
 
 
 #endif

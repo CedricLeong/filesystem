@@ -62,7 +62,7 @@ int close_file(int fd) {
 
 int get_opened_file(int fd, char *pathname) {
     for(int i=0; i<64; i++) {
-        if(fd == all_opened_files[i].fd) {
+        if(fd == all_opened_files[i].fd && all_opened_files[i].pathname != NULL) {
             strcpy(pathname, all_opened_files[i].pathname);
             return 0;
         }

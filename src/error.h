@@ -18,7 +18,9 @@ typedef enum {
     INVALID_FILE_NAME,
     FOUND_TYPE,
     WRITING_TO_DIR,
-    READING_FROM_DIR
+    READING_FROM_DIR,
+    READING_BEYOND_FILE_SIZE,
+    WRITING_BEYOND_FILE_SIZE
 } ERROR;
 
 extern int error(ERROR error);

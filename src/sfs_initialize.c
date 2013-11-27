@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "blockio.h"
 #include "i_node.h"
 #include "super_block.h"
@@ -14,18 +15,16 @@ if (erase == 1)
 }
 return 0;
 }
-int new_filesystem(){
+int new_filesystem(void){
         /* Create the null block of data */
-        char* buffer = NULL;
+        char* buffer;
         buffer =  calloc(128, sizeof(char));
 
         int retval = 0;
 
-        for (int i = 0; i < 512; i++)
-        {
+        for (int i = 0; i < 512; i++) {
                 retval = put_block(i, buffer);
-                if (retval != 0)
-                {
+                if (retval != 0) {
                         return 0;
                 }
         }

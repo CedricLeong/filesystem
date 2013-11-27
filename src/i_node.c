@@ -250,14 +250,14 @@ int find_file(char *pathname) {
 return error(FILE_NOT_FOUND);
 }
 
-int get_file_contents(char *name, int start, int length, char *contents) {
+int get_file_contents(char *name, char *contents) {
     for (int i=0; i<64; i++) {
         if (strcmp(inode_table[i].name,name) == 0) {
             int index_block = inode_table[i].index_blk_location;
             char *blocks = calloc(128, sizeof(char));
             get_block(index_block, blocks);
             if (strlen(blocks) == 0) {
-                return error(FILE_IS_EMPTY);
+                return -1;
             } else {
                 // Get each block
                 char *tok = strtok(blocks, "_");
@@ -270,7 +270,7 @@ int get_file_contents(char *name, int start, int length, char *contents) {
                     get_block(block_num, buf);
 
                     if (blk_counter==0) {
-                        strncpy(contents, buf+start, length);
+                        strcpy(contents, buf);
                     } else {
                         strcat(contents, buf);
                     }
@@ -287,7 +287,10 @@ int get_file_contents(char *name, int start, int length, char *contents) {
     return error(FILE_NOT_FOUND);
 }
 
-int save_file_contents(char *contents, char *name, int start, int length) {
+int save_file_contents(char *contents, char *name) {
+
+    char *length = calloc(4, sizeof(char));
+    sprintf(length, "%d", strlen(contents));
 
 
     for (int i=0; i<64; i++) {
@@ -295,22 +298,26 @@ int save_file_contents(char *contents, char *name, int start, int length) {
            int index_block = inode_table[i].index_blk_location;
             char *blocks = calloc(128, sizeof(char));
             get_block(index_block, blocks);
-            int parts = ceil((double) length/(double)128);
+            int parts = ceil((double) strlen(contents)/(double)128);
             char *tok = strtok(blocks, "_");
-            int lengths[parts];
+
+            int lengths[8] = {0};
+
+            // Get lengths of every block
             if (parts > 1) {
                 for (int l=0; l<parts; l++) {
-                    if(i<length-1) {
+                    if(l<parts-1) {
                         lengths[l] = 128;
                     } else {
                         lengths[l] = length-i*128;
                     }
                 }
             } else {
-                lengths[parts] = length;
+                lengths[0] = length;
             }
 
 
+            int index_blk[8] = {0};
             for (int j=0; j<parts; j++) {
                 int blk_num;
                 if (tok == NULL || strlen(tok) == 0) {
@@ -320,33 +327,34 @@ int save_file_contents(char *contents, char *name, int start, int length) {
                 }
 
                 char *part = calloc(lengths[j], sizeof(char));
-                strncpy(part, contents+j*128, length);
+                strncpy(part, contents+j*128, lengths[j]);
 
-                // TODO: add -1 start
 
                 if(put_block(blk_num, part) == 0) {
-                    change_size(name, strlen(part));
-                    int index_blk[8] = {0};
-                    index_blk[0] = blk_num;
-                    char *char_index_blk = calloc(128, sizeof(char));
-                    for (int k=0; k<8; k++) {
-                        char *buf = calloc(10, sizeof(char));
-                        if (k==0) {
-                            sprintf(buf, "%d", index_blk[k]);
-                        } else {
-                            sprintf(buf, "_%d", index_blk[k]);
-                        }
+                    //change_size(name, strlen(part));
 
-                        strcat(char_index_blk, buf);
-                    }
-
-                    put_block(index_block, char_index_blk);
-
+                    index_blk[j] = blk_num;
                     printf("%s %d %s\n", "Data to block", blk_num, "has been written.");
+
                 }
 
                 tok = strtok(0, "_");
             }
+
+            char *char_index_blk = calloc(128, sizeof(char));
+            for (int k=0; k<8; k++) {
+                char *buf = calloc(10, sizeof(char));
+                if (k==0) {
+                    sprintf(buf, "%d", index_blk[k]);
+                } else {
+                    sprintf(buf, "_%d", index_blk[k]);
+                }
+
+                strcat(char_index_blk, buf);
+            }
+
+            put_block(index_block, char_index_blk);
+            return 0;
         }
     }
 }

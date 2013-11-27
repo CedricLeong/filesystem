@@ -19,11 +19,14 @@ int sfs_read(int fd,int start, int length, char* buffer) {
 
         char *contents = calloc(512, sizeof(char));
 
-        get_file_contents(name, start, length, contents);
-        printf("%s\n", contents);
-        buffer = contents;
+        get_file_contents(name, contents);
+
+        if ((start + length) > strlen(contents)) {
+            return error(READING_BEYOND_FILE_SIZE);
+        }
+        strncpy(buffer, contents+start, length);
     } else {
-        return -1;
+        return error(FILE_NOT_FOUND_IN_OPEN_TABLE);
     }
 
  	return 0;

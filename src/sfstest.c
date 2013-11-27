@@ -111,6 +111,7 @@ main()
     printf("q: quit - exit this program\n");
     /* read in the next command */
     printf("\nCommand? ");
+
     if (gets(command_buffer) == NULL) break;
     /* determine which command was requested */
     switch(command_buffer[0]) {
@@ -135,7 +136,7 @@ main()
       printf("Enter number of bytes to read: ");
       scanf("%d",&p3);
       retval = sfs_read(p1,p2,p3,io_buffer);
-      if (retval > 0) {
+      if (retval >= 0) {
 	printf("Read succeeded.\n");
 	printf("The following data was read (only printable ASCII will display)\n");
 	for(i=0;i<p3;i++) {
