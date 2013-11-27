@@ -2,8 +2,8 @@
 
 <h2> TODO </h2>
 <p>
-Many operations do not work after restarting filesystem, no loading from disk to memory happens (e.g inode_table is empty). 
-Change the inode names such that untokenized strings work with get_type.</p>
+<del>Many operations do not work after restarting filesystem, no loading from disk to memory happens (e.g inode_table is empty). 
+Change the inode names such that untokenized strings work with get_type.></del></p>
 <p>Makefile</p>
 <p>sfs_readdir</p>
 <p>Making a tree structure for dir</p>
