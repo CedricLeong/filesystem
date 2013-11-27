@@ -10,6 +10,13 @@ if (erase == 1)
     new_filesystem();
     put_super_blk();
     put_inode_table();
+
+    // open root folder /
+
+    int fd = sfs_open("/");
+    if (fd >= 0) {
+    	printf("%s %d\n", "Root folder / is opened. File descriptor:", fd);
+    }
     return 1;
 
 }

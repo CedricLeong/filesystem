@@ -30,12 +30,6 @@ int sfs_create(char *pathname, int type) {
             get_empty_blk(&free_blk_no);
             new_inode.index_blk_location = free_blk_no;
 
-            time_t currentTime = time(NULL);
-            char *time = asctime(localtime(&currentTime));
-            new_inode.time_created = time;
-            new_inode.time_last_accessed = time;
-            new_inode.time_last_modified = time;
-
             new_inode.type = type;
 
             //TODO: Add the inode to i_node table and save it to disk

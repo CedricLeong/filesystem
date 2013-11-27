@@ -21,17 +21,13 @@ int put_inode_table(void)
     strcpy(root.name, "/");
     root.i_number = "00";
     i_numbers[0] = 1;
-    time_t currentTime  = time(NULL);
-    root.time_created = asctime(localtime(&currentTime));
-    root.time_last_accessed = root.time_created;
-    root.time_last_modified = root.time_created;
     root.type = 1;
     root.file_size = "0";
 
     inode_table[0] = root;
 
     char *buf = calloc(128, sizeof(char));
-    sprintf(buf, "%d_%s_%s_%d_%s_%s_%s_%s", 0,(char *) root.name, (char *) root.i_number, root.type, (char *) root.time_created, (char *) root.time_last_accessed, (char *) root.time_last_modified, root.file_size, (char *) root.index_blk_location);
+    sprintf(buf, "%d:%s:%s:%d:%s:", 0,(char *) root.name, (char *) root.i_number, root.type, root.file_size);
 
     if (put_block(2, buf) == 0) {
         set_disk_bitmap_busy(2);
@@ -58,7 +54,11 @@ int add_new_inode(inode *new_inode) {
             continue;
         }
 
-        sprintf(buf, "%d_%s_%s_%d_%s_%s_%s_%s_%d", i,(char *) current_inode.name, (char *) current_inode.i_number, current_inode.type, (char *) current_inode.time_created, (char *) current_inode.time_last_accessed, (char *) current_inode.time_last_modified, current_inode.file_size, current_inode.index_blk_location);
+        if (strcmp(current_inode.name, "/") == 0) {
+        	sprintf(buf, "%d:%s:%s:%d:%s:", i,(char *) current_inode.name, (char *) current_inode.i_number, current_inode.type, current_inode.file_size);
+        } else {
+        	sprintf(buf, "%d:%s:%s:%d:%s:%d:", i,(char *) current_inode.name, (char *) current_inode.i_number, current_inode.type, current_inode.file_size, current_inode.index_blk_location);
+        }
         strcat(all_inode_info, buf);
     }
     // Check how many blocks we need
@@ -82,7 +82,7 @@ int add_new_inode(inode *new_inode) {
 
 int get_inode_table_from_disk(void) {
 
-    char *all_inode_info = calloc(8192, sizeof(char));
+     char *all_inode_info = calloc(8192, sizeof(char));
 
     char *buf;
     for (int i=0; i<inode_blocks; i++) {
@@ -92,7 +92,7 @@ int get_inode_table_from_disk(void) {
         strcat(all_inode_info, buf);
         }
 
-    char *tok = strtok(buf, "_");
+    char *tok = strtok(buf, ":");
 
     int counter = 0;
     inode i_node;
@@ -116,22 +116,13 @@ int get_inode_table_from_disk(void) {
                 i_node.type = atoi(tok);
                 break;
             case 4:
-                i_node.time_created = tok;
-                break;
-            case 5:
-                i_node.time_last_accessed = tok;
-                break;
-            case 6:
-                i_node.time_last_modified = tok;
-                break;
-            case 7:
                 i_node.file_size = tok;
                 break;
-            case 8:
+            case 5:
                 i_node.index_blk_location = tok;
         }
         counter++;
-        tok = strtok(0, "_");
+        tok = strtok(0, ":");
     }
     return 0;
 }
@@ -155,7 +146,7 @@ int alloc_block_tofile(inode *inode)
     check = strchr(buffer,'0');
     while (check!=NULL)
     {
-    	check=strchr(check+1,'_');
+    	check=strchr(check+1,':');
     	filecount++;
     	if (filecount >= 8)
     		return error(FULL_FILE);
@@ -166,7 +157,7 @@ int alloc_block_tofile(inode *inode)
     char str[sizeof(freeblk)];
     sprintf(str, "%d", freeblk);
     strcat(buffer,str);
-    strcat(buffer,"_");
+    strcat(buffer,":");
 
     // write to index block if there is space
     success = put_block(indexblock,buffer);
@@ -196,7 +187,7 @@ int alloc_file_todir(inode *inode)
     check = strchr(buffer,'0');
     while (check!=NULL)
     {
-    	check=strchr(check+1,'_');
+    	check=strchr(check+1,':');
     	filecount++;
     	if (filecount >= 8)
     		return error(FULL_FILE);
@@ -207,7 +198,7 @@ int alloc_file_todir(inode *inode)
     char str[sizeof(freeblk)];
     sprintf(str, "%d", freeblk);
     strcat(buffer,str);
-    strcat(buffer,"_");
+    strcat(buffer,":");
 
     // write to index block if there is space
     success = put_block(indexblock,buffer);
@@ -247,7 +238,7 @@ int find_file(char *pathname) {
     }
 
     // file was not found
-return error(FILE_NOT_FOUND);
+    return -1;
 }
 
 int get_file_contents(char *name, char *contents) {
@@ -260,7 +251,7 @@ int get_file_contents(char *name, char *contents) {
                 return -1;
             } else {
                 // Get each block
-                char *tok = strtok(blocks, "_");
+                char *tok = strtok(blocks, ":");
 
                 int blk_counter = 0;
                 while(tok != NULL && strcmp(tok, "0") != 0) {
@@ -274,7 +265,7 @@ int get_file_contents(char *name, char *contents) {
                     } else {
                         strcat(contents, buf);
                     }
-                    tok = strtok(0, "_");
+                    tok = strtok(0, ":");
                     blk_counter++;
                 }
                 return 0;
@@ -299,7 +290,7 @@ int save_file_contents(char *contents, char *name) {
             char *blocks = calloc(128, sizeof(char));
             get_block(index_block, blocks);
             int parts = ceil((double) strlen(contents)/(double)128);
-            char *tok = strtok(blocks, "_");
+            char *tok = strtok(blocks, ":");
 
             int lengths[8] = {0};
 
@@ -338,7 +329,7 @@ int save_file_contents(char *contents, char *name) {
 
                 }
 
-                tok = strtok(0, "_");
+                tok = strtok(0, ":");
             }
 
             char *char_index_blk = calloc(128, sizeof(char));
@@ -347,7 +338,7 @@ int save_file_contents(char *contents, char *name) {
                 if (k==0) {
                     sprintf(buf, "%d", index_blk[k]);
                 } else {
-                    sprintf(buf, "_%d", index_blk[k]);
+                    sprintf(buf, ":%d", index_blk[k]);
                 }
 
                 strcat(char_index_blk, buf);
@@ -374,7 +365,7 @@ int change_size(char *name, int bytes) {
 int get_size(char *name) {
     for (int i=0; i<64; i++) {
         if(strcmp(inode_table[i].name, name) == 0) {
-            printf("%s %s", "The file size is:", inode_table[i].file_size);
+            printf("%s %s", "The file size is: ", inode_table[i].file_size);
             return 0;
         }
     }

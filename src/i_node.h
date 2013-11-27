@@ -9,9 +9,6 @@ typedef struct {
     char name[MAX_NAME_LENGTH];
     char *i_number;
     int type;
-    char *time_created;
-    char *time_last_accessed;
-    char *time_last_modified;
     char *file_size;
     int index_blk_location;
 } inode;

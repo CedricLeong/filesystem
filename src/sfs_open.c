@@ -7,7 +7,14 @@ int sfs_open(char *pathname)
     char name[strlen(pathname) + 1];
     strcpy(name, pathname);
 	// Check if file is there
-	if(find_file(name) == 0) {
+    if (strcmp(pathname, "/") == 0) {
+    	int fd = add_opened_file(name);
+		if(fd >= 0) {
+			return fd;
+		} else {
+			return -1;
+		}
+    } else if(find_file(name) == 0) {
         int fd = add_opened_file(name);
         if(fd >= 0) {
             return fd;
@@ -16,7 +23,6 @@ int sfs_open(char *pathname)
         }
 
 	} else {
-        error(FILE_NOT_FOUND);
-        return -1;
+        return error(FILE_NOT_FOUND);
 	}
 }
