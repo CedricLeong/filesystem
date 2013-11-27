@@ -10,7 +10,7 @@ int sfs_write(int fd, int start, int length, char *mem_pointer) {
 
 char *contents = calloc(1024, sizeof(char));
 char *tempbuffer = calloc(1024, sizeof(char));
-int* type;
+int type;
 
     char *pathname = calloc(30, sizeof(char));
     if (get_opened_file(fd, pathname) == 0) {

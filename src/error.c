@@ -59,5 +59,11 @@ int error(ERROR error) {
         case WRITING_BEYOND_FILE_SIZE:
             printf("%s\n", "Error: Attempt to write addresses beyond the file size.");
             return -1;
+        case PATHNAME_ERROR:
+        	printf("%s\n", "Error: Pathname is not existed in file system.");
+        	return -1;
+        case FILE_NAME_TOO_LONG:
+        	printf("%s\n", "Error: The file name is too long. It has to be up to 5 characters.");
+        	return -1;
     }
 }

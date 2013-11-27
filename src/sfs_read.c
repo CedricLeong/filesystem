@@ -7,13 +7,16 @@ int sfs_read(int fd,int start, int length, char* buffer) {
 
 
 
-    int* type;
+    int type;
 
 
  	char *pathname = calloc(30, sizeof(char));
     if (get_opened_file(fd, pathname) == 0) {
         char *name = strtok(pathname, "/");
-            get_type(name,&type );
+        if(name == NULL) {
+        	name = "/";
+        }
+            get_type(name, &type);
             if (type == 1)
                 return error(READING_FROM_DIR);
 

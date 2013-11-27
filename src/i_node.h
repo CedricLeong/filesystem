@@ -1,14 +1,11 @@
 #ifndef I_NODE_H_   /* Include guard */
 #define I_NODE_H_
 
-#include <time.h>
-
-#define MAX_NAME_LENGTH 5
-
 typedef struct {
-    char name[MAX_NAME_LENGTH];
+    char *name;
     char *i_number;
     int type;
+    char *parent_i_number;
     char *file_size;
     int index_blk_location;
 } inode;
@@ -25,6 +22,7 @@ extern int get_next_i_number(char *i_number);
 extern int get_inode_table_from_disk(void);
 extern int get_size(char *name);
 extern int save_file_contents(char *contents, char *name);
+extern int get_i_number(char *name, char *i_number);
 
 
 #endif
