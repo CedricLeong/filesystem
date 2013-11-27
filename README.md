@@ -1,13 +1,21 @@
-filesystem
-==========
-  The file system has been able to initialize but many of the operations we still need to implement.
-These operations are as follows:
-    1.Creating a file
-    2.Opening a file
-    3.Closing a file
-    4.Writing to a file
-    5.Reading from a file
-    6.Deletling a file
-    
-In addition to the operations we need to implement, along the way we will need to implement things such as the index block and the free block list. 
-Not only ar ethey neccessary for these operations but to fully initialize the filesystem we will need these objects. Other then that were close to being done. 
+<h1>Filesystem</h1>
+
+<h2> TODO </h2>
+<p>
+Many operations do not work after restarting filesystem, no loading from disk to memory happens (e.g inode_table is empty). 
+Change the inode names such that untokenized strings work with get_type.</p>
+<p>Makefile</p>
+<p>sfs_readdir</p>
+<p>Making a tree structure for dir</p>
+<p>Allocating files to a dir</p>
+<p> sfs_delete doesn't delete inode from disk </p>
+
+
+<h2> Special notes </h2>
+ The write function in sartipi's code shows us that we don't have to worry about writing to multiple blocks.
+If you try to enter a length over 128 or start + length over 128 it will give you an error. 
+Also, do not run the program in code::blocks some functions don't work in xterm. 
+<b> Edit: This is only true if your not appending to the file, if you append to the file you can exceed multiple blocks</b>
+
+<h2>Finished work</h2>
+sfs_write, sfs_read and sfs_gettype sfs_close sfs_open all works for files and dir
