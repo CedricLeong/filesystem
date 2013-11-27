@@ -84,7 +84,7 @@ int p1,p2,p3;
 
 main()
 {
-    //cleaget_inode_table_from_disk(void);
+  get_inode_table_from_disk();
   int i;
   int retval;  /* used to hold return values of file system calls */
 
@@ -96,6 +96,7 @@ main()
      5) display the results of the operation
   */
   while(1) {
+    //get_inode_table_from_disk();
     /* print a list of available commands */
     printf("\n");
     printf("o: open a file\n");
@@ -111,7 +112,6 @@ main()
     printf("q: quit - exit this program\n");
     /* read in the next command */
     printf("\nCommand? ");
-
     if (gets(command_buffer) == NULL) break;
     /* determine which command was requested */
     switch(command_buffer[0]) {
@@ -136,7 +136,7 @@ main()
       printf("Enter number of bytes to read: ");
       scanf("%d",&p3);
       retval = sfs_read(p1,p2,p3,io_buffer);
-      if (retval >= 0) {
+      if (retval > 0) {
 	printf("Read succeeded.\n");
 	printf("The following data was read (only printable ASCII will display)\n");
 	for(i=0;i<p3;i++) {
@@ -217,7 +217,7 @@ main()
       printf("Enter full path name of file to delete: ");
       scanf(INPUT_BUF_FORMAT,data_buffer_1);
       retval = sfs_delete(data_buffer_1);
-      if (retval > 0) {
+      if (retval == 0) {
 	printf("sfs_delete succeeded.\n");
       }
       else {

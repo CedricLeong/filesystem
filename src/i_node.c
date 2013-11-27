@@ -1,9 +1,13 @@
 #include "i_node.h"
 #include "blockio.h"
 #include "error.h"
+#include "super_block.h"
 #include <math.h>
 #include <stddef.h>
+#include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
+#include <time.h>
 
 // Global data that should be visible to inode and super block
 short int fd_table[64];
@@ -27,12 +31,14 @@ int put_inode_table(void)
     root.time_last_modified = root.time_created;
     root.type = 1;
     root.file_size = "0";
-
+    int *free_blk_no = calloc(3, sizeof(int));
+    get_empty_blk(&free_blk_no);
+    root.index_blk_location = free_blk_no;
     inode_table[0] = root;
 
     char *buf = calloc(128, sizeof(char));
-    sprintf(buf, "%d_%s_%s_%d_%s_%s_%s_%s", 0,(char *) root.name, (char *) root.i_number, root.type, (char *) root.time_created, (char *) root.time_last_accessed, (char *) root.time_last_modified, root.file_size, (char *) root.index_blk_location);
-
+    sprintf(buf, "%d_%s_%s_%d_%s_%s_%s_%s_%d", 0,(char *) root.name, (char *) root.i_number, root.type, (char *) root.time_created, (char *) root.time_last_accessed, (char *) root.time_last_modified, root.file_size, root.index_blk_location);
+    strcat(buf, "_");
     if (put_block(2, buf) == 0) {
         set_disk_bitmap_busy(2);
         inode_blocks = 1;
@@ -55,17 +61,23 @@ int add_new_inode(inode *new_inode) {
         char *buf = calloc(128, sizeof(char));
         inode current_inode = inode_table[i];
         if(strlen(current_inode.name) == 0) {
-            continue;
+            break;
         }
 
         sprintf(buf, "%d_%s_%s_%d_%s_%s_%s_%s_%d", i,(char *) current_inode.name, (char *) current_inode.i_number, current_inode.type, (char *) current_inode.time_created, (char *) current_inode.time_last_accessed, (char *) current_inode.time_last_modified, current_inode.file_size, current_inode.index_blk_location);
-        strcat(all_inode_info, buf);
+        strcat(buf, "_");
+        printf("%s\n", buf);
+        if(i == 0){
+        strcpy(all_inode_info, buf);}
+        else{
+        strcat(all_inode_info, buf);}
     }
     // Check how many blocks we need
+    printf("%d\n",strlen(all_inode_info) );
     if (strlen(all_inode_info) > 128) {
         char *buf;
         buf = calloc (128, sizeof(char));
-        double parts = ceil((double) strlen(all_inode_info)/(double)128);
+        int parts = (strlen(all_inode_info)+128-1)/128;
         inode_blocks = parts;
         for (int i=0; i<parts; i++) {
             strncpy(buf, all_inode_info+i*128, 128);
@@ -80,37 +92,44 @@ int add_new_inode(inode *new_inode) {
     return 0;
 }
 
-int get_inode_table_from_disk(void) {
+int delete_inode(char* pathname) {
 
-    char *all_inode_info = calloc(8192, sizeof(char));
+        char* pch;
+        char* pch2;
+        char* idxblk = "_";
+        char holder[3];
 
-    char *buf;
-    for (int i=0; i<inode_blocks; i++) {
-        buf = calloc(128, sizeof(char));
-        get_block(2+i, buf);
-
-        strcat(all_inode_info, buf);
-        }
+char* inum;
+char *iname = strtok(pathname, "/");
+int i;
+char* buf;
+// Find which block the inode is in
+ for (i=0; i<9; i++) {
+    buf = calloc(128, sizeof(char));
+    get_block(2+i, buf);
 
     char *tok = strtok(buf, "_");
 
     int counter = 0;
     inode i_node;
-    int inum;
     while (tok != NULL) {
+        inode_table[0] = i_node;
         if (counter == 9) {
             counter = 0;
-            inode_table[inum] = i_node;
+            inode_table[atoi(inum)] = i_node;
         }
         switch(counter) {
             case 0:
-                inum = atoi(tok);
+                inum = tok;
                 break;
             case 1:
                 strcpy(i_node.name, tok);
+                if (strcmp(i_node.name,iname) == 0){
+                    goto found;}
                 break;
             case 2:
                 i_node.i_number = tok;
+                i_numbers[atoi(i_node.i_number)]=1;
                 break;
             case 3:
                 i_node.type = atoi(tok);
@@ -128,10 +147,94 @@ int get_inode_table_from_disk(void) {
                 i_node.file_size = tok;
                 break;
             case 8:
-                i_node.index_blk_location = tok;
-        }
+                i_node.index_blk_location = atoi(tok);
+                break;
+            }
         counter++;
         tok = strtok(0, "_");
+        }
+    }
+
+    // clear the section in the disk
+    found:
+        sprintf(holder,"%d",inode_table[i].index_blk_location);
+
+        // add the info in the middle
+        strcat(idxblk, holder);
+        strcat(idxblk, "_");
+        strcat(inum, "_");
+
+        // get the disk information
+        buf = calloc(128, sizeof(char));
+        get_block(2+i, buf);
+        char* placebuf = calloc(128, sizeof(char));
+
+        // Find the index of the inum and the index block
+        pch = strstr (buf,inum);
+        pch2 = strstr (buf,idxblk);
+
+        // erase the inode
+        char *buf_left = calloc(128, sizeof(char));
+        char *buf_right = calloc(128, sizeof(char));
+
+        strncpy(buf_left, buf, (int)pch);
+        strcpy(buf_right, buf + (int)pch + (ptrdiff_t)(pch2-pch));
+        strcat(buf_left, buf_right);
+        put_block(2+i,buf_left);
+    return 0;
+}
+
+int get_inode_table_from_disk(void) {
+
+    int counter = 0;
+    int inum = 0;
+    char* buf;
+    for (int i=0; i<9; i++) {
+    buf = calloc(128, sizeof(char));
+    get_block(2+i, buf);
+
+
+
+    char *tok = strtok(buf, "_");
+    inode i_node;
+    while (tok != NULL) {
+        if (counter == 9) {
+            counter = 0;
+            inode_table[inum] = i_node;
+        }
+        switch(counter) {
+            case 0:
+                inum = atoi(tok);
+                break;
+            case 1:
+                strcpy(i_node.name, tok);
+                break;
+            case 2:
+                i_node.i_number = tok;
+                i_numbers[atoi(i_node.i_number)]=1;
+                break;
+            case 3:
+                i_node.type = atoi(tok);
+                break;
+            case 4:
+                i_node.time_created = tok;
+                break;
+            case 5:
+                i_node.time_last_accessed = tok;
+                break;
+            case 6:
+                i_node.time_last_modified = tok;
+                break;
+            case 7:
+                i_node.file_size = tok;
+                break;
+            case 8:
+                i_node.index_blk_location = atoi(tok);
+                break;
+        }
+        counter++;
+        tok = strtok(NULL, "_");
+    }
     }
     return 0;
 }
@@ -152,13 +255,13 @@ int alloc_block_tofile(inode *inode)
     //Check if there are eight blocks already allocated to the file
     char* check;
     int filecount =0 ;
-    check = strchr(buffer,'0');
+    check = strchr(buffer,'_');
     while (check!=NULL)
     {
-    	check=strchr(check+1,'_');
-    	filecount++;
-    	if (filecount >= 8)
-    		return error(FULL_FILE);
+            check=strchr(check+1,'_');
+            filecount++;
+            if (filecount >= 8)
+                    return error(FULL_FILE);
     }
 
     // add block
@@ -196,10 +299,10 @@ int alloc_file_todir(inode *inode)
     check = strchr(buffer,'0');
     while (check!=NULL)
     {
-    	check=strchr(check+1,'_');
-    	filecount++;
-    	if (filecount >= 8)
-    		return error(FULL_FILE);
+            check=strchr(check+1,'_');
+            filecount++;
+            if (filecount >= 8)
+                    return error(FULL_FILE);
     }
 
     // add block
@@ -233,12 +336,16 @@ int get_next_i_number(char *i_number) {
 }
 
 int find_file(char *pathname) {
+
+    char* tok;
+    if(strcmp(pathname,"/") == 0 && strlen(pathname) == 1){
+        tok = pathname;}
+    else {
     char path[strlen(pathname) + 1];
     strcpy(path, pathname);
-    char *tok = strtok(path, "/");
-
+    tok = strtok(path, "/");
     if (tok == NULL)
-        return error(INVALID_FILE_NAME);
+        return error(INVALID_FILE_NAME);}
     for (int i=0; i<64; i++) {
         if (strcmp(inode_table[i].name,tok) == 0) {
             // file exists
@@ -249,7 +356,6 @@ int find_file(char *pathname) {
     // file was not found
 return error(FILE_NOT_FOUND);
 }
-
 int get_file_contents(char *name, char *contents) {
     for (int i=0; i<64; i++) {
         if (strcmp(inode_table[i].name,name) == 0) {
@@ -286,6 +392,7 @@ int get_file_contents(char *name, char *contents) {
     // File was not found in the inode tabel
     return error(FILE_NOT_FOUND);
 }
+
 
 int save_file_contents(char *contents, char *name) {
 
@@ -358,6 +465,7 @@ int save_file_contents(char *contents, char *name) {
         }
     }
 }
+
 
 int change_size(char *name, int bytes) {
     for (int i=0; i<64; i++) {
