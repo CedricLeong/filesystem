@@ -66,14 +66,12 @@ int add_new_inode(inode *new_inode) {
 
         sprintf(buf, "%d_%s_%s_%d_%s_%s_%s_%s_%d", i,(char *) current_inode.name, (char *) current_inode.i_number, current_inode.type, (char *) current_inode.time_created, (char *) current_inode.time_last_accessed, (char *) current_inode.time_last_modified, current_inode.file_size, current_inode.index_blk_location);
         strcat(buf, "_");
-        printf("%s\n", buf);
         if(i == 0){
         strcpy(all_inode_info, buf);}
         else{
         strcat(all_inode_info, buf);}
     }
     // Check how many blocks we need
-    printf("%d\n",strlen(all_inode_info) );
     if (strlen(all_inode_info) > 128) {
         char *buf;
         buf = calloc (128, sizeof(char));
