@@ -20,18 +20,20 @@ int sfs_delete(char *pathname) {
     for (int i=0; i<64; i++) {
         if (strcmp(inode_table[i].name,tok) == 0) {
             // delete contents
-            char* contents = calloc(atoi(inode_table[i].file_size),sizeof(char));
-            save_file_contents(contents, inode_table[i].name);
+            //char* contents = calloc(atoi(inode_table[i].file_size),sizeof(char));
+            //save_file_contents(contents, inode_table[i].name);
 
-            //delete inode
-            delete_inode(pathname);
 
             // delete from memory
             inumber = atoi(inode_table[i].i_number);
             i_numbers[inumber] = 0;
-            strcpy(inode_table[i].name, "");
+            inode_table[i].name[0] = '\0';
+            strcpy(inode_table[i].i_number, "99");
             inode_table[i].file_size = "0";
+            delete_inode_now();
+
             return 0;
+
         }
     }
     // deletle inode

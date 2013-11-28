@@ -96,7 +96,6 @@ main()
      5) display the results of the operation
   */
   while(1) {
-    //get_inode_table_from_disk();
     /* print a list of available commands */
     printf("\n");
     printf("o: open a file\n");
@@ -263,8 +262,12 @@ main()
       printf("Enter 1 to erase disk while initializing, 0 otherwise: ");
       scanf("%d",&p1);
       retval = sfs_initialize(p1);
-      if (retval > 0) {
+      if (retval == 0) {
 	printf("sfs_initialize succeeded.\n");
+      }
+      else if(retval == 1)
+      {
+          	printf("i node table loaded from disk");
       }
       else {
 	printf("Error.  Return value was %d\n",retval);
