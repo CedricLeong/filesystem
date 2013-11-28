@@ -29,19 +29,6 @@ I   characters may be written to files.  Non-printable characters
 #include "sfs_gettype.h"
 
 /*****************************************************
-   templates for the sfs interface functions
-******************************************************/
-
-
-int
-sfs_readdir(int fd,
-	    char *mem_pointer)
-{}
-
-
-
-
-/*****************************************************
    Program constants
 ******************************************************/
 
@@ -157,7 +144,7 @@ main()
       scanf("%d",&p2);
       printf("Enter number of bytes to write: ");
       scanf("%d",&p3);
-      printf("This program allows only non-white-space, printable ASCII characters to be written to a file.\n");
+      printf("This pirogram allows only non-white-space, printable ASCII characters to be written to a file.\n");
       printf("Enter %d characters to be written: ",p3);
       scanf(IO_BUF_FORMAT,io_buffer);
       retval = sfs_write(p1,p2,p3,io_buffer);
@@ -174,16 +161,11 @@ main()
       printf("Enter file descriptor number: ");
       scanf("%d",&p1);
       retval = sfs_readdir(p1,io_buffer);
-      if (retval > 0) {
-	printf("sfs_readdir succeeded.\n");
-	printf("Directory entry is: %s\n",io_buffer);
-      }
-      else if (retval == 0) {
-	printf("sfs_readdir succeeded.\n");
-	printf("No more entries in this directory\n");
+      if (retval == 0) {
+    	  printf("sfs_readdir succeeded.\n");
       }
       else {
-	printf("Error.  Return value was %d\n",retval);
+    	  printf("Error.  Return value was %d\n",retval);
       }
       break;
     case 'c':
@@ -191,7 +173,7 @@ main()
       printf("Enter file descriptor number: ");
       scanf("%d",&p1);
       retval = sfs_close(p1);
-      if (retval > 0) {
+      if (retval >= 0) {
 	printf("sfs_close succeeded.\n");
       }
       else {

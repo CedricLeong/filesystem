@@ -50,6 +50,8 @@ int close_file(int fd) {
                 return 0;
             } else {
                 all_fd[i] = 0;
+                all_opened_files[i].fd = calloc(2, sizeof(char));
+                all_opened_files[i].pathname = calloc(50, sizeof(char));
                 return 0;
             }
         }

@@ -65,5 +65,17 @@ int error(ERROR error) {
         case FILE_NAME_TOO_LONG:
         	printf("%s\n", "Error: The file name is too long. It has to be up to 5 characters.");
         	return -1;
+        case WRITE_TOO_MANY_CHARS:
+        	printf("%s\n", "Error: More characters were entered than the requested number of bytes.");
+        	return -1;
+        case READDIR_REG_FILE:
+        	printf("%s\n", "Error: Cannot sfs_readdir a regular file type.");
+        	return -1;
+        case ERROR_PARENT_REG_FILE:
+        	printf("%s\n", "Error: Cannot create a file with a regular file as a parent.");
+        	return -1;
+        case ERROR_DIR_SIZE:
+        	printf("%s\n", "Error: Cannot get size of a directory file type. Only for regular files.");
+			return -1;
     }
 }

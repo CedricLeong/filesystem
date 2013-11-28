@@ -5,7 +5,7 @@ int sfs_close(int fd) {
 	int success = close_file(fd);
 		if( success != 0)
 		{
-			return 0;
+			return -1;
 		}
-		return -1;
+		return 0;
 }

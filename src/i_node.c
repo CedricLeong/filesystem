@@ -236,7 +236,7 @@ int get_next_i_number(char *i_number) {
     }
 }
 
-int find_file(char *pathname) {
+int find_file(char *pathname, char *parent) {
     char path[strlen(pathname) + 1];
     strcpy(path, pathname);
     char *tok = strtok(path, "/");
@@ -245,7 +245,7 @@ int find_file(char *pathname) {
         return error(INVALID_FILE_NAME);
     for (int i=0; i<64; i++) {
     	if (inode_table[i].name != NULL) {
-			if (strcmp(inode_table[i].name, tok) == 0) {
+			if (strcmp(inode_table[i].name, tok) == 0 && strcmp(inode_table[i].parent_i_number, parent) == 0) {
 				// file exists
 				return 0;
 			}
@@ -256,10 +256,10 @@ int find_file(char *pathname) {
     return -1;
 }
 
-int get_file_contents(char *name, char *contents) {
+int get_file_contents(char *name, char *parent, char *contents) {
     for (int i=0; i<64; i++) {
-    	if (inode_table[i].name != NULL) {
-			if (strcmp(inode_table[i].name,name) == 0) {
+    	if (inode_table[i].name != NULL && inode_table[i].parent_i_number != NULL) {
+			if(strcmp(inode_table[i].name,name) == 0 && strcmp(inode_table[i].parent_i_number, parent) == 0) {
 				int index_block = inode_table[i].index_blk_location;
 				char *blocks = calloc(128, sizeof(char));
 				get_block(index_block, blocks);
@@ -295,15 +295,15 @@ int get_file_contents(char *name, char *contents) {
     return error(FILE_NOT_FOUND);
 }
 
-int save_file_contents(char *contents, char *name) {
+int save_file_contents(char *contents, char *name, char *parent) {
 
     char *length = calloc(4, sizeof(char));
     sprintf(length, "%d", strlen(contents));
 
 
     for (int i=0; i<64; i++) {
-    	if (inode_table[i].name != NULL) {
-			if(strcmp(inode_table[i].name,name) == 0) {
+    	if (inode_table[i].name != NULL && inode_table[i].parent_i_number != NULL) {
+			if(strcmp(inode_table[i].name,name) == 0 && strcmp(inode_table[i].parent_i_number, parent) == 0) {
 			   int index_block = inode_table[i].index_blk_location;
 				char *blocks = calloc(128, sizeof(char));
 				get_block(index_block, blocks);
@@ -362,44 +362,93 @@ int save_file_contents(char *contents, char *name) {
 					strcat(char_index_blk, buf);
 				}
 
-				put_block(index_block, char_index_blk);
-				return 0;
+				if (put_block(index_block, char_index_blk) == 0) {
+					// Update the file size
+					inode_table[i].file_size = length;
+					return 0;
+				}
+
+				return -1;
+
+
 			}
     	}
     }
 }
 
-int change_size(char *name, int bytes) {
-    for (int i=0; i<64; i++) {
-    	if (inode_table[i].name != NULL) {
-			if(strcmp(inode_table[i].name, name) == 0) {
-				inode_table[i].file_size = calloc(3, sizeof(char));
-				sprintf(inode_table[i].file_size, "%d", bytes);
-				return 0;
-			}
-    	}
-    }
+int change_size(char *pathname, int bytes) {
 
-    return error(FILE_NOT_FOUND);
+	char *tok = strtok(pathname, "/");
+	char *parent_i_num = calloc(2, sizeof(char));
+	char *current_i_num = calloc(2, sizeof(char));
+
+	int depth = 0;
+	char *hierarchy[8];
+	while(tok != NULL) {
+		hierarchy[depth] = tok;
+
+		depth++;
+		tok = strtok(0, "/");
+	}
+
+	if (depth == 1) {
+		parent_i_num = "00";
+	} else {
+		strcpy(parent_i_num, current_i_num);
+	}
+
+	for (int i=0; i<depth; i++) {
+		if (get_i_number(hierarchy[i], parent_i_num, current_i_num) < 0) {
+			//error looking up the file
+			return -1;
+		}
+	}
+
+	int i_num = atoi(current_i_num);
+	inode_table[i_num].file_size = calloc(3, sizeof(char));
+	sprintf(inode_table[i_num].file_size, "%d", bytes);
+	return 0;
 }
 
-int get_size(char *name) {
-    for (int i=0; i<64; i++) {
-    	if (inode_table[i].name != NULL) {
-			if(strcmp(inode_table[i].name, name) == 0) {
-				printf("%s %s", "The file size is: ", inode_table[i].file_size);
-				return 0;
-			}
-    	}
-    }
+int get_size(char *pathname) {
 
-    return error(FILE_NOT_FOUND);
+	char *tok = strtok(pathname, "/");
+	char *parent_i_num = calloc(2, sizeof(char));
+	char *current_i_num = calloc(2, sizeof(char));
+
+	int depth = 0;
+	char *hierarchy[8];
+	while(tok != NULL) {
+		hierarchy[depth] = tok;
+
+		depth++;
+		tok = strtok(0, "/");
+	}
+
+	if (depth == 1) {
+		parent_i_num = "00";
+	} else {
+		strcpy(parent_i_num, current_i_num);
+	}
+
+	for (int i=0; i<depth; i++) {
+		if (get_i_number(hierarchy[i], parent_i_num, current_i_num) < 0) {
+			//error looking up the file
+			return -1;
+		}
+	}
+
+	int i_num = atoi(current_i_num);
+	if (inode_table[i_num].type == 1) {
+		return error(ERROR_DIR_SIZE);
+	}
+	return atoi(inode_table[i_num].file_size);
 }
 
-int get_type(char *name, int* type) {
+int get_type(char *name, char *parent, int* type) {
     for (int i=0; i<64; i++) {
-    	if (inode_table[i].name != NULL) {
-			if(strcmp(inode_table[i].name, name) == 0) {
+    	if (inode_table[i].name != NULL && inode_table[i].parent_i_number != NULL) {
+			if(strcmp(inode_table[i].name, name) == 0 && strcmp(inode_table[i].parent_i_number, parent) == 0) {
 				*type = inode_table[i].type;
 
 				return 0;
@@ -410,15 +459,87 @@ int get_type(char *name, int* type) {
     return error(FILE_NOT_FOUND);
 }
 
-int get_i_number(char *name, char *i_number) {
+int get_i_number(char *name, char *parent, char *i_number) {
 	for (int i=0; i<64; i++) {
-		if (inode_table[i].name != NULL) {
-			if(strcmp(inode_table[i].name, name) == 0) {
+		if (inode_table[i].name != NULL && inode_table[i].parent_i_number != NULL) {
+			if(strcmp(inode_table[i].name, name) == 0 && strcmp(inode_table[i].parent_i_number, parent) == 0) {
 				strcpy(i_number, inode_table[i].i_number);
 				return 0;
 			}
 		}
 	}
+	return error(FILE_NOT_FOUND);
 }
 
+int dir_get_children(char *pathname, char *children) {
+
+	char *current_i_num = calloc(2, sizeof(char));
+
+	if(strcmp(pathname, "/") == 0) {
+		current_i_num = "00";
+	} else {
+
+		char *tok = strtok(pathname, "/");
+		char *parent_i_num = calloc(2, sizeof(char));
+
+		int depth = 0;
+		char *hierarchy[8];
+		while(tok != NULL) {
+			hierarchy[depth] = tok;
+
+			depth++;
+			tok = strtok(0, "/");
+		}
+
+		if (depth == 1) {
+			parent_i_num = "00";
+		} else {
+			strcpy(parent_i_num, current_i_num);
+		}
+
+		for (int i=0; i<depth; i++) {
+			get_i_number(hierarchy[i], parent_i_num, current_i_num);
+		}
+	}
+
+	char *reg_files = calloc(512, sizeof(char));
+	char *dir_files = calloc(512, sizeof(char));
+
+	for (int i=1; i<64; i++) {
+		if (inode_table[i].name != NULL && strlen(inode_table[i].parent_i_number) != 0) {
+			if (strcmp(inode_table[i].parent_i_number, current_i_num) == 0) {
+				// Found a child
+				inode current_inode = inode_table[i];
+				if(current_inode.type == 0) {
+					if (strlen(reg_files) == 0) {
+						sprintf(reg_files, "%s %s ", "Regular files:", current_inode.name);
+					} else {
+						char *temp = calloc(512, sizeof(char));
+						sprintf(temp, "%s ", current_inode.name);
+						strcat(reg_files, temp);
+					}
+				} else {
+					if (strlen(dir_files) == 0) {
+						sprintf(dir_files, "%s %s ", "Directory files:", current_inode.name);
+					} else {
+						char *temp = calloc(512, sizeof(char));
+						sprintf(temp, "%s ", current_inode.name);
+						strcat(dir_files, temp);
+					}
+				}
+			}
+		}
+	}
+
+	if (strlen(reg_files) != 0) {
+		strcat(children, reg_files);
+		strcat(children, "\n");
+	}
+	if (strlen(dir_files) != 0) {
+		strcat(children, dir_files);
+		strcat(children, "\n");
+	}
+
+	return 0;
+}
 
