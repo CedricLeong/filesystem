@@ -425,13 +425,13 @@ int get_size(char *pathname) {
 		tok = strtok(0, "/");
 	}
 
-	if (depth == 1) {
-		parent_i_num = "00";
-	} else {
-		strcpy(parent_i_num, current_i_num);
-	}
-
 	for (int i=0; i<depth; i++) {
+		if (i == 0) {
+			parent_i_num = "00";
+		} else {
+			parent_i_num = calloc(2, sizeof(char));
+			strcpy(parent_i_num, current_i_num);
+		}
 		if (get_i_number(hierarchy[i], parent_i_num, current_i_num) < 0) {
 			//error looking up the file
 			return -1;
