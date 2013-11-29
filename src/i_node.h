@@ -47,4 +47,38 @@ extern int get_type(char *name, char *parent, int* type);
 extern int dir_get_children(char *pathname, char *children);
 
 
+/***************************************************************************
+ *
+ * @brief: Saves the inode_table from memory into the disk
+ * @details: Converts the inode table into a string literal and stores it on to the disk blocks 2-10
+ *
+ * @author Yasha Prikhodko
+ * @author Cedric Leong
+ * @author Arezou Mousavi
+ *
+ * @return 0 to indicate the operation is over.
+ *
+ * @copyright GNU Public License.
+ *
+ ***************************************************************************/
+int save_inode_table(void);
+
+
+
+/***************************************************************************
+ *
+ * @brief: Removes the inode with the specified i_number from the inode_table
+ * @details: Removes the appropriate inode from the inode_table and re-writes the disk
+ *
+ * @author Yasha Prikhodko
+ * @author Cedric Leong
+ * @author Arezou Mousavi
+ *
+ * @return 0 to indicate the operation is over.
+ *
+ * @copyright GNU Public License.
+ *
+ ***************************************************************************/
+extern int delete_inode(int i_num);
+
 #endif

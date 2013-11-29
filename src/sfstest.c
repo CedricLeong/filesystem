@@ -27,6 +27,9 @@ I   characters may be written to files.  Non-printable characters
 #include "sfs_delete.h"
 #include "i_node.h"
 #include "sfs_gettype.h"
+#include "sfs_readdir.h"
+#include "sfs_getsize.h"
+#include "sfs_initialize.h"
 
 /*****************************************************
    Program constants
@@ -69,7 +72,7 @@ int p1,p2,p3;
    main test routine
 ******************************************************/
 
-main()
+int main(void)
 {
     //cleaget_inode_table_from_disk(void);
   int i;
@@ -99,7 +102,7 @@ main()
     /* read in the next command */
     printf("\nCommand? ");
 
-    if (gets(command_buffer) == NULL) break;
+    if (fgets(command_buffer, MAX_IO_LENGTH, stdin) == NULL) break;
     /* determine which command was requested */
     switch(command_buffer[0]) {
     case 'o':
@@ -160,7 +163,7 @@ main()
       /* Read from a directory */
       printf("Enter file descriptor number: ");
       scanf("%d",&p1);
-      retval = sfs_readdir(p1,io_buffer);
+      retval = sfs_readdir(p1);
       if (retval == 0) {
     	  printf("sfs_readdir succeeded.\n");
       }
@@ -199,7 +202,7 @@ main()
       printf("Enter full path name of file to delete: ");
       scanf(INPUT_BUF_FORMAT,data_buffer_1);
       retval = sfs_delete(data_buffer_1);
-      if (retval > 0) {
+      if (retval >= 0) {
 	printf("sfs_delete succeeded.\n");
       }
       else {
@@ -261,7 +264,7 @@ main()
     }
     if (command_buffer[0] == 'q') break;
     /* cleanup the newline that remains after reading command parameter(s) */
-    gets(command_buffer);
+    fgets(command_buffer, MAX_IO_LENGTH, stdin);
   }
 }
 

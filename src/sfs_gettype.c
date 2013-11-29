@@ -1,10 +1,15 @@
-#include "i_node.h"
-#include "error.h"
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
+#include "i_node.h"
+#include "error.h"
 
 int sfs_gettype(char* pathname)
 {
+	if (strcmp(pathname, "/") == 0) {
+		// dir type
+		return 1;
+	}
     int type;
 
     char *tok = strtok(pathname, "/");
@@ -47,9 +52,6 @@ int sfs_gettype(char* pathname)
 			parent_i_number = calloc(2, sizeof(char));
 			get_i_number(hierarchy[i], parent, parent_i_number);
 
-			get_type(hierarchy[depth-1], parent_i_number, &type);
-
-
 
 			continue;
 		} else if (found !=0 && i == depth-1) {
@@ -58,5 +60,6 @@ int sfs_gettype(char* pathname)
 			return error(PATHNAME_ERROR);
 		}
 	}
+	return -1;
 
 }

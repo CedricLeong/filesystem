@@ -33,8 +33,7 @@ int put_super_blk(void) {
         ++counter;
 	}
 
-	// Write to memory
-	int writesb = put_block(0, buf);
+	put_block(0, buf);
 
 	return decimal;
 }
@@ -75,6 +74,7 @@ int get_empty_blk(int *free_blk_no) {
 			return 0;
 		}
 	}
+	return -1;
 }
 
 int release_block(int release_blk_no) {

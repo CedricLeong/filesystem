@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 #include <time.h>
 #include "i_node.h"
 #include "super_block.h"
@@ -71,7 +72,7 @@ int sfs_create(char *pathname, int type) {
 				get_next_i_number(i_number);
 				new_inode.i_number = i_number;
 
-				int free_blk_no = calloc(2, sizeof(int));
+				int free_blk_no;
 				get_empty_blk(&free_blk_no);
 				new_inode.index_blk_location = free_blk_no;
 
@@ -95,4 +96,5 @@ int sfs_create(char *pathname, int type) {
         error(NO_FILE_NAME_ENTERED);
         return -1;
     }
+    return -1;
 }

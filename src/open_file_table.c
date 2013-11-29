@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 #include "error.h"
 #include "open_file_table.h"
 
@@ -38,6 +39,7 @@ int add_opened_file(char *pathname) {
             return file.fd;
         }
     }
+    return -1;
 }
 
 int close_file(int fd) {
@@ -50,7 +52,7 @@ int close_file(int fd) {
                 return 0;
             } else {
                 all_fd[i] = 0;
-                all_opened_files[i].fd = calloc(2, sizeof(char));
+                all_opened_files[i].fd = calloc(2, sizeof(int));
                 all_opened_files[i].pathname = calloc(50, sizeof(char));
                 return 0;
             }
@@ -77,12 +79,13 @@ int get_opened_file(int fd, char *pathname) {
 
 int get_opened_file_fd(char *pathname) {
     for(int i=0; i<64; i++) {
-        if(strcmp(all_opened_files[i].pathname, pathname) == 0) {
-            return all_opened_files[i].fd;
-        }
+    	if(all_opened_files[i].pathname != NULL) {
+			if(strcmp(all_opened_files[i].pathname, pathname) == 0) {
+				return all_opened_files[i].fd;
+			}
+    	}
     }
 
     // File was not found
-    error(FILE_NOT_FOUND_IN_OPEN_TABLE);
     return -1;
 }

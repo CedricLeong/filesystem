@@ -1,7 +1,11 @@
 #include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include "sfs_open.h"
 #include "blockio.h"
 #include "i_node.h"
 #include "super_block.h"
+#include "sfs_initialize.h"
 
 int sfs_initialize(int erase)
 {
@@ -19,8 +23,20 @@ if (erase == 1)
     }
     return 1;
 
+} else if (erase == 0) {
+	// load the info from disk
+	get_super_blk();
+	get_inode_table_from_disk();
+
+	// open root folder /
+
+	int fd = sfs_open("/");
+	if (fd >= 0) {
+		printf("%s %d\n", "Root folder / is opened. File descriptor:", fd);
+	}
+	return 1;
 }
-return 0;
+return -1;
 }
 int new_filesystem(void){
         /* Create the null block of data */

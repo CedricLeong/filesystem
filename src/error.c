@@ -77,5 +77,14 @@ int error(ERROR error) {
         case ERROR_DIR_SIZE:
         	printf("%s\n", "Error: Cannot get size of a directory file type. Only for regular files.");
 			return -1;
+        case ERROR_DELETE_FILE_IS_OPEN:
+        	printf("%s\n", "Error: The file is open. Cannot delete it.");
+        	return -1;
+        case ERROR_DELETE_DIR_HAS_CHILDREN:
+        	printf("%s\n", "Error: The DIRECTORY type file is not empty. Cannot delete it.");
+			return -1;
+        case READDIR_FILE_NOT_OPEN:
+			printf("%s\n", "Error: The DIRECTORY type file is not empty. Cannot delete it.");
+			return -1;
     }
 }

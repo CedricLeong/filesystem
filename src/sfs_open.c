@@ -1,6 +1,9 @@
 #include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
 #include "error.h"
 #include "open_file_table.h"
+#include "i_node.h"
 
 int sfs_open(char *pathname)
 {
@@ -63,24 +66,5 @@ int sfs_open(char *pathname)
 			}
 		}
 	}
-
-//
-//    if (strcmp(pathname, "/") == 0) {
-//    	int fd = add_opened_file(tok);
-//		if(fd >= 0) {
-//			return fd;
-//		} else {
-//			return -1;
-//		}
-//    } else if(find_file(tok) == 0) {
-//        int fd = add_opened_file(tok);
-//        if(fd >= 0) {
-//            return fd;
-//        } else {
-//            return -1;
-//        }
-//
-//	} else {
-//        return error(FILE_NOT_FOUND);
-//	}
+	return -1;
 }

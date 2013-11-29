@@ -17,7 +17,7 @@
  * @copyright GNU Public License.
  *
  ***************************************************************************/
-int sfs_open(char *pathname);
+extern int sfs_open(char *pathname);
 
 
 #endif
