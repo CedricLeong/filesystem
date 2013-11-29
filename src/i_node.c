@@ -180,88 +180,6 @@ int get_inode_table_from_disk(void) {
     return 0;
 }
 
-int alloc_block_tofile(inode *inode)
-{
-    int freeblk;
-    int indexblock;
-    indexblock = atoi((*inode).i_number);
-    char* buffer = calloc(128,sizeof(char));
-
-    // This is where it reads the index block
-    int success = get_block(indexblock,buffer);
-           if (success == -1)
-            return error(GET_BLOCK_FAIL);
-
-    //Check if there are eight blocks already allocated to the file
-    char* check;
-    int filecount =0 ;
-    check = strchr(buffer,'0');
-    while (check!=NULL)
-    {
-    	check=strchr(check+1,':');
-    	filecount++;
-    	if (filecount >= 8)
-    		return error(FULL_FILE);
-    }
-
-    // add block
-    get_empty_blk(&freeblk);
-    char str[sizeof(freeblk)];
-    sprintf(str, "%d", freeblk);
-    strcat(buffer,str);
-    strcat(buffer,":");
-
-    // write to index block if there is space
-    success = put_block(indexblock,buffer);
-    if (success == -1)
-            return error(PUT_BLOCK_FAIL);
-    return error(BLK_ALLOCATED);
-
-    return (error(FAIL_ALLOCATE));
-}
-
-int alloc_file_todir(inode *inode)
-{
-    int freeblk;
-    int indexblock;
-    indexblock = atoi((*inode).i_number);
-    char* buffer = calloc(128,sizeof(char));
-
-    // This is where it reads the index block
-    int success = get_block(indexblock,buffer);
-           if (success == -1)
-            return error(GET_BLOCK_FAIL);
-
-    //Check if there are eight blocks already allocated to the file
-    char* check;
-    int filecount =0 ;
-    check = strchr(buffer,'0');
-    while (check!=NULL)
-    {
-    	check=strchr(check+1,':');
-    	filecount++;
-    	if (filecount >= 8)
-    		return error(FULL_FILE);
-    }
-
-    // add block
-    get_empty_blk(&freeblk);
-    char str[sizeof(freeblk)];
-    sprintf(str, "%d", freeblk);
-    strcat(buffer,str);
-    strcat(buffer,":");
-
-    // write to index block if there is space
-    success = put_block(indexblock,buffer);
-    if (success == -1)
-            return error(PUT_BLOCK_FAIL);
-    return error(BLK_ALLOCATED);
-
-    return (error(FAIL_ALLOCATE));
-}
-
-
-
 int get_next_i_number(char *i_number) {
     for(int i = 0; i<64; i++) {
         if (i_numbers[i] == 0) {
@@ -275,16 +193,11 @@ int get_next_i_number(char *i_number) {
     return -1;
 }
 
-int find_file(char *pathname, char *parent) {
-    char path[strlen(pathname) + 1];
-    strcpy(path, pathname);
-    char *tok = strtok(path, "/");
+int find_file(char *name, char *parent) {
 
-    if (tok == NULL)
-        return error(INVALID_FILE_NAME);
     for (int i=0; i<64; i++) {
     	if (inode_table[i].name != NULL) {
-			if (strcmp(inode_table[i].name, tok) == 0 && strcmp(inode_table[i].parent_i_number, parent) == 0) {
+			if (strcmp(inode_table[i].name, name) == 0 && strcmp(inode_table[i].parent_i_number, parent) == 0) {
 				// file exists
 				return 0;
 			}

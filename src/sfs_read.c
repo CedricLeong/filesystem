@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include "error.h"
 #include "i_node.h"
 #include "open_file_table.h"

@@ -11,7 +11,10 @@ int sfs_initialize(int erase)
 {
 if (erase == 1)
 {
-    new_filesystem();
+    if(new_filesystem() < 0) {
+    	//failed
+    	return -1;
+    }
     put_super_blk();
     put_inode_table();
 
@@ -48,7 +51,7 @@ int new_filesystem(void){
         for (int i = 0; i < 512; i++) {
                 retval = put_block(i, buffer);
                 if (retval != 0) {
-                        return 0;
+                        return -1;
                 }
         }
         return 1;
