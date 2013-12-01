@@ -1,6 +1,11 @@
 #ifndef ERROR_H_   /* Include guard */
 #define ERROR_H_
 
+/** @file error.h
+ * Error management tool
+ * Responds with an error output to predefined error codes.
+ */
+
 typedef enum {
     SUCCESSFULLY_CREATED_FILE,
     NO_FILE_NAME_ENTERED,
@@ -32,5 +37,22 @@ typedef enum {
     READDIR_FILE_NOT_OPEN
 } ERROR;
 
+
+/**
+ *
+ * @brief Basic error handling system that outputs an appropriate error by request
+ * @details This function will output an appropriate error according to the ERROR code provided
+ *
+ * @author Yasha Prikhodko
+ * @author Cedric Leong
+ * @author Arezou Mousavi
+ *
+ * @param error The error code to handle
+ * @return -1 if it's an error
+ * @return 0 if it's success
+ *
+ * @copyright GNU Public License.
+ *
+ */
 extern int error(ERROR error);
 #endif

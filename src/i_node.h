@@ -1,5 +1,10 @@
-#ifndef I_NODE_H_   /* Include guard */
+#ifndef I_NODE_H_   /** Include guard */
 #define I_NODE_H_
+
+/** @file i_node.h
+ * Connects the lower level functions with the higher level and deal with the inode table
+ * Contains most of the file functions regarding deleting, changing file information, writing, etc.
+ */
 
 typedef struct {
     char *name;
@@ -15,7 +20,7 @@ extern int i_numbers[64];
 extern inode inode_table[64];
 
 
-/***************************************************************************
+/**
  *
  * @brief: Adds an inode to the inode_table and writes it to disk.
  * @details: Inserts provided inode into the inode_table array and then rewrites the information back to the disk.
@@ -29,11 +34,11 @@ extern inode inode_table[64];
  *
  * @copyright GNU Public License.
  *
- ***************************************************************************/
+ */
 extern int add_new_inode(inode *new_inode);
 
 
-/***************************************************************************
+/**
  *
  * @brief Creates the initial inode_table and writes it to disk
  * @details Initiates the root inode and writes it to disk separating every parameter with a ":" delimiter and "_" indicating end of the inode
@@ -45,11 +50,11 @@ extern int add_new_inode(inode *new_inode);
  *
  * @copyright GNU Public License.
  *
- ***************************************************************************/
+ */
 extern int put_inode_table(void);
 
 
-/***************************************************************************
+/**
  *
  * @brief Gets the smallest available i_number.
  * @details Gets the smallest available i_number and marks is taken (1), and saves the value to the provided parameter making sure it has two digits.
@@ -64,11 +69,11 @@ extern int put_inode_table(void);
  *
  * @copyright GNU Public License.
  *
- ***************************************************************************/
+ */
 extern int get_next_i_number(char *i_number);
 
 
-/***************************************************************************
+/**
  *
  * @brief Gets the inode table from the disk.
  * @details Reads inode table from the disk and loads it into memory by creating new inode structs and putting them into the inode_table array
@@ -81,11 +86,11 @@ extern int get_next_i_number(char *i_number);
  *
  * @copyright GNU Public License.
  *
- ***************************************************************************/
+ */
 extern int get_inode_table_from_disk(void);
 
 
-/***************************************************************************
+/**
  *
  * @brief Saves the file contents to disk
  * @details Saves the contents of the file by dynamically allocating new blocks on the disk if needed. Writes the contents to the disk and then write the index block table containing the blocks used up.
@@ -102,12 +107,12 @@ extern int get_inode_table_from_disk(void);
  *
  * @copyright GNU Public License.
  *
- ***************************************************************************/
+ */
 extern int save_file_contents(char *contents, char *name, char *parent);
 
 
 
-/***************************************************************************
+/**
  *
  * @brief Retrieves the file contents from the disk
  * @details This function gets the name of the file, parent's i_number, and pointer to contents to save the contents of the file to.
@@ -124,11 +129,11 @@ extern int save_file_contents(char *contents, char *name, char *parent);
  *
  * @copyright GNU Public License.
  *
- ***************************************************************************/
+ */
 extern int get_file_contents(char *name, char *parent, char *contents);
 
 
-/***************************************************************************
+/**
  *
  * @brief Gets the size of the file
  * @details Iterates through the path to get the size of the target file
@@ -144,11 +149,11 @@ extern int get_file_contents(char *name, char *parent, char *contents);
  *
  * @copyright GNU Public License.
  *
- ***************************************************************************/
+ */
 extern int get_size(char *pathname);
 
 
-/***************************************************************************
+/**
  *
  * @brief Returns the i_number of the file
  * @details Finds the correct file by using the name provided and the parent's i_number and returns the file's i_number
@@ -166,11 +171,11 @@ extern int get_size(char *pathname);
  *
  * @copyright GNU Public License.
  *
- ***************************************************************************/
+ */
 extern int get_i_number(char *name, char *parent, char *i_number);
 
 
-/***************************************************************************
+/**
  *
  * @brief Return true or false (0 or -1) of whether the file is found
  * @details Finds the correct file by using the name provided and the parent's i_number and returns success flag if the operation is successful
@@ -187,11 +192,11 @@ extern int get_i_number(char *name, char *parent, char *i_number);
  *
  * @copyright GNU Public License.
  *
- ***************************************************************************/
+ */
 extern int find_file(char *name, char *parent);
 
 
-/***************************************************************************
+/**
  *
  * @brief Finds the appropriate file and saves its type to the pointer provided
  * @details Finds the correct file by using the name provided and the parent's i_number and saves the file's type to the provided pointer type
@@ -209,11 +214,11 @@ extern int find_file(char *name, char *parent);
  *
  * @copyright GNU Public License.
  *
- ***************************************************************************/
+ */
 extern int get_type(char *name, char *parent, int* type);
 
 
-/***************************************************************************
+/**
  *
  * @brief Reads the inode_table and returns a directory's children.
  * @details Looks up the file in the open_file_table by its fd, checks the file type. If it's a folder - outputs the file names of the files that have this directory as a parent.
@@ -228,11 +233,11 @@ extern int get_type(char *name, char *parent, int* type);
  *
  * @copyright GNU Public License.
  *
- ***************************************************************************/
+ */
 extern int dir_get_children(char *pathname, char *children);
 
 
-/***************************************************************************
+/**
  *
  * @brief Saves the inode_table from memory into the disk
  * @details Converts the inode table into a string literal and stores it on to the disk blocks 2-10
@@ -245,12 +250,12 @@ extern int dir_get_children(char *pathname, char *children);
  *
  * @copyright GNU Public License.
  *
- ***************************************************************************/
+ */
 int save_inode_table(void);
 
 
 
-/***************************************************************************
+/**
  *
  * @brief Removes the inode with the specified i_number from the inode_table
  * @details Removes the appropriate inode from the inode_table and re-writes the disk
@@ -263,7 +268,7 @@ int save_inode_table(void);
  *
  * @copyright GNU Public License.
  *
- ***************************************************************************/
+ */
 extern int delete_inode(int i_num);
 
 #endif

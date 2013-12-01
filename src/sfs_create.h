@@ -1,8 +1,13 @@
-#ifndef SFS_CREATE_H_   /* Include guard */
+#ifndef SFS_CREATE_H_   /** Include guard */
 #define SFS_CREATE_H_
 
+/** @file sfs_create.h
+ * Creates a directory or regular type file
+ * Creates a file along with its inode and write it to disk
+ */
 
-/***************************************************************************
+
+/**
  *
  * @brief File function to create files
  * @details This function will create a new file along with its inode
@@ -16,7 +21,7 @@
  *
  * @copyright GNU Public License.
  *
- ***************************************************************************/
+ */
 extern int sfs_create(char *pathname, int type);
 
 

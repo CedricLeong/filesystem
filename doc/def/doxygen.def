@@ -1,0 +1,4237 @@
+AutoGen Definitions dummy;
+struct = {
+  cp-id     = 'structinode';
+  cp-name   = 'inode';
+  cp-section = {
+    sec-kind = 'public-attrib';
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'structinode_1a5ac083a645d964373f022d03df4849c8';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+char *
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'name';
+      sec-mem-desc-file = '/home/yasha/github/filesystem/src/i_node.h';
+      sec-mem-desc-line = '10';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'structinode_1aa506a4cc9b9babf12199ddeefee783df';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+char *
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'i_number';
+      sec-mem-desc-file = '/home/yasha/github/filesystem/src/i_node.h';
+      sec-mem-desc-line = '11';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'structinode_1ac765329451135abec74c45e1897abf26';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'type';
+      sec-mem-desc-file = '/home/yasha/github/filesystem/src/i_node.h';
+      sec-mem-desc-line = '12';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'structinode_1a88a9e7f5c198310db48a256e4c3e9e44';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+char *
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'parent_i_number';
+      sec-mem-desc-file = '/home/yasha/github/filesystem/src/i_node.h';
+      sec-mem-desc-line = '13';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'structinode_1af85c909a77e2db613cd8ea8aef4f4016';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+char *
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'file_size';
+      sec-mem-desc-file = '/home/yasha/github/filesystem/src/i_node.h';
+      sec-mem-desc-line = '14';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'structinode_1a144950d9a51eb4c375f87283f75607fc';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'index_blk_location';
+      sec-mem-desc-file = '/home/yasha/github/filesystem/src/i_node.h';
+      sec-mem-desc-line = '15';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+  }; /* cp-section */
+  cp-filename  = '/home/yasha/github/filesystem/src/i_node.h';
+  cp-fileline  = '9';
+  cp-briefdesc = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  cp-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+}; /* struct */
+struct = {
+  cp-id     = 'structopenfile';
+  cp-name   = 'openfile';
+  cp-section = {
+    sec-kind = 'public-attrib';
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'structopenfile_1a72c976db777e42d75c2234432c42fc72';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+char *
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'pathname';
+      sec-mem-desc-file = '/home/yasha/github/filesystem/src/open_file_table.h';
+      sec-mem-desc-line = '11';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'structopenfile_1af2606797deda70b5effbc50b2648d699';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'opened';
+      sec-mem-desc-file = '/home/yasha/github/filesystem/src/open_file_table.h';
+      sec-mem-desc-line = '12';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'structopenfile_1a6f8059414f0228f0256115e024eeed4b';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'fd';
+      sec-mem-desc-file = '/home/yasha/github/filesystem/src/open_file_table.h';
+      sec-mem-desc-line = '13';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+  }; /* cp-section */
+  cp-filename  = '/home/yasha/github/filesystem/src/open_file_table.h';
+  cp-fileline  = '9';
+  cp-briefdesc = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  cp-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+}; /* struct */
+struct = {
+  cp-id     = 'structsuper__block';
+  cp-name   = 'super_block';
+  cp-section = {
+    sec-kind = 'public-attrib';
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'structsuper__block_1a439227feff9d7f55384e8780cfc2eb82';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'size';
+      sec-mem-desc-file = '/home/yasha/github/filesystem/src/super_block.h';
+      sec-mem-desc-line = '5';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'structsuper__block_1a75e9073defcedf91712de41e4ac14800';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'blocksize';
+      sec-mem-desc-file = '/home/yasha/github/filesystem/src/super_block.h';
+      sec-mem-desc-line = '6';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'structsuper__block_1a9da392e039a93303b8d9c7dfe9a76c64';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'free_blocks';
+      sec-mem-desc-file = '/home/yasha/github/filesystem/src/super_block.h';
+      sec-mem-desc-line = '7';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'structsuper__block_1a3b62f50202abd219e165f5a333d5c156';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'root';
+      sec-mem-desc-file = '/home/yasha/github/filesystem/src/super_block.h';
+      sec-mem-desc-line = '8';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+  }; /* cp-section */
+  cp-filename  = '/home/yasha/github/filesystem/src/super_block.h';
+  cp-fileline  = '4';
+  cp-briefdesc = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  cp-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+}; /* struct */
+file = {
+  file-id   = 'blockio_8c';
+  file-name = 'blockio.c';
+    define = {
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = 'blockio_8c_1a314f278e51bde415c4c5963757cbdcde';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'DISKFILE';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+"simdisk.data"
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = '/home/yasha/github/filesystem/src/blockio.c';
+      define-mem-desc-line = '14';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = 'blockio_8c_1ac4551bbc9efabf8378f35498f80b4679';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'BLKSIZE';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+128
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = '/home/yasha/github/filesystem/src/blockio.c';
+      define-mem-desc-line = '16';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = 'blockio_8c_1a1a26eed02f4dee88f68eb825c8ace393';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'NUMBLKS';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+512
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = '/home/yasha/github/filesystem/src/blockio.c';
+      define-mem-desc-line = '18';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = 'blockio_8c_1a385fbe043a6c0497273f7706486c642b';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'DISKFILEMODE';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+S_IRUSR|S_IWUSR|S_IRWXG
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = '/home/yasha/github/filesystem/src/blockio.c';
+      define-mem-desc-line = '21';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    };
+    func = {
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'blockio_8c_1a789e2811663d6f55763a5b5df41f52ec';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+static int
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'init_disk';
+      func-mem-desc-file = '/home/yasha/github/filesystem/src/blockio.c';
+      func-mem-desc-line = '37';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'blockio_8c_1ad5b3febeacc72574c9d4abfec0f8aa5b';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'get_block';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'blknum';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+char *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'buf';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/home/yasha/github/filesystem/src/blockio.c';
+      func-mem-desc-line = '74';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'blockio_8c_1ad4e1ecd704d051e110bd524df9f1d1c2';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'put_block';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'blknum';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+char *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'buf';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/home/yasha/github/filesystem/src/blockio.c';
+      func-mem-desc-line = '110';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    };
+    var = {
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'blockio_8c_1a7151efcc027c6ebf9f2f1486f1e0f64b';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+static int
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'diskfd';
+      var-mem-initializer = <<_EnD_oF_dEf_TeXt_
+= -1
+_EnD_oF_dEf_TeXt_;
+      var-mem-desc-file = '/home/yasha/github/filesystem/src/blockio.c';
+      var-mem-desc-line = '27';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    };
+  file-full-name  = '/home/yasha/github/filesystem/src/blockio.c';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+}; /* file */
+file = {
+  file-id   = 'blockio_8h';
+  file-name = 'blockio.h';
+    func = {
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'blockio_8h_1ad5b3febeacc72574c9d4abfec0f8aa5b';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'get_block';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'blknum';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+char *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'buf';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/home/yasha/github/filesystem/src/blockio.h';
+      func-mem-desc-line = '5';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'blockio_8h_1ad4e1ecd704d051e110bd524df9f1d1c2';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'put_block';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'blknum';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+char *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'buf';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/home/yasha/github/filesystem/src/blockio.h';
+      func-mem-desc-line = '7';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    };
+  file-full-name  = '/home/yasha/github/filesystem/src/blockio.h';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+}; /* file */
+file = {
+  file-id   = 'error_8c';
+  file-name = 'error.c';
+    func = {
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'error_8c_1a00123e4462ed7ccce3601f0275e9cad2';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'error';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+ERROR
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'error';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/home/yasha/github/filesystem/src/error.c';
+      func-mem-desc-line = '3';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Basic error handling system that outputs an appropriate error by request.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+This function will output an appropriate error according to the ERROR code provided
+
+@author Yasha Prikhodko
+@author Cedric Leong
+@author Arezou Mousavi
+
+@param error The error code to handle
+@return -1 if it's an error
+@return 0 if it's success
+
+@copyright GNU Public License.
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    };
+  file-full-name  = '/home/yasha/github/filesystem/src/error.c';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+}; /* file */
+file = {
+  file-id   = 'error_8h';
+  file-name = 'error.h';
+    enum = {
+    enum-member = {
+      enum-mem-kind = 'enum';
+      enum-mem-id   = 'error_8h_1a9eaada089c4de774cfc8b7aea4b9379a';
+      enum-mem-virt = normal;
+      enum-mem-prot = public;
+      enum-mem-name = 'ERROR';
+      enum-mem-enum = { enum-name = SUCCESSFULLY_CREATED_FILE; };
+      enum-mem-enum = { enum-name = NO_FILE_NAME_ENTERED; };
+      enum-mem-enum = { enum-name = FULL_FILE; };
+      enum-mem-enum = { enum-name = PUT_BLOCK_FAIL; };
+      enum-mem-enum = { enum-name = BLK_ALLOCATED; };
+      enum-mem-enum = { enum-name = FAIL_ALLOCATE; };
+      enum-mem-enum = { enum-name = GET_BLOCK_FAIL; };
+      enum-mem-enum = { enum-name = ERROR_WRITING_INODE_TO_DISK; };
+      enum-mem-enum = { enum-name = FILE_OPENED_LIMIT_HAS_BEEN_REACHED; };
+      enum-mem-enum = { enum-name = FILE_NOT_FOUND_IN_OPEN_TABLE; };
+      enum-mem-enum = { enum-name = FILE_NOT_FOUND; };
+      enum-mem-enum = { enum-name = FILE_WITH_NAME_EXISTS; };
+      enum-mem-enum = { enum-name = FILE_IS_EMPTY; };
+      enum-mem-enum = { enum-name = INVALID_FILE_NAME; };
+      enum-mem-enum = { enum-name = FOUND_TYPE; };
+      enum-mem-enum = { enum-name = WRITING_TO_DIR; };
+      enum-mem-enum = { enum-name = READING_FROM_DIR; };
+      enum-mem-enum = { enum-name = READING_BEYOND_FILE_SIZE; };
+      enum-mem-enum = { enum-name = WRITING_BEYOND_FILE_SIZE; };
+      enum-mem-enum = { enum-name = PATHNAME_ERROR; };
+      enum-mem-enum = { enum-name = FILE_NAME_TOO_LONG; };
+      enum-mem-enum = { enum-name = WRITE_TOO_MANY_CHARS; };
+      enum-mem-enum = { enum-name = READDIR_REG_FILE; };
+      enum-mem-enum = { enum-name = ERROR_PARENT_REG_FILE; };
+      enum-mem-enum = { enum-name = ERROR_DIR_SIZE; };
+      enum-mem-enum = { enum-name = ERROR_DELETE_FILE_IS_OPEN; };
+      enum-mem-enum = { enum-name = ERROR_DELETE_DIR_HAS_CHILDREN; };
+      enum-mem-enum = { enum-name = READDIR_FILE_NOT_OPEN; };
+      enum-mem-desc-file = '/home/yasha/github/filesystem/src/error.h';
+      enum-mem-desc-line = '9';
+      enum-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      enum-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* enum-member */
+    };
+    func = {
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'error_8h_1a00123e4462ed7ccce3601f0275e9cad2';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'error';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+ERROR
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'error';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/home/yasha/github/filesystem/src/error.h';
+      func-mem-desc-line = '57';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Basic error handling system that outputs an appropriate error by request.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+This function will output an appropriate error according to the ERROR code provided
+
+@author Yasha Prikhodko
+@author Cedric Leong
+@author Arezou Mousavi
+
+@param error The error code to handle
+@return -1 if it's an error
+@return 0 if it's success
+
+@copyright GNU Public License.
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    };
+  file-full-name  = '/home/yasha/github/filesystem/src/error.h';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+Error management tool
+Responds with an error output to predefined error codes.
+_EnD_oF_dEf_TeXt_;
+}; /* file */
+file = {
+  file-id   = 'i__node_8c';
+  file-name = 'i_node.c';
+    func = {
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'i__node_8c_1a86f8e54d36a1929171b30ed11f967b6e';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'put_inode_table';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/home/yasha/github/filesystem/src/i_node.c';
+      func-mem-desc-line = '21';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Creates the initial inode_table and writes it to disk.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+Initiates the root inode and writes it to disk separating every parameter with a ":" delimiter and "_" indicating end of the inode
+
+@author Yasha Prikhodko
+@author Cedric Leong
+@author Arezou Mousavi
+
+@copyright GNU Public License.
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'i__node_8c_1a3abee56ff93c8d4c60418566b0fc7f0c';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'add_new_inode';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+inode *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'new_inode';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/home/yasha/github/filesystem/src/i_node.c';
+      func-mem-desc-line = '46';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+: Adds an inode to the inode_table and writes it to disk.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+: Inserts provided inode into the inode_table array and then rewrites the information back to the disk.
+
+@author Yasha Prikhodko
+@author Cedric Leong
+@author Arezou Mousavi
+
+@param  *new_inode Reference to the inode to add into the table
+@return 0 indicating successful operation
+
+@copyright GNU Public License.
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'i__node_8c_1a9d4df0753bd12488424d510bdd936a19';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'save_inode_table';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/home/yasha/github/filesystem/src/i_node.c';
+      func-mem-desc-line = '54';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Saves the inode_table from memory into the disk.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+Converts the inode table into a string literal and stores it on to the disk blocks 2-10
+
+@author Yasha Prikhodko
+@author Cedric Leong
+@author Arezou Mousavi
+
+@return 0 to indicate the operation is over.
+
+@copyright GNU Public License.
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'i__node_8c_1a83e1ab0e759754f6120b28f30b13007e';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'delete_inode';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'i_num';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/home/yasha/github/filesystem/src/i_node.c';
+      func-mem-desc-line = '93';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Removes the inode with the specified i_number from the inode_table.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+Removes the appropriate inode from the inode_table and re-writes the disk
+
+@author Yasha Prikhodko
+@author Cedric Leong
+@author Arezou Mousavi
+
+@return 0 to indicate the operation is over.
+
+@copyright GNU Public License.
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'i__node_8c_1aef1e36168807ec09af215b96963af8e7';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'get_inode_table_from_disk';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/home/yasha/github/filesystem/src/i_node.c';
+      func-mem-desc-line = '114';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Gets the inode table from the disk.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+Reads inode table from the disk and loads it into memory by creating new inode structs and putting them into the inode_table array
+
+@author Yasha Prikhodko
+@author Cedric Leong
+@author Arezou Mousavi
+
+@return 0 indicating success
+
+@copyright GNU Public License.
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'i__node_8c_1aab4e486972159787110391396bcfceba';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'get_next_i_number';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+char *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'i_number';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/home/yasha/github/filesystem/src/i_node.c';
+      func-mem-desc-line = '183';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Gets the smallest available i_number.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+Gets the smallest available i_number and marks is taken (1), and saves the value to the provided parameter making sure it has two digits.
+
+@author Yasha Prikhodko
+@author Cedric Leong
+@author Arezou Mousavi
+
+@param *i_number Pointer to char to save the i_number to
+@return 0 success
+@return -1 failure
+
+@copyright GNU Public License.
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'i__node_8c_1adb4170e75fcb8b4b89a72db0a70b1280';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'find_file';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+char *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'name';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+char *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'parent';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/home/yasha/github/filesystem/src/i_node.c';
+      func-mem-desc-line = '196';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Return true or false (0 or -1) of whether the file is found.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+Finds the correct file by using the name provided and the parent's i_number and returns success flag if the operation is successful
+
+@author Yasha Prikhodko
+@author Cedric Leong
+@author Arezou Mousavi
+
+@param *name Pointer to the name of the file to get the i_number of
+@param *parent File's parent's i_number
+
+@return 0 indicating success
+@return -1 indicating failure
+
+@copyright GNU Public License.
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'i__node_8c_1af3f5cc8db6d77f17d8a78b7c034ef243';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'get_file_contents';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+char *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'name';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+char *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'parent';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+char *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'contents';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/home/yasha/github/filesystem/src/i_node.c';
+      func-mem-desc-line = '211';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Retrieves the file contents from the disk.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+This function gets the name of the file, parent's i_number, and pointer to contents to save the contents of the file to.
+
+@author Yasha Prikhodko
+@author Cedric Leong
+@author Arezou Mousavi
+
+@param  *name Name of the file to get the contents of
+@param  *parent The file's parent's i_number
+@param  *contents Contents of the file to save to
+@return  0 if successful
+@return -1 if error occurs
+
+@copyright GNU Public License.
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'i__node_8c_1ae79b074c11004f93e3ea5d13057f0ab6';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'save_file_contents';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+char *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'contents';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+char *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'name';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+char *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'parent';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/home/yasha/github/filesystem/src/i_node.c';
+      func-mem-desc-line = '250';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Saves the file contents to disk.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+Saves the contents of the file by dynamically allocating new blocks on the disk if needed. Writes the contents to the disk and then write the index block table containing the blocks used up.
+
+@author Yasha Prikhodko
+@author Cedric Leong
+@author Arezou Mousavi
+
+@param *contents Contents of the file to save to disk
+@param *name Name of the file to save
+@param *parent File's parent's i_number
+
+@return 0 indicating successful operation
+
+@copyright GNU Public License.
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'i__node_8c_1ad50fa4fa05a25a510fd7871f093a20d5';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'change_size';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+char *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'pathname';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'bytes';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/home/yasha/github/filesystem/src/i_node.c';
+      func-mem-desc-line = '332';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'i__node_8c_1a4781022ff463e29e660c5b36e24b05ba';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'get_size';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+char *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'pathname';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/home/yasha/github/filesystem/src/i_node.c';
+      func-mem-desc-line = '366';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Gets the size of the file.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+Iterates through the path to get the size of the target file
+
+@author Yasha Prikhodko
+@author Cedric Leong
+@author Arezou Mousavi
+
+@param  *pathname Pointer to the pathname of the file to get the size of
+
+@return The file size
+@return -1 indicating failure
+
+@copyright GNU Public License.
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'i__node_8c_1ae91873f72409d9d0811bc19f88213a33';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'get_type';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+char *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'name';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+char *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'parent';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+int *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'type';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/home/yasha/github/filesystem/src/i_node.c';
+      func-mem-desc-line = '401';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Finds the appropriate file and saves its type to the pointer provided.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+Finds the correct file by using the name provided and the parent's i_number and saves the file's type to the provided pointer type
+
+@author Yasha Prikhodko
+@author Cedric Leong
+@author Arezou Mousavi
+
+@param *name Pointer to the name of the file to get the i_number of
+@param *parent File's parent's i_number
+@param *type The reference to the file's type to save the information to
+
+@return 0 indicating success
+@return -1 indicating failure
+
+@copyright GNU Public License.
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'i__node_8c_1a40ffa42b047fe1eaf37a3eab5882b576';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'get_i_number';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+char *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'name';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+char *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'parent';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+char *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'i_number';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/home/yasha/github/filesystem/src/i_node.c';
+      func-mem-desc-line = '415';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Returns the i_number of the file.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+Finds the correct file by using the name provided and the parent's i_number and returns the file's i_number
+
+@author Yasha Prikhodko
+@author Cedric Leong
+@author Arezou Mousavi
+
+@param *name Pointer to the name of the file to get the i_number of
+@param *parent File's parent's i_number
+@param *i_number The reference to the file's i_number to save the information to
+
+@return 0 indicating success
+@return -1 indicating failure
+
+@copyright GNU Public License.
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'i__node_8c_1a60eeaee87631fc81d06a2613cb240567';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'dir_get_children';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+char *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'pathname';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+char *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'children';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/home/yasha/github/filesystem/src/i_node.c';
+      func-mem-desc-line = '427';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Reads the inode_table and returns a directory's children.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+Looks up the file in the open_file_table by its fd, checks the file type. If it's a folder - outputs the file names of the files that have this directory as a parent.
+
+@author Yasha Prikhodko
+@author Cedric Leong
+@author Arezou Mousavi
+
+@param pathname Pathname of the dir file to read
+@param children List of children to be returned
+@return 0 to indicate the operation is over.
+
+@copyright GNU Public License.
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    };
+    var = {
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'i__node_8c_1af105c8c8024ce2d6e2d88bbfd2cbd8d2';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+short int
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'fd_table';
+      var-mem-desc-file = '/home/yasha/github/filesystem/src/i_node.c';
+      var-mem-desc-line = '12';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'i__node_8c_1aaf8379613e2e8b5391eb2f52cc5a87b8';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+short int
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'index_block';
+      var-mem-desc-file = '/home/yasha/github/filesystem/src/i_node.c';
+      var-mem-desc-line = '13';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'i__node_8c_1ad8fc7be54ac9830f743089c2fc5ec93d';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+char
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'pathname_parse';
+      var-mem-desc-file = '/home/yasha/github/filesystem/src/i_node.c';
+      var-mem-desc-line = '14';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'i__node_8c_1a2e69d9e5c5eb484264b75bd3f2a0a486';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'i_numbers';
+      var-mem-initializer = <<_EnD_oF_dEf_TeXt_
+= {0}
+_EnD_oF_dEf_TeXt_;
+      var-mem-desc-file = '/home/yasha/github/filesystem/src/i_node.c';
+      var-mem-desc-line = '15';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'i__node_8c_1a5fac7c4f2c9074748d935d7990b675e7';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+inode
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'inode_table';
+      var-mem-desc-file = '/home/yasha/github/filesystem/src/i_node.c';
+      var-mem-desc-line = '16';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'i__node_8c_1ace2c278e927638f399148d24ffd42c0c';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'inode_blocks';
+      var-mem-initializer = <<_EnD_oF_dEf_TeXt_
+= 0
+_EnD_oF_dEf_TeXt_;
+      var-mem-desc-file = '/home/yasha/github/filesystem/src/i_node.c';
+      var-mem-desc-line = '17';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    };
+  file-full-name  = '/home/yasha/github/filesystem/src/i_node.c';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+}; /* file */
+file = {
+  file-id   = 'i__node_8h';
+  file-name = 'i_node.h';
+    define = {
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = 'i__node_8h_1ae11a3ec1e39f4b5110a3dbc276f9be06';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'I_NODE_H_';
+      define-mem-desc-file = '/home/yasha/github/filesystem/src/i_node.h';
+      define-mem-desc-line = '2';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+Include guard  
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    };
+    func = {
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'i__node_8h_1a3abee56ff93c8d4c60418566b0fc7f0c';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'add_new_inode';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+inode *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'new_inode';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/home/yasha/github/filesystem/src/i_node.h';
+      func-mem-desc-line = '38';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+: Adds an inode to the inode_table and writes it to disk.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+: Inserts provided inode into the inode_table array and then rewrites the information back to the disk.
+
+@author Yasha Prikhodko
+@author Cedric Leong
+@author Arezou Mousavi
+
+@param  *new_inode Reference to the inode to add into the table
+@return 0 indicating successful operation
+
+@copyright GNU Public License.
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'i__node_8h_1a86f8e54d36a1929171b30ed11f967b6e';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'put_inode_table';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/home/yasha/github/filesystem/src/i_node.h';
+      func-mem-desc-line = '54';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Creates the initial inode_table and writes it to disk.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+Initiates the root inode and writes it to disk separating every parameter with a ":" delimiter and "_" indicating end of the inode
+
+@author Yasha Prikhodko
+@author Cedric Leong
+@author Arezou Mousavi
+
+@copyright GNU Public License.
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'i__node_8h_1aab4e486972159787110391396bcfceba';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'get_next_i_number';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+char *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'i_number';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/home/yasha/github/filesystem/src/i_node.h';
+      func-mem-desc-line = '73';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Gets the smallest available i_number.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+Gets the smallest available i_number and marks is taken (1), and saves the value to the provided parameter making sure it has two digits.
+
+@author Yasha Prikhodko
+@author Cedric Leong
+@author Arezou Mousavi
+
+@param *i_number Pointer to char to save the i_number to
+@return 0 success
+@return -1 failure
+
+@copyright GNU Public License.
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'i__node_8h_1aef1e36168807ec09af215b96963af8e7';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'get_inode_table_from_disk';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/home/yasha/github/filesystem/src/i_node.h';
+      func-mem-desc-line = '90';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Gets the inode table from the disk.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+Reads inode table from the disk and loads it into memory by creating new inode structs and putting them into the inode_table array
+
+@author Yasha Prikhodko
+@author Cedric Leong
+@author Arezou Mousavi
+
+@return 0 indicating success
+
+@copyright GNU Public License.
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'i__node_8h_1ae79b074c11004f93e3ea5d13057f0ab6';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'save_file_contents';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+char *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'contents';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+char *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'name';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+char *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'parent';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/home/yasha/github/filesystem/src/i_node.h';
+      func-mem-desc-line = '111';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Saves the file contents to disk.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+Saves the contents of the file by dynamically allocating new blocks on the disk if needed. Writes the contents to the disk and then write the index block table containing the blocks used up.
+
+@author Yasha Prikhodko
+@author Cedric Leong
+@author Arezou Mousavi
+
+@param *contents Contents of the file to save to disk
+@param *name Name of the file to save
+@param *parent File's parent's i_number
+
+@return 0 indicating successful operation
+
+@copyright GNU Public License.
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'i__node_8h_1af3f5cc8db6d77f17d8a78b7c034ef243';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'get_file_contents';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+char *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'name';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+char *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'parent';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+char *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'contents';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/home/yasha/github/filesystem/src/i_node.h';
+      func-mem-desc-line = '133';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Retrieves the file contents from the disk.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+This function gets the name of the file, parent's i_number, and pointer to contents to save the contents of the file to.
+
+@author Yasha Prikhodko
+@author Cedric Leong
+@author Arezou Mousavi
+
+@param  *name Name of the file to get the contents of
+@param  *parent The file's parent's i_number
+@param  *contents Contents of the file to save to
+@return  0 if successful
+@return -1 if error occurs
+
+@copyright GNU Public License.
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'i__node_8h_1a4781022ff463e29e660c5b36e24b05ba';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'get_size';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+char *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'pathname';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/home/yasha/github/filesystem/src/i_node.h';
+      func-mem-desc-line = '153';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Gets the size of the file.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+Iterates through the path to get the size of the target file
+
+@author Yasha Prikhodko
+@author Cedric Leong
+@author Arezou Mousavi
+
+@param  *pathname Pointer to the pathname of the file to get the size of
+
+@return The file size
+@return -1 indicating failure
+
+@copyright GNU Public License.
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'i__node_8h_1a40ffa42b047fe1eaf37a3eab5882b576';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'get_i_number';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+char *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'name';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+char *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'parent';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+char *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'i_number';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/home/yasha/github/filesystem/src/i_node.h';
+      func-mem-desc-line = '175';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Returns the i_number of the file.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+Finds the correct file by using the name provided and the parent's i_number and returns the file's i_number
+
+@author Yasha Prikhodko
+@author Cedric Leong
+@author Arezou Mousavi
+
+@param *name Pointer to the name of the file to get the i_number of
+@param *parent File's parent's i_number
+@param *i_number The reference to the file's i_number to save the information to
+
+@return 0 indicating success
+@return -1 indicating failure
+
+@copyright GNU Public License.
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'i__node_8h_1adb4170e75fcb8b4b89a72db0a70b1280';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'find_file';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+char *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'name';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+char *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'parent';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/home/yasha/github/filesystem/src/i_node.h';
+      func-mem-desc-line = '196';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Return true or false (0 or -1) of whether the file is found.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+Finds the correct file by using the name provided and the parent's i_number and returns success flag if the operation is successful
+
+@author Yasha Prikhodko
+@author Cedric Leong
+@author Arezou Mousavi
+
+@param *name Pointer to the name of the file to get the i_number of
+@param *parent File's parent's i_number
+
+@return 0 indicating success
+@return -1 indicating failure
+
+@copyright GNU Public License.
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'i__node_8h_1ae91873f72409d9d0811bc19f88213a33';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'get_type';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+char *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'name';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+char *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'parent';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+int *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'type';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/home/yasha/github/filesystem/src/i_node.h';
+      func-mem-desc-line = '218';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Finds the appropriate file and saves its type to the pointer provided.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+Finds the correct file by using the name provided and the parent's i_number and saves the file's type to the provided pointer type
+
+@author Yasha Prikhodko
+@author Cedric Leong
+@author Arezou Mousavi
+
+@param *name Pointer to the name of the file to get the i_number of
+@param *parent File's parent's i_number
+@param *type The reference to the file's type to save the information to
+
+@return 0 indicating success
+@return -1 indicating failure
+
+@copyright GNU Public License.
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'i__node_8h_1a60eeaee87631fc81d06a2613cb240567';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'dir_get_children';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+char *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'pathname';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+char *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'children';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/home/yasha/github/filesystem/src/i_node.h';
+      func-mem-desc-line = '237';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Reads the inode_table and returns a directory's children.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+Looks up the file in the open_file_table by its fd, checks the file type. If it's a folder - outputs the file names of the files that have this directory as a parent.
+
+@author Yasha Prikhodko
+@author Cedric Leong
+@author Arezou Mousavi
+
+@param pathname Pathname of the dir file to read
+@param children List of children to be returned
+@return 0 to indicate the operation is over.
+
+@copyright GNU Public License.
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'i__node_8h_1a9d4df0753bd12488424d510bdd936a19';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'save_inode_table';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/home/yasha/github/filesystem/src/i_node.h';
+      func-mem-desc-line = '254';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Saves the inode_table from memory into the disk.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+Converts the inode table into a string literal and stores it on to the disk blocks 2-10
+
+@author Yasha Prikhodko
+@author Cedric Leong
+@author Arezou Mousavi
+
+@return 0 to indicate the operation is over.
+
+@copyright GNU Public License.
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'i__node_8h_1a83e1ab0e759754f6120b28f30b13007e';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'delete_inode';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'i_num';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/home/yasha/github/filesystem/src/i_node.h';
+      func-mem-desc-line = '272';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Removes the inode with the specified i_number from the inode_table.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+Removes the appropriate inode from the inode_table and re-writes the disk
+
+@author Yasha Prikhodko
+@author Cedric Leong
+@author Arezou Mousavi
+
+@return 0 to indicate the operation is over.
+
+@copyright GNU Public License.
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    };
+    var = {
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'i__node_8h_1af105c8c8024ce2d6e2d88bbfd2cbd8d2';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+short int
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'fd_table';
+      var-mem-desc-file = '/home/yasha/github/filesystem/src/i_node.h';
+      var-mem-desc-line = '18';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'i__node_8h_1a2e69d9e5c5eb484264b75bd3f2a0a486';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'i_numbers';
+      var-mem-desc-file = '/home/yasha/github/filesystem/src/i_node.h';
+      var-mem-desc-line = '19';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'i__node_8h_1a5fac7c4f2c9074748d935d7990b675e7';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+inode
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'inode_table';
+      var-mem-desc-file = '/home/yasha/github/filesystem/src/i_node.h';
+      var-mem-desc-line = '20';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    };
+  file-full-name  = '/home/yasha/github/filesystem/src/i_node.h';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+Connects the lower level functions with the higher level and deal with the inode table
+Contains most of the file functions regarding deleting, changing file information, writing, etc.
+_EnD_oF_dEf_TeXt_;
+}; /* file */
+file = {
+  file-id   = 'open__file__table_8c';
+  file-name = 'open_file_table.c';
+    func = {
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'open__file__table_8c_1ab33a06e6187c41a2144e0e619d1c430c';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'add_opened_file';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+char *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'pathname';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/home/yasha/github/filesystem/src/open_file_table.c';
+      func-mem-desc-line = '9';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Adds a file to the open-file table.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+This function will add a new file specified by its pathname to the open-file table
+
+@author Yasha Prikhodko
+@author Cedric Leong
+@author Arezou Mousavi
+
+@param *pathname The absolute pathname of the file to add
+@return The fd of the file added
+
+@copyright GNU Public License.
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'open__file__table_8c_1a587769950f1531fd9660c4515878489b';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'close_file';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'fd';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/home/yasha/github/filesystem/src/open_file_table.c';
+      func-mem-desc-line = '45';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Removes a file from the open-file table.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+This function will remove the file specified by its fd from the open-file table
+
+@author Yasha Prikhodko
+@author Cedric Leong
+@author Arezou Mousavi
+
+@param fd The fd of the file to close
+@return 0 for success -1 for failure
+
+@copyright GNU Public License.
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'open__file__table_8c_1a7e5225e8b0a747d1403369e8b395f346';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'get_opened_file';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'fd';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+char *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'pathname';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/home/yasha/github/filesystem/src/open_file_table.c';
+      func-mem-desc-line = '67';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Returns opened file's pathname.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+This function will return the file's pathname
+
+@author Yasha Prikhodko
+@author Cedric Leong
+@author Arezou Mousavi
+
+@param fd The fd of the file to search for
+@param *pathname The char pointer where the files pathname will be saved to
+@return 0 for success -1 for failure
+
+@copyright GNU Public License.
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'open__file__table_8c_1a7e9dd1371557f20326e4d0048ea05770';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'get_opened_file_fd';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+char *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'pathname';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/home/yasha/github/filesystem/src/open_file_table.c';
+      func-mem-desc-line = '80';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Returns opened file's file descriptor.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+This function will return the file's file descriptor
+
+@author Yasha Prikhodko
+@author Cedric Leong
+@author Arezou Mousavi
+
+@param *pathname The pathname of the file to get the file descriptor of
+@return 0 for success -1 for failure
+
+@copyright GNU Public License.
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    };
+    var = {
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'open__file__table_8c_1a0620fd63be38f392929f167c03feb849';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+openfile
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'all_opened_files';
+      var-mem-desc-file = '/home/yasha/github/filesystem/src/open_file_table.c';
+      var-mem-desc-line = '6';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'open__file__table_8c_1a455873f8aa4da6ec3ed5ef06489c348a';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'all_fd';
+      var-mem-initializer = <<_EnD_oF_dEf_TeXt_
+= {0}
+_EnD_oF_dEf_TeXt_;
+      var-mem-desc-file = '/home/yasha/github/filesystem/src/open_file_table.c';
+      var-mem-desc-line = '7';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    };
+  file-full-name  = '/home/yasha/github/filesystem/src/open_file_table.c';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+}; /* file */
+file = {
+  file-id   = 'open__file__table_8h';
+  file-name = 'open_file_table.h';
+    define = {
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = 'open__file__table_8h_1a066f57c4ecad8b9bdcd2a19c36f1775e';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'OPEN_FILE_TABLE_H_';
+      define-mem-desc-file = '/home/yasha/github/filesystem/src/open_file_table.h';
+      define-mem-desc-line = '2';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+Include guard  
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    };
+    func = {
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'open__file__table_8h_1ab33a06e6187c41a2144e0e619d1c430c';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'add_opened_file';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+char *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'pathname';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/home/yasha/github/filesystem/src/open_file_table.h';
+      func-mem-desc-line = '35';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Adds a file to the open-file table.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+This function will add a new file specified by its pathname to the open-file table
+
+@author Yasha Prikhodko
+@author Cedric Leong
+@author Arezou Mousavi
+
+@param *pathname The absolute pathname of the file to add
+@return The fd of the file added
+
+@copyright GNU Public License.
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'open__file__table_8h_1a587769950f1531fd9660c4515878489b';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'close_file';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'fd';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/home/yasha/github/filesystem/src/open_file_table.h';
+      func-mem-desc-line = '52';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Removes a file from the open-file table.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+This function will remove the file specified by its fd from the open-file table
+
+@author Yasha Prikhodko
+@author Cedric Leong
+@author Arezou Mousavi
+
+@param fd The fd of the file to close
+@return 0 for success -1 for failure
+
+@copyright GNU Public License.
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'open__file__table_8h_1a7e5225e8b0a747d1403369e8b395f346';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'get_opened_file';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'fd';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+char *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'pathname';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/home/yasha/github/filesystem/src/open_file_table.h';
+      func-mem-desc-line = '72';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Returns opened file's pathname.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+This function will return the file's pathname
+
+@author Yasha Prikhodko
+@author Cedric Leong
+@author Arezou Mousavi
+
+@param fd The fd of the file to search for
+@param *pathname The char pointer where the files pathname will be saved to
+@return 0 for success -1 for failure
+
+@copyright GNU Public License.
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'open__file__table_8h_1a7e9dd1371557f20326e4d0048ea05770';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'get_opened_file_fd';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+char *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'pathname';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/home/yasha/github/filesystem/src/open_file_table.h';
+      func-mem-desc-line = '90';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Returns opened file's file descriptor.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+This function will return the file's file descriptor
+
+@author Yasha Prikhodko
+@author Cedric Leong
+@author Arezou Mousavi
+
+@param *pathname The pathname of the file to get the file descriptor of
+@return 0 for success -1 for failure
+
+@copyright GNU Public License.
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    };
+    var = {
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'open__file__table_8h_1a0620fd63be38f392929f167c03feb849';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+openfile
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'all_opened_files';
+      var-mem-desc-file = '/home/yasha/github/filesystem/src/open_file_table.h';
+      var-mem-desc-line = '17';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'open__file__table_8h_1a455873f8aa4da6ec3ed5ef06489c348a';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'all_fd';
+      var-mem-desc-file = '/home/yasha/github/filesystem/src/open_file_table.h';
+      var-mem-desc-line = '18';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    };
+  file-full-name  = '/home/yasha/github/filesystem/src/open_file_table.h';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+Open file table. Tracks of all opened files
+Creates and tracks of all open files in the open-file table with file descriptors
+_EnD_oF_dEf_TeXt_;
+}; /* file */
+file = {
+  file-id   = 'sfs__close_8c';
+  file-name = 'sfs_close.c';
+    func = {
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'sfs__close_8c_1ab89c6dcbc639c5fb3348a6935c12912d';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'sfs_close';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'fd';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/home/yasha/github/filesystem/src/sfs_close.c';
+      func-mem-desc-line = '4';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+File function to close files.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+This function will close a file (or its instance) in memory by its file descriptor
+
+@author Yasha Prikhodko
+@author Cedric Leong
+@author Arezou Mousavi
+
+@param fd The file descriptor of the file to close
+
+@return 0 if success
+@return -1 if failure
+
+@copyright GNU Public License.
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    };
+  file-full-name  = '/home/yasha/github/filesystem/src/sfs_close.c';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+}; /* file */
+file = {
+  file-id   = 'sfs__close_8h';
+  file-name = 'sfs_close.h';
+    func = {
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'sfs__close_8h_1ab89c6dcbc639c5fb3348a6935c12912d';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'sfs_close';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'fd';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/home/yasha/github/filesystem/src/sfs_close.h';
+      func-mem-desc-line = '26';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+File function to close files.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+This function will close a file (or its instance) in memory by its file descriptor
+
+@author Yasha Prikhodko
+@author Cedric Leong
+@author Arezou Mousavi
+
+@param fd The file descriptor of the file to close
+
+@return 0 if success
+@return -1 if failure
+
+@copyright GNU Public License.
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    };
+  file-full-name  = '/home/yasha/github/filesystem/src/sfs_close.h';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+File function to close a file
+Closes the file or its instance (if the file was opened multiple times)
+_EnD_oF_dEf_TeXt_;
+}; /* file */
+file = {
+  file-id   = 'sfs__create_8c';
+  file-name = 'sfs_create.c';
+    func = {
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'sfs__create_8c_1a10498692a07aacf1e88110005e3f2f3f';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'sfs_create';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+char *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'pathname';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'type';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/home/yasha/github/filesystem/src/sfs_create.c';
+      func-mem-desc-line = '9';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+File function to create files.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+This function will create a new file along with its inode
+
+@author Yasha Prikhodko
+@author Cedric Leong
+@author Arezou Mousavi
+
+@param *pathname The absolute pathname of the file to be created
+@param type The type of the file to be created (0=regular file, 1=folder)
+
+@copyright GNU Public License.
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    };
+  file-full-name  = '/home/yasha/github/filesystem/src/sfs_create.c';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+}; /* file */
+file = {
+  file-id   = 'sfs__create_8h';
+  file-name = 'sfs_create.h';
+    define = {
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = 'sfs__create_8h_1aa5a7b1ba433a461fddcd58dbb28d89d0';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'SFS_CREATE_H_';
+      define-mem-desc-file = '/home/yasha/github/filesystem/src/sfs_create.h';
+      define-mem-desc-line = '2';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+Include guard  
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    };
+    func = {
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'sfs__create_8h_1a10498692a07aacf1e88110005e3f2f3f';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'sfs_create';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+char *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'pathname';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'type';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/home/yasha/github/filesystem/src/sfs_create.h';
+      func-mem-desc-line = '25';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+File function to create files.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+This function will create a new file along with its inode
+
+@author Yasha Prikhodko
+@author Cedric Leong
+@author Arezou Mousavi
+
+@param *pathname The absolute pathname of the file to be created
+@param type The type of the file to be created (0=regular file, 1=folder)
+
+@copyright GNU Public License.
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    };
+  file-full-name  = '/home/yasha/github/filesystem/src/sfs_create.h';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+Creates a directory or regular type file
+Creates a file along with its inode and write it to disk
+_EnD_oF_dEf_TeXt_;
+}; /* file */
+file = {
+  file-id   = 'sfs__delete_8c';
+  file-name = 'sfs_delete.c';
+    func = {
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'sfs__delete_8c_1ad7cc263f6e467c2eb2f8f73a6eb9d1c3';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'sfs_delete';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+char *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'pathname';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/home/yasha/github/filesystem/src/sfs_delete.c';
+      func-mem-desc-line = '8';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+: Deletes the file from the disk
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+: Makes sure the file is not opened and does not contain any children, then deletes its inode and frees up the blocks
+
+@author Yasha Prikhodko
+@author Cedric Leong
+@author Arezou Mousavi
+
+@param  *pathname Pointer pathname char type
+@return 0 if successful
+@return -1 if failure
+
+@copyright GNU Public License.
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    };
+  file-full-name  = '/home/yasha/github/filesystem/src/sfs_delete.c';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+}; /* file */
+file = {
+  file-id   = 'sfs__delete_8h';
+  file-name = 'sfs_delete.h';
+    func = {
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'sfs__delete_8h_1ad7cc263f6e467c2eb2f8f73a6eb9d1c3';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'sfs_delete';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+char *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'pathname';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/home/yasha/github/filesystem/src/sfs_delete.h';
+      func-mem-desc-line = '25';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+: Deletes the file from the disk
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+: Makes sure the file is not opened and does not contain any children, then deletes its inode and frees up the blocks
+
+@author Yasha Prikhodko
+@author Cedric Leong
+@author Arezou Mousavi
+
+@param  *pathname Pointer pathname char type
+@return 0 if successful
+@return -1 if failure
+
+@copyright GNU Public License.
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    };
+  file-full-name  = '/home/yasha/github/filesystem/src/sfs_delete.h';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+File function to delete a file from disk
+Finds and deletes the file specified along with its contents and the inode.
+_EnD_oF_dEf_TeXt_;
+}; /* file */
+file = {
+  file-id   = 'sfs__getsize_8c';
+  file-name = 'sfs_getsize.c';
+    func = {
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'sfs__getsize_8c_1a9abcf2f46b77ed569f2a64407e656d22';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'sfs_getsize';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+char *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'pathname';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/home/yasha/github/filesystem/src/sfs_getsize.c';
+      func-mem-desc-line = '5';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+: Gets the size of the file
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+: Iterates through the pathname making sure each level exists, then finds the target file and returns its size.
+
+@author Yasha Prikhodko
+@author Cedric Leong
+@author Arezou Mousavi
+
+@param  *pathname Pointer pathname char type
+@return Size of the file
+
+@copyright GNU Public License.
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    };
+  file-full-name  = '/home/yasha/github/filesystem/src/sfs_getsize.c';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+}; /* file */
+file = {
+  file-id   = 'sfs__getsize_8h';
+  file-name = 'sfs_getsize.h';
+    define = {
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = 'sfs__getsize_8h_1a80fde7f89b6fedf47c3005cfcc54d114';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'SFS_GET_SIZE_H_';
+      define-mem-desc-file = '/home/yasha/github/filesystem/src/sfs_getsize.h';
+      define-mem-desc-line = '2';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+Include guard  
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    };
+    func = {
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'sfs__getsize_8h_1a9abcf2f46b77ed569f2a64407e656d22';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'sfs_getsize';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+char *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'pathname';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/home/yasha/github/filesystem/src/sfs_getsize.h';
+      func-mem-desc-line = '24';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+: Gets the size of the file
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+: Iterates through the pathname making sure each level exists, then finds the target file and returns its size.
+
+@author Yasha Prikhodko
+@author Cedric Leong
+@author Arezou Mousavi
+
+@param  *pathname Pointer pathname char type
+@return Size of the file
+
+@copyright GNU Public License.
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    };
+  file-full-name  = '/home/yasha/github/filesystem/src/sfs_getsize.h';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+Returns the size of the file
+Looks up the file by goind down the hierarchy and gets its size from the inode_table
+_EnD_oF_dEf_TeXt_;
+}; /* file */
+file = {
+  file-id   = 'sfs__gettype_8c';
+  file-name = 'sfs_gettype.c';
+    func = {
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'sfs__gettype_8c_1a8ce020071b4ba304d7bb45b6c1e246f5';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'sfs_gettype';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+char *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'pathname';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/home/yasha/github/filesystem/src/sfs_gettype.c';
+      func-mem-desc-line = '8';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+: File function to check the type of the file
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+: Iterates over the pathname making sure the path is existent. Then gets the type of the file and returns it
+
+@author Yasha Prikhodko
+@author Cedric Leong
+@author Arezou Mousavi
+
+@param *pathname The pathname of the file to get the type of
+@return 1 if directory
+@return 0 if regular file
+@return -1 if failed to get the type
+
+@copyright GNU Public License.
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    };
+  file-full-name  = '/home/yasha/github/filesystem/src/sfs_gettype.c';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+}; /* file */
+file = {
+  file-id   = 'sfs__gettype_8h';
+  file-name = 'sfs_gettype.h';
+    func = {
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'sfs__gettype_8h_1a8ce020071b4ba304d7bb45b6c1e246f5';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'sfs_gettype';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+char *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'pathname';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/home/yasha/github/filesystem/src/sfs_gettype.h';
+      func-mem-desc-line = '26';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+: File function to check the type of the file
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+: Iterates over the pathname making sure the path is existent. Then gets the type of the file and returns it
+
+@author Yasha Prikhodko
+@author Cedric Leong
+@author Arezou Mousavi
+
+@param *pathname The pathname of the file to get the type of
+@return 1 if directory
+@return 0 if regular file
+@return -1 if failed to get the type
+
+@copyright GNU Public License.
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    };
+  file-full-name  = '/home/yasha/github/filesystem/src/sfs_gettype.h';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+Looks up the file and returns its type
+Gets the type of the file from the inode_table and returns 0 (REGULAR) or 1 (DIRECTORY).
+_EnD_oF_dEf_TeXt_;
+}; /* file */
+file = {
+  file-id   = 'sfs__initialize_8c';
+  file-name = 'sfs_initialize.c';
+    func = {
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'sfs__initialize_8c_1a19433b013c630f41f2a2162275594858';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'sfs_initialize';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'erase';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/home/yasha/github/filesystem/src/sfs_initialize.c';
+      func-mem-desc-line = '11';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+: Initialize the free block list.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+: It creates a new file system, then creates a new super block with size 512 and initialize this free blocks list.
+
+@author Yasha Prikhodko
+@author Cedric Leong
+@author Arezou Mousavi
+
+@param erase Flag indicator to erase (1) or not (0)
+@return 1 if successful and -1 if failure
+
+@copyright GNU Public License.
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'sfs__initialize_8c_1a8034c1a6abb884782c6120ee2cf0a3ee';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'new_filesystem';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/home/yasha/github/filesystem/src/sfs_initialize.c';
+      func-mem-desc-line = '44';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+: Create a null block of data
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+: Allocates 0's to the disk in order to override it
+
+@author Yasha Prikhodko
+@author Cedric Leong
+@author Arezou Mousavi
+
+@return 1 if successful and -1 if failure
+
+@copyright GNU Public License.
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    };
+  file-full-name  = '/home/yasha/github/filesystem/src/sfs_initialize.c';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+}; /* file */
+file = {
+  file-id   = 'sfs__initialize_8h';
+  file-name = 'sfs_initialize.h';
+    define = {
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = 'sfs__initialize_8h_1a2562f1a8baec44b22a1fe3b5e0bd2901';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'SFS_INITIALIZE_H_';
+      define-mem-desc-file = '/home/yasha/github/filesystem/src/sfs_initialize.h';
+      define-mem-desc-line = '2';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+Include guard  
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    };
+    func = {
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'sfs__initialize_8h_1a19433b013c630f41f2a2162275594858';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'sfs_initialize';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'erase';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/home/yasha/github/filesystem/src/sfs_initialize.h';
+      func-mem-desc-line = '24';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+: Initialize the free block list.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+: It creates a new file system, then creates a new super block with size 512 and initialize this free blocks list.
+
+@author Yasha Prikhodko
+@author Cedric Leong
+@author Arezou Mousavi
+
+@param erase Flag indicator to erase (1) or not (0)
+@return 1 if successful and -1 if failure
+
+@copyright GNU Public License.
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'sfs__initialize_8h_1a8034c1a6abb884782c6120ee2cf0a3ee';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'new_filesystem';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/home/yasha/github/filesystem/src/sfs_initialize.h';
+      func-mem-desc-line = '40';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+: Create a null block of data
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+: Allocates 0's to the disk in order to override it
+
+@author Yasha Prikhodko
+@author Cedric Leong
+@author Arezou Mousavi
+
+@return 1 if successful and -1 if failure
+
+@copyright GNU Public License.
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    };
+  file-full-name  = '/home/yasha/github/filesystem/src/sfs_initialize.h';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+File function to intialize the file system
+Initialized the file system with option 0 to load it from disk or option 1 to erase the disk
+_EnD_oF_dEf_TeXt_;
+}; /* file */
+file = {
+  file-id   = 'sfs__open_8c';
+  file-name = 'sfs_open.c';
+    func = {
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'sfs__open_8c_1ae482b5d82cfd7a92ea1f2815c5965f3c';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'sfs_open';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+char *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'pathname';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/home/yasha/github/filesystem/src/sfs_open.c';
+      func-mem-desc-line = '9';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+File function to open files.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+This function will open a new file by iterating through the path using tokens making sure each level of hierarchy exists
+
+@author Yasha Prikhodko
+@author Cedric Leong
+@author Arezou Mousavi
+
+@param *pathname The absolute pathname of the file to be opened
+@return fd of the file opened
+
+@copyright GNU Public License.
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    };
+  file-full-name  = '/home/yasha/github/filesystem/src/sfs_open.c';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+}; /* file */
+file = {
+  file-id   = 'sfs__open_8h';
+  file-name = 'sfs_open.h';
+    define = {
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = 'sfs__open_8h_1a8a55adf42eb3804ef212df02a709e44a';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'SFS_OPEN_H_';
+      define-mem-desc-file = '/home/yasha/github/filesystem/src/sfs_open.h';
+      define-mem-desc-line = '2';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+Include guard  
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    };
+    func = {
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'sfs__open_8h_1ae482b5d82cfd7a92ea1f2815c5965f3c';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'sfs_open';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+char *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'pathname';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/home/yasha/github/filesystem/src/sfs_open.h';
+      func-mem-desc-line = '25';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+File function to open files.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+This function will open a new file by iterating through the path using tokens making sure each level of hierarchy exists
+
+@author Yasha Prikhodko
+@author Cedric Leong
+@author Arezou Mousavi
+
+@param *pathname The absolute pathname of the file to be opened
+@return fd of the file opened
+
+@copyright GNU Public License.
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    };
+  file-full-name  = '/home/yasha/github/filesystem/src/sfs_open.h';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+File function to open a file and load its file descriptor into memory
+Finds and and opens the file by assigning a file descriptor in the open-file table.
+_EnD_oF_dEf_TeXt_;
+}; /* file */
+file = {
+  file-id   = 'sfs__read_8c';
+  file-name = 'sfs_read.c';
+    func = {
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'sfs__read_8c_1a9be148e1366a1da018551221880ec961';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'sfs_read';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'fd';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'start';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'length';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+char *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'buffer';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/home/yasha/github/filesystem/src/sfs_read.c';
+      func-mem-desc-line = '8';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+: Reads the contents of the file from the disk and outputs it
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+: Reads the file blocks at the given start position and an appropriate length and saves the result to buffer
+
+@author Yasha Prikhodko
+@author Cedric Leong
+@author Arezou Mousavi
+
+@param fd File descriptor of the file in the open file table
+@param start Start location to read at in bytes
+@param length The length of the buffer to read (in bytes)
+@param *buffe The pointer to where the content of the file will be saved to
+@return 0 if succedd
+@return -1 if failure
+
+@copyright GNU Public License.
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    };
+  file-full-name  = '/home/yasha/github/filesystem/src/sfs_read.c';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+}; /* file */
+file = {
+  file-id   = 'sfs__read_8h';
+  file-name = 'sfs_read.h';
+    define = {
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = 'sfs__read_8h_1a06a425f669d267b30fdc8792b3cd1507';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'SFS_READ_H_';
+      define-mem-desc-file = '/home/yasha/github/filesystem/src/sfs_read.h';
+      define-mem-desc-line = '2';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+Include guard  
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    };
+    func = {
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'sfs__read_8h_1a9be148e1366a1da018551221880ec961';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'sfs_read';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'fd';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'start';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'length';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+char *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'buffer';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/home/yasha/github/filesystem/src/sfs_read.h';
+      func-mem-desc-line = '28';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+: Reads the contents of the file from the disk and outputs it
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+: Reads the file blocks at the given start position and an appropriate length and saves the result to buffer
+
+@author Yasha Prikhodko
+@author Cedric Leong
+@author Arezou Mousavi
+
+@param fd File descriptor of the file in the open file table
+@param start Start location to read at in bytes
+@param length The length of the buffer to read (in bytes)
+@param *buffe The pointer to where the content of the file will be saved to
+@return 0 if succedd
+@return -1 if failure
+
+@copyright GNU Public License.
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    };
+  file-full-name  = '/home/yasha/github/filesystem/src/sfs_read.h';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+Reads the contents of the file if its open and outputs it
+Checks if the file is open, then reads the contents of it off the disk and outputs it
+_EnD_oF_dEf_TeXt_;
+}; /* file */
+file = {
+  file-id   = 'sfs__readdir_8c';
+  file-name = 'sfs_readdir.c';
+    func = {
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'sfs__readdir_8c_1a2d1804621680e1ea693926d011960bf9';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'sfs_readdir';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'fd';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/home/yasha/github/filesystem/src/sfs_readdir.c';
+      func-mem-desc-line = '5';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+: Reads and returns a directory's children
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+: Looks up the file in the open_file_table by its fd, checks the file type. If it's a folder - outputs the file names of the files that have this directory as a parent.
+
+@author Yasha Prikhodko
+@author Cedric Leong
+@author Arezou Mousavi
+
+@param fd File descriptor of the folder to read the contents of.
+@return 0 or -1 (success or failure) of the operation
+
+@copyright GNU Public License.
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    };
+  file-full-name  = '/home/yasha/github/filesystem/src/sfs_readdir.c';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+}; /* file */
+file = {
+  file-id   = 'sfs__readdir_8h';
+  file-name = 'sfs_readdir.h';
+    func = {
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'sfs__readdir_8h_1a2d1804621680e1ea693926d011960bf9';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'sfs_readdir';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'fd';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/home/yasha/github/filesystem/src/sfs_readdir.h';
+      func-mem-desc-line = '24';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+: Reads and returns a directory's children
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+: Looks up the file in the open_file_table by its fd, checks the file type. If it's a folder - outputs the file names of the files that have this directory as a parent.
+
+@author Yasha Prikhodko
+@author Cedric Leong
+@author Arezou Mousavi
+
+@param fd File descriptor of the folder to read the contents of.
+@return 0 or -1 (success or failure) of the operation
+
+@copyright GNU Public License.
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    };
+  file-full-name  = '/home/yasha/github/filesystem/src/sfs_readdir.h';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+Reads the contents of a file DIRECTORY type and outputs the result
+Reads the names of the children of a DIRECTORY type file and outputs the children REGULAR and DIRECTORY type files
+_EnD_oF_dEf_TeXt_;
+}; /* file */
+file = {
+  file-id   = 'sfs__write_8c';
+  file-name = 'sfs_write.c';
+    func = {
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'sfs__write_8c_1aba41acd87111356a5f3aab66874b5cae';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'sfs_write';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'fd';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'start';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'length';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+char *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'mem_pointer';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/home/yasha/github/filesystem/src/sfs_write.c';
+      func-mem-desc-line = '8';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+: Writes the buffer to the file and save it to the disc
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+: It checks the size before writing then writes and saves them to the disc while increasing the size if needed. Also in order to write the file need to be opened
+
+@author Yasha Prikhodko
+@author Cedric Leong
+@author Arezou Mousavi
+
+@param fd File descriptor of the file in the open file table
+@param start Start location to write at (-1) if the file is empty and/or to append to the end
+@param length The length of the buffer to write (in bytes)
+@param *mem_pointer The input the user provided to write to the file
+@return 0 if succedd
+@return -1 if failure
+
+@copyright GNU Public License.
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    };
+  file-full-name  = '/home/yasha/github/filesystem/src/sfs_write.c';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+}; /* file */
+file = {
+  file-id   = 'sfs__write_8h';
+  file-name = 'sfs_write.h';
+    define = {
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = 'sfs__write_8h_1a1f0e095c4d6f0b2d0be1862324ce550f';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'SFS_WRITE_H_';
+      define-mem-desc-file = '/home/yasha/github/filesystem/src/sfs_write.h';
+      define-mem-desc-line = '2';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+Include guard  
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    };
+    func = {
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'sfs__write_8h_1aba41acd87111356a5f3aab66874b5cae';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'sfs_write';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'fd';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'start';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'length';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+char *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'mem_pointer';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/home/yasha/github/filesystem/src/sfs_write.h';
+      func-mem-desc-line = '28';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+: Writes the buffer to the file and save it to the disc
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+: It checks the size before writing then writes and saves them to the disc while increasing the size if needed. Also in order to write the file need to be opened
+
+@author Yasha Prikhodko
+@author Cedric Leong
+@author Arezou Mousavi
+
+@param fd File descriptor of the file in the open file table
+@param start Start location to write at (-1) if the file is empty and/or to append to the end
+@param length The length of the buffer to write (in bytes)
+@param *mem_pointer The input the user provided to write to the file
+@return 0 if succedd
+@return -1 if failure
+
+@copyright GNU Public License.
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    };
+  file-full-name  = '/home/yasha/github/filesystem/src/sfs_write.h';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+Writes a literal string to a file
+Writes a literal string to a file witha start location on the disk.
+_EnD_oF_dEf_TeXt_;
+}; /* file */
+file = {
+  file-id   = 'sfstest_8c';
+  file-name = 'sfstest.c';
+    define = {
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = 'sfstest_8c_1af9982907185f6cd7256017fc4312b312';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'MAX_IO_LENGTH';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+1024       /* I CHANGED IT FROM 512--->1024 */
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = '/home/yasha/github/filesystem/src/sfstest.c';
+      define-mem-desc-line = '44';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = 'sfstest_8c_1a7cd8c9dbf0e8ded6e30634fa5b53b667';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'IO_BUF_FORMAT';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+"%512s"
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = '/home/yasha/github/filesystem/src/sfstest.c';
+      define-mem-desc-line = '45';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = 'sfstest_8c_1a975fc9874a52790d9a5ca6d4e6a228ce';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'MAX_INPUT_LENGTH';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+512
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = '/home/yasha/github/filesystem/src/sfstest.c';
+      define-mem-desc-line = '51';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = 'sfstest_8c_1aa2dfbf8b30809589e42b2cb018c99358';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'INPUT_BUF_FORMAT';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+"%1024s"
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = '/home/yasha/github/filesystem/src/sfstest.c';
+      define-mem-desc-line = '52';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    };
+    func = {
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'sfstest_8c_1a840291bc02cba5474a4cb46a9b9566fe';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'main';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/home/yasha/github/filesystem/src/sfstest.c';
+      func-mem-desc-line = '76';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    };
+    var = {
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'sfstest_8c_1adff158e4f153ce5ce67c556c5cf6e31b';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+char
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'command_buffer';
+      var-mem-desc-file = '/home/yasha/github/filesystem/src/sfstest.c';
+      var-mem-desc-line = '59';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'sfstest_8c_1aa59de164da6603e8dd1f6843203dab61';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+char
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'io_buffer';
+      var-mem-desc-file = '/home/yasha/github/filesystem/src/sfstest.c';
+      var-mem-desc-line = '62';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'sfstest_8c_1a8e2daed3fec703550b961f3776362981';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+char
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'data_buffer_1';
+      var-mem-desc-file = '/home/yasha/github/filesystem/src/sfstest.c';
+      var-mem-desc-line = '65';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'sfstest_8c_1a8d5504470de9fec69f0389092910c500';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'p1';
+      var-mem-desc-file = '/home/yasha/github/filesystem/src/sfstest.c';
+      var-mem-desc-line = '67';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'sfstest_8c_1a2fbbf5056a49832e7d5e73a15ae2ee05';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'p2';
+      var-mem-desc-file = '/home/yasha/github/filesystem/src/sfstest.c';
+      var-mem-desc-line = '67';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'sfstest_8c_1a72edc878cdc5f05f4217ec6330dc549c';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'p3';
+      var-mem-desc-file = '/home/yasha/github/filesystem/src/sfstest.c';
+      var-mem-desc-line = '67';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    };
+  file-full-name  = '/home/yasha/github/filesystem/src/sfstest.c';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+}; /* file */
+file = {
+  file-id   = 'super__block_8c';
+  file-name = 'super_block.c';
+    func = {
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'super__block_8c_1aca2a939f7fe9ca58c095cba3220096c6';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'binary_decimal';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'n';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/home/yasha/github/filesystem/src/super_block.c';
+      func-mem-desc-line = '13';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'super__block_8c_1a6fd85a02683c8b87c0e457de08f24b44';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'decimal_binary';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'n';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/home/yasha/github/filesystem/src/super_block.c';
+      func-mem-desc-line = '14';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'super__block_8c_1a111dcac33848094cd20faeb76e354a28';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'put_super_blk';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/home/yasha/github/filesystem/src/super_block.c';
+      func-mem-desc-line = '16';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+: Writes the super_block from memory onto the disk
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+: It takes 4 block statuses (busy/free) from the disk_bitmap and convert it to decimal and then writes the result on to disk
+
+@author Yasha Prikhodko
+@author Cedric Leong
+@author Arezou Mousavi
+
+@return 0 for success 
+
+@copyright GNU Public License.
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'super__block_8c_1a25b7edde99920e68460a068441a07fc2';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'get_super_blk';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/home/yasha/github/filesystem/src/super_block.c';
+      func-mem-desc-line = '41';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+: Gets the super block from disk and loads it into memory
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+: Reads the values from disk and loads them into memory by converting in from decimal into binary to fill up the disk_bitmap arrsay correctly
+
+@author Yasha Prikhodko
+@author Cedric Leong
+@author Arezou Mousavi
+
+@return 0 for success
+
+@copyright GNU Public License.
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'super__block_8c_1ac913f8401c20c3b7b4246f6df33ae3b7';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'get_empty_blk';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+int *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'free_blk_no';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/home/yasha/github/filesystem/src/super_block.c';
+      func-mem-desc-line = '67';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+: Gets the first non-busy block from the disk and returns its id
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+: Reads memory to find the first id of a free block. Then sets it to busy and saves the block_num to the parameter provided.
+
+@author Yasha Prikhodko
+@author Cedric Leong
+@author Arezou Mousavi
+
+@param *free_blk_no Pointer to char to save the block number to
+@return 0 for success
+
+@copyright GNU Public License.
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'super__block_8c_1aedef4886af840b77d8044dfbbaf5a9e1';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'release_block';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'release_blk_no';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/home/yasha/github/filesystem/src/super_block.c';
+      func-mem-desc-line = '80';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'super__block_8c_1a2bb090f34ab7945e5dc1d92793d5e77f';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'set_disk_bitmap_busy';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'blk_no';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/home/yasha/github/filesystem/src/super_block.c';
+      func-mem-desc-line = '115';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+: Sets the appropriate location in disk_bitmap to busy (only used for inode table)
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+: Sets the block to busy and then writes the super block to disk.
+
+@author Yasha Prikhodko
+@author Cedric Leong
+@author Arezou Mousavi
+
+@param blk_no Number of the block to set busy
+
+@return 0 for success
+
+@copyright GNU Public License.
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    };
+    var = {
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'super__block_8c_1a48eff8e105035b6a372d9c725d896233';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+short int
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'disk_bitmap';
+      var-mem-initializer = <<_EnD_oF_dEf_TeXt_
+= {0}
+_EnD_oF_dEf_TeXt_;
+      var-mem-desc-file = '/home/yasha/github/filesystem/src/super_block.c';
+      var-mem-desc-line = '10';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'super__block_8c_1a4ba04df6955ec441fee3f29d43563cb4';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+short int
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'super_blk_buf';
+      var-mem-desc-file = '/home/yasha/github/filesystem/src/super_block.c';
+      var-mem-desc-line = '11';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    };
+  file-full-name  = '/home/yasha/github/filesystem/src/super_block.c';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+}; /* file */
+file = {
+  file-id   = 'super__block_8h';
+  file-name = 'super_block.h';
+    define = {
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = 'super__block_8h_1ab6d509b3e9e00d13ef1b633349f1534e';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'SUPER_BLOCK_H_';
+      define-mem-desc-file = '/home/yasha/github/filesystem/src/super_block.h';
+      define-mem-desc-line = '2';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+Include guard  
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    };
+    func = {
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'super__block_8h_1a111dcac33848094cd20faeb76e354a28';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'put_super_blk';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/home/yasha/github/filesystem/src/super_block.h';
+      func-mem-desc-line = '29';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+: Writes the super_block from memory onto the disk
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+: It takes 4 block statuses (busy/free) from the disk_bitmap and convert it to decimal and then writes the result on to disk
+
+@author Yasha Prikhodko
+@author Cedric Leong
+@author Arezou Mousavi
+
+@return 0 for success 
+
+@copyright GNU Public License.
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'super__block_8h_1a25b7edde99920e68460a068441a07fc2';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'get_super_blk';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/home/yasha/github/filesystem/src/super_block.h';
+      func-mem-desc-line = '46';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+: Gets the super block from disk and loads it into memory
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+: Reads the values from disk and loads them into memory by converting in from decimal into binary to fill up the disk_bitmap arrsay correctly
+
+@author Yasha Prikhodko
+@author Cedric Leong
+@author Arezou Mousavi
+
+@return 0 for success
+
+@copyright GNU Public License.
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'super__block_8h_1a2bb090f34ab7945e5dc1d92793d5e77f';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'set_disk_bitmap_busy';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'blk_no';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/home/yasha/github/filesystem/src/super_block.h';
+      func-mem-desc-line = '65';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+: Sets the appropriate location in disk_bitmap to busy (only used for inode table)
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+: Sets the block to busy and then writes the super block to disk.
+
+@author Yasha Prikhodko
+@author Cedric Leong
+@author Arezou Mousavi
+
+@param blk_no Number of the block to set busy
+
+@return 0 for success
+
+@copyright GNU Public License.
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'super__block_8h_1ac913f8401c20c3b7b4246f6df33ae3b7';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'get_empty_blk';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+int *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'free_blk_no';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/home/yasha/github/filesystem/src/super_block.h';
+      func-mem-desc-line = '83';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+: Gets the first non-busy block from the disk and returns its id
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+: Reads memory to find the first id of a free block. Then sets it to busy and saves the block_num to the parameter provided.
+
+@author Yasha Prikhodko
+@author Cedric Leong
+@author Arezou Mousavi
+
+@param *free_blk_no Pointer to char to save the block number to
+@return 0 for success
+
+@copyright GNU Public License.
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    };
+    var = {
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'super__block_8h_1a48eff8e105035b6a372d9c725d896233';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+short int
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'disk_bitmap';
+      var-mem-desc-file = '/home/yasha/github/filesystem/src/super_block.h';
+      var-mem-desc-line = '12';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'super__block_8h_1a4ba04df6955ec441fee3f29d43563cb4';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+short int
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'super_blk_buf';
+      var-mem-desc-file = '/home/yasha/github/filesystem/src/super_block.h';
+      var-mem-desc-line = '13';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    };
+  file-full-name  = '/home/yasha/github/filesystem/src/super_block.h';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+}; /* file */

@@ -117,12 +117,3 @@ int set_disk_bitmap_busy(int blk_no) {
     put_super_blk();
     return 0;
 }
-
-int clear_disk() {
-    for (int i=0; i<512; i++) {
-        disk_bitmap[i] = 0;
-        char *buf = calloc(128, sizeof(char));
-        put_block(i, buf);
-    }
-    return 0;
-}

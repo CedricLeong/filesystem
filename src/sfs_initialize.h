@@ -1,7 +1,12 @@
-#ifndef SFS_INITIALIZE_H_   /* Include guard */
+#ifndef SFS_INITIALIZE_H_   /** Include guard */
 #define SFS_INITIALIZE_H_
 
-/***************************************************************************
+/** @file sfs_initialize.h
+ * File function to intialize the file system
+ * Initialized the file system with option 0 to load it from disk or option 1 to erase the disk
+ */
+
+/**
  *
  * @brief: Initialize the free block list.
  * @details: It creates a new file system, then creates a new super block with size 512 and initialize this free blocks list.
@@ -15,10 +20,10 @@
  *
  * @copyright GNU Public License.
  *
- ***************************************************************************/
+ */
 extern int sfs_initialize(int erase);
 
-/***************************************************************************
+/**
  *
  * @brief: Create a null block of data
  * @details: Allocates 0's to the disk in order to override it
@@ -31,7 +36,7 @@ extern int sfs_initialize(int erase);
  *
  * @copyright GNU Public License.
  *
- ***************************************************************************/
+ */
 int new_filesystem(void);
 
 #endif
