@@ -1,6 +1,8 @@
 # Yet Another File System (YAFS)
 
-## TODO
+UOIT 2013 Operating Systems Course
 
-The filesystem should now be working i also included a binary in the /bin folder.
-The only thing is left is to finish up the documentation.
+##Authors
+  Yasha Prikhodko
+  Cedric Leong
+  Arezou Mousavi
