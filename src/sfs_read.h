@@ -8,8 +8,8 @@
 
 /**
  *
- * @brief: Reads the contents of the file from the disk and outputs it
- * @details: Reads the file blocks at the given start position and an appropriate length and saves the result to buffer
+ * @brief Reads the contents of the file from the disk and outputs it
+ * @details Reads the file blocks at the given start position and an appropriate length and saves the result to buffer
  *
  * @author Yasha Prikhodko
  * @author Cedric Leong

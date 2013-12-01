@@ -14,5 +14,5 @@ var files =
     [ "sfs_read.h", "sfs__read_8h.html", "sfs__read_8h" ],
     [ "sfs_readdir.h", "sfs__readdir_8h.html", "sfs__readdir_8h" ],
     [ "sfs_write.h", "sfs__write_8h.html", "sfs__write_8h" ],
-    [ "super_block.h", "super__block_8h_source.html", null ]
+    [ "super_block.h", "super__block_8h.html", "super__block_8h" ]
 ];

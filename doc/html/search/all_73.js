@@ -2,6 +2,7 @@ var searchData=
 [
   ['save_5ffile_5fcontents',['save_file_contents',['../i__node_8h.html#ae79b074c11004f93e3ea5d13057f0ab6',1,'i_node.c']]],
   ['save_5finode_5ftable',['save_inode_table',['../i__node_8h.html#a9d4df0753bd12488424d510bdd936a19',1,'i_node.c']]],
+  ['set_5fdisk_5fbitmap_5fbusy',['set_disk_bitmap_busy',['../super__block_8h.html#a2bb090f34ab7945e5dc1d92793d5e77f',1,'super_block.c']]],
   ['sfs_5fclose',['sfs_close',['../sfs__close_8h.html#ab89c6dcbc639c5fb3348a6935c12912d',1,'sfs_close.c']]],
   ['sfs_5fclose_2eh',['sfs_close.h',['../sfs__close_8h.html',1,'']]],
   ['sfs_5fcreate',['sfs_create',['../sfs__create_8h.html#a10498692a07aacf1e88110005e3f2f3f',1,'sfs_create.c']]],
@@ -28,5 +29,7 @@ var searchData=
   ['sfs_5fwrite',['sfs_write',['../sfs__write_8h.html#aba41acd87111356a5f3aab66874b5cae',1,'sfs_write.c']]],
   ['sfs_5fwrite_2eh',['sfs_write.h',['../sfs__write_8h.html',1,'']]],
   ['sfs_5fwrite_5fh_5f',['SFS_WRITE_H_',['../sfs__write_8h.html#a1f0e095c4d6f0b2d0be1862324ce550f',1,'sfs_write.h']]],
-  ['super_5fblock',['super_block',['../structsuper__block.html',1,'']]]
+  ['super_5fblock',['super_block',['../structsuper__block.html',1,'']]],
+  ['super_5fblock_2eh',['super_block.h',['../super__block_8h.html',1,'']]],
+  ['super_5fblock_5fh_5f',['SUPER_BLOCK_H_',['../super__block_8h.html#ab6d509b3e9e00d13ef1b633349f1534e',1,'super_block.h']]]
 ];

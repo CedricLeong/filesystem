@@ -22,8 +22,8 @@ extern inode inode_table[64];
 
 /**
  *
- * @brief: Adds an inode to the inode_table and writes it to disk.
- * @details: Inserts provided inode into the inode_table array and then rewrites the information back to the disk.
+ * @brief Adds an inode to the inode_table and writes it to disk.
+ * @details Inserts provided inode into the inode_table array and then rewrites the information back to the disk.
  *
  * @author Yasha Prikhodko
  * @author Cedric Leong

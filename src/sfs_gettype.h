@@ -8,8 +8,8 @@
 
 /**
  *
- * @brief: File function to check the type of the file
- * @details: Iterates over the pathname making sure the path is existent. Then gets the type of the file and returns it
+ * @brief File function to check the type of the file
+ * @details Iterates over the pathname making sure the path is existent. Then gets the type of the file and returns it
  *
  * @author Yasha Prikhodko
  * @author Cedric Leong

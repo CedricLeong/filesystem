@@ -2,6 +2,7 @@ var searchData=
 [
   ['save_5ffile_5fcontents',['save_file_contents',['../i__node_8h.html#ae79b074c11004f93e3ea5d13057f0ab6',1,'i_node.c']]],
   ['save_5finode_5ftable',['save_inode_table',['../i__node_8h.html#a9d4df0753bd12488424d510bdd936a19',1,'i_node.c']]],
+  ['set_5fdisk_5fbitmap_5fbusy',['set_disk_bitmap_busy',['../super__block_8h.html#a2bb090f34ab7945e5dc1d92793d5e77f',1,'super_block.c']]],
   ['sfs_5fclose',['sfs_close',['../sfs__close_8h.html#ab89c6dcbc639c5fb3348a6935c12912d',1,'sfs_close.c']]],
   ['sfs_5fcreate',['sfs_create',['../sfs__create_8h.html#a10498692a07aacf1e88110005e3f2f3f',1,'sfs_create.c']]],
   ['sfs_5fdelete',['sfs_delete',['../sfs__delete_8h.html#ad7cc263f6e467c2eb2f8f73a6eb9d1c3',1,'sfs_delete.c']]],

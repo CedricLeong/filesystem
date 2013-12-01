@@ -8,8 +8,8 @@
 
 /**
  *
- * @brief: Writes the buffer to the file and save it to the disc
- * @details: It checks the size before writing then writes and saves them to the disc while increasing the size if needed. Also in order to write the file need to be opened
+ * @brief Writes the buffer to the file and save it to the disc
+ * @details It checks the size before writing then writes and saves them to the disc while increasing the size if needed. Also in order to write the file need to be opened
  *
  * @author Yasha Prikhodko
  * @author Cedric Leong

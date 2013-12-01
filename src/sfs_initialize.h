@@ -8,8 +8,8 @@
 
 /**
  *
- * @brief: Initialize the free block list.
- * @details: It creates a new file system, then creates a new super block with size 512 and initialize this free blocks list.
+ * @brief Initialize the free block list.
+ * @details It creates a new file system, then creates a new super block with size 512 and initialize this free blocks list.
  *
  * @author Yasha Prikhodko
  * @author Cedric Leong
@@ -25,8 +25,8 @@ extern int sfs_initialize(int erase);
 
 /**
  *
- * @brief: Create a null block of data
- * @details: Allocates 0's to the disk in order to override it
+ * @brief Create a null block of data
+ * @details Allocates 0's to the disk in order to override it
  *
  * @author Yasha Prikhodko
  * @author Cedric Leong

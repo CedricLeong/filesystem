@@ -8,8 +8,8 @@
 
 /**
  *
- * @brief: Gets the size of the file
- * @details: Iterates through the pathname making sure each level exists, then finds the target file and returns its size.
+ * @brief Gets the size of the file
+ * @details Iterates through the pathname making sure each level exists, then finds the target file and returns its size.
  *
  * @author Yasha Prikhodko
  * @author Cedric Leong

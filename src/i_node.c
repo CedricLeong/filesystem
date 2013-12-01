@@ -92,6 +92,24 @@ int save_inode_table(void) {
 
 int delete_inode(int i_num) {
 
+	int index_blk_loc = inode_table[i_num].index_blk_location;
+
+	// delete the index_block and the contents of the file
+	char *index_blk = calloc(32, sizeof(char));
+	char *buf_null = calloc(128, sizeof(char));
+	get_block(index_blk_loc, index_blk);
+	for (int i=0; i<8; i++) {
+		char *tok = strtok(index_blk, ":");
+
+		if (tok != NULL && strcmp(tok, "0") != 0) {
+			put_block(atoi(tok), buf_null);
+			release_block(atoi(tok));
+		}
+	}
+
+	put_block(index_blk_loc, buf_null);
+	release_block(index_blk_loc);
+
 	inode_table[i_num].file_size = calloc(3, sizeof(char));
 	inode_table[i_num].i_number = calloc(2, sizeof(char));
 	inode_table[i_num].index_blk_location = calloc(3, sizeof(int));
@@ -100,8 +118,6 @@ int delete_inode(int i_num) {
 	inode_table[i_num].type = calloc(1, sizeof(int));
 
 	i_numbers[i_num] = 0;
-
-	char *buf_null = calloc(128, sizeof(char));
 
 	// erase the inode table from disk to overwrite it cleanly
 	for (int i=0; i<inode_blocks; i++) {

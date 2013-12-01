@@ -8,8 +8,8 @@
 
 /**
  *
- * @brief: Reads and returns a directory's children
- * @details: Looks up the file in the open_file_table by its fd, checks the file type. If it's a folder - outputs the file names of the files that have this directory as a parent.
+ * @brief Reads and returns a directory's children
+ * @details Looks up the file in the open_file_table by its fd, checks the file type. If it's a folder - outputs the file names of the files that have this directory as a parent.
  *
  * @author Yasha Prikhodko
  * @author Cedric Leong

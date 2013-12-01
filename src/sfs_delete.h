@@ -8,8 +8,8 @@
 
 /**
  *
- * @brief: Deletes the file from the disk
- * @details: Makes sure the file is not opened and does not contain any children, then deletes its inode and frees up the blocks
+ * @brief Deletes the file from the disk
+ * @details Makes sure the file is not opened and does not contain any children, then deletes its inode and frees up the blocks
  *
  * @author Yasha Prikhodko
  * @author Cedric Leong

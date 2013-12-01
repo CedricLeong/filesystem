@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.3.1"/>
-<title>Yet Another File System: open_file_table.h File Reference</title>
+<title>Yet Another File System: super_block.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -85,7 +85,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
 </div>
 <script type="text/javascript">
-$(document).ready(function(){initNavTree('open__file__table_8h.html','');});
+$(document).ready(function(){initNavTree('super__block_8h.html','');});
 </script>
 <div id="doc-content">
 <!-- window showing the filter options -->
@@ -109,55 +109,58 @@ $(document).ready(function(){initNavTree('open__file__table_8h.html','');});
 <a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
-<div class="title">open_file_table.h File Reference</div>  </div>
+<div class="title">super_block.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p><a href="open__file__table_8h_source.html">Go to the source code of this file.</a></p>
+<p><a href="super__block_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Data Structures</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structopenfile.html">openfile</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsuper__block.html">super_block</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a066f57c4ecad8b9bdcd2a19c36f1775e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="open__file__table_8h.html#a066f57c4ecad8b9bdcd2a19c36f1775e">OPEN_FILE_TABLE_H_</a></td></tr>
-<tr class="separator:a066f57c4ecad8b9bdcd2a19c36f1775e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6d509b3e9e00d13ef1b633349f1534e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="super__block_8h.html#ab6d509b3e9e00d13ef1b633349f1534e">SUPER_BLOCK_H_</a></td></tr>
+<tr class="separator:ab6d509b3e9e00d13ef1b633349f1534e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ab33a06e6187c41a2144e0e619d1c430c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="open__file__table_8h.html#ab33a06e6187c41a2144e0e619d1c430c">add_opened_file</a> (char *pathname)</td></tr>
-<tr class="memdesc:ab33a06e6187c41a2144e0e619d1c430c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a file to the open-file table.  <a href="#ab33a06e6187c41a2144e0e619d1c430c">More...</a><br/></td></tr>
-<tr class="separator:ab33a06e6187c41a2144e0e619d1c430c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a587769950f1531fd9660c4515878489b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="open__file__table_8h.html#a587769950f1531fd9660c4515878489b">close_file</a> (int fd)</td></tr>
-<tr class="memdesc:a587769950f1531fd9660c4515878489b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes a file from the open-file table.  <a href="#a587769950f1531fd9660c4515878489b">More...</a><br/></td></tr>
-<tr class="separator:a587769950f1531fd9660c4515878489b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7e5225e8b0a747d1403369e8b395f346"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="open__file__table_8h.html#a7e5225e8b0a747d1403369e8b395f346">get_opened_file</a> (int fd, char *pathname)</td></tr>
-<tr class="memdesc:a7e5225e8b0a747d1403369e8b395f346"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns opened file's pathname.  <a href="#a7e5225e8b0a747d1403369e8b395f346">More...</a><br/></td></tr>
-<tr class="separator:a7e5225e8b0a747d1403369e8b395f346"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7e9dd1371557f20326e4d0048ea05770"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="open__file__table_8h.html#a7e9dd1371557f20326e4d0048ea05770">get_opened_file_fd</a> (char *pathname)</td></tr>
-<tr class="memdesc:a7e9dd1371557f20326e4d0048ea05770"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns opened file's file descriptor.  <a href="#a7e9dd1371557f20326e4d0048ea05770">More...</a><br/></td></tr>
-<tr class="separator:a7e9dd1371557f20326e4d0048ea05770"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a111dcac33848094cd20faeb76e354a28"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="super__block_8h.html#a111dcac33848094cd20faeb76e354a28">put_super_blk</a> (void)</td></tr>
+<tr class="memdesc:a111dcac33848094cd20faeb76e354a28"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes the <a class="el" href="structsuper__block.html">super_block</a> from memory onto the disk.  <a href="#a111dcac33848094cd20faeb76e354a28">More...</a><br/></td></tr>
+<tr class="separator:a111dcac33848094cd20faeb76e354a28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25b7edde99920e68460a068441a07fc2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="super__block_8h.html#a25b7edde99920e68460a068441a07fc2">get_super_blk</a> (void)</td></tr>
+<tr class="memdesc:a25b7edde99920e68460a068441a07fc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the super block from disk and loads it into memory.  <a href="#a25b7edde99920e68460a068441a07fc2">More...</a><br/></td></tr>
+<tr class="separator:a25b7edde99920e68460a068441a07fc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2bb090f34ab7945e5dc1d92793d5e77f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="super__block_8h.html#a2bb090f34ab7945e5dc1d92793d5e77f">set_disk_bitmap_busy</a> (int blk_no)</td></tr>
+<tr class="memdesc:a2bb090f34ab7945e5dc1d92793d5e77f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the appropriate location in disk_bitmap to busy (only used for inode table)  <a href="#a2bb090f34ab7945e5dc1d92793d5e77f">More...</a><br/></td></tr>
+<tr class="separator:a2bb090f34ab7945e5dc1d92793d5e77f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac913f8401c20c3b7b4246f6df33ae3b7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="super__block_8h.html#ac913f8401c20c3b7b4246f6df33ae3b7">get_empty_blk</a> (int *free_blk_no)</td></tr>
+<tr class="memdesc:ac913f8401c20c3b7b4246f6df33ae3b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the first non-busy block from the disk and returns its id.  <a href="#ac913f8401c20c3b7b4246f6df33ae3b7">More...</a><br/></td></tr>
+<tr class="separator:ac913f8401c20c3b7b4246f6df33ae3b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aedef4886af840b77d8044dfbbaf5a9e1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="super__block_8h.html#aedef4886af840b77d8044dfbbaf5a9e1">release_block</a> (int release_blk_no)</td></tr>
+<tr class="memdesc:aedef4886af840b77d8044dfbbaf5a9e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Marks the block on disk as free.  <a href="#aedef4886af840b77d8044dfbbaf5a9e1">More...</a><br/></td></tr>
+<tr class="separator:aedef4886af840b77d8044dfbbaf5a9e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a0620fd63be38f392929f167c03feb849"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0620fd63be38f392929f167c03feb849"></a>
-<a class="el" href="structopenfile.html">openfile</a>&#160;</td><td class="memItemRight" valign="bottom"><b>all_opened_files</b> [64]</td></tr>
-<tr class="separator:a0620fd63be38f392929f167c03feb849"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a455873f8aa4da6ec3ed5ef06489c348a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a455873f8aa4da6ec3ed5ef06489c348a"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>all_fd</b> [64]</td></tr>
-<tr class="separator:a455873f8aa4da6ec3ed5ef06489c348a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48eff8e105035b6a372d9c725d896233"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a48eff8e105035b6a372d9c725d896233"></a>
+short int&#160;</td><td class="memItemRight" valign="bottom"><b>disk_bitmap</b> [512]</td></tr>
+<tr class="separator:a48eff8e105035b6a372d9c725d896233"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ba04df6955ec441fee3f29d43563cb4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4ba04df6955ec441fee3f29d43563cb4"></a>
+short int&#160;</td><td class="memItemRight" valign="bottom"><b>super_blk_buf</b> [128]</td></tr>
+<tr class="separator:a4ba04df6955ec441fee3f29d43563cb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Open file table. Tracks of all opened files Creates and tracks of all open files in the open-file table with file descriptors </p>
+<div class="textblock"><p>Stores the information about the disk on the disk Keeps track of the blocks on the disk and write the super block to disk. </p>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
-<a class="anchor" id="a066f57c4ecad8b9bdcd2a19c36f1775e"></a>
+<a class="anchor" id="ab6d509b3e9e00d13ef1b633349f1534e"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define OPEN_FILE_TABLE_H_</td>
+          <td class="memname">#define SUPER_BLOCK_H_</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -166,22 +169,22 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>all_fd</b> [64]</td></
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="ab33a06e6187c41a2144e0e619d1c430c"></a>
+<a class="anchor" id="ac913f8401c20c3b7b4246f6df33ae3b7"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int add_opened_file </td>
+          <td class="memname">int get_empty_blk </td>
           <td>(</td>
-          <td class="paramtype">char *&#160;</td>
-          <td class="paramname"><em>pathname</em></td><td>)</td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>free_blk_no</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Adds a file to the open-file table. </p>
-<p>This function will add a new file specified by its pathname to the open-file table</p>
+<p>Gets the first non-busy block from the disk and returns its id. </p>
+<p>Reads memory to find the first id of a free block. Then sets it to busy and saves the block_num to the parameter provided.</p>
 <dl class="section author"><dt>Author</dt><dd>Yasha Prikhodko </dd>
 <dd>
 Cedric Leong </dd>
@@ -189,31 +192,83 @@ Cedric Leong </dd>
 Arezou Mousavi</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">*pathname</td><td>The absolute pathname of the file to add </td></tr>
+    <tr><td class="paramname">*free_blk_no</td><td>Pointer to char to save the block number to </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The fd of the file added</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>0 for success</dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>GNU Public License. </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="a587769950f1531fd9660c4515878489b"></a>
+<a class="anchor" id="a25b7edde99920e68460a068441a07fc2"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int close_file </td>
+          <td class="memname">int get_super_blk </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the super block from disk and loads it into memory. </p>
+<p>Reads the values from disk and loads them into memory by converting in from decimal into binary to fill up the disk_bitmap arrsay correctly</p>
+<dl class="section author"><dt>Author</dt><dd>Yasha Prikhodko </dd>
+<dd>
+Cedric Leong </dd>
+<dd>
+Arezou Mousavi</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>0 for success</dd></dl>
+<dl class="section copyright"><dt>Copyright</dt><dd>GNU Public License. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a111dcac33848094cd20faeb76e354a28"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int put_super_blk </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Writes the <a class="el" href="structsuper__block.html">super_block</a> from memory onto the disk. </p>
+<p>It takes 4 block statuses (busy/free) from the disk_bitmap and convert it to decimal and then writes the result on to disk</p>
+<dl class="section author"><dt>Author</dt><dd>Yasha Prikhodko </dd>
+<dd>
+Cedric Leong </dd>
+<dd>
+Arezou Mousavi</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>0 for success</dd></dl>
+<dl class="section copyright"><dt>Copyright</dt><dd>GNU Public License. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aedef4886af840b77d8044dfbbaf5a9e1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int release_block </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>fd</em></td><td>)</td>
+          <td class="paramname"><em>release_blk_no</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Removes a file from the open-file table. </p>
-<p>This function will remove the file specified by its fd from the open-file table</p>
+<p>Marks the block on disk as free. </p>
+<p>Looks up the block in disk_bitmap and marks it as free, then recalculates super_blk_buf and writes it to disk.</p>
 <dl class="section author"><dt>Author</dt><dd>Yasha Prikhodko </dd>
 <dd>
 Cedric Leong </dd>
@@ -221,41 +276,31 @@ Cedric Leong </dd>
 Arezou Mousavi</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">fd</td><td>The fd of the file to close </td></tr>
+    <tr><td class="paramname">*release_blk_no</td><td>Block number to release </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>0 for success -1 for failure</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>0 for success</dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>GNU Public License. </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="a7e5225e8b0a747d1403369e8b395f346"></a>
+<a class="anchor" id="a2bb090f34ab7945e5dc1d92793d5e77f"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int get_opened_file </td>
+          <td class="memname">int set_disk_bitmap_busy </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>fd</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"><em>blk_no</em></td><td>)</td>
           <td></td>
-          <td class="paramtype">char *&#160;</td>
-          <td class="paramname"><em>pathname</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns opened file's pathname. </p>
-<p>This function will return the file's pathname</p>
+<p>Sets the appropriate location in disk_bitmap to busy (only used for inode table) </p>
+<p>Sets the block to busy and then writes the super block to disk.</p>
 <dl class="section author"><dt>Author</dt><dd>Yasha Prikhodko </dd>
 <dd>
 Cedric Leong </dd>
@@ -263,44 +308,11 @@ Cedric Leong </dd>
 Arezou Mousavi</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">fd</td><td>The fd of the file to search for </td></tr>
-    <tr><td class="paramname">*pathname</td><td>The char pointer where the files pathname will be saved to </td></tr>
+    <tr><td class="paramname">blk_no</td><td>Number of the block to set busy</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>0 for success -1 for failure</dd></dl>
-<dl class="section copyright"><dt>Copyright</dt><dd>GNU Public License. </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="a7e9dd1371557f20326e4d0048ea05770"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int get_opened_file_fd </td>
-          <td>(</td>
-          <td class="paramtype">char *&#160;</td>
-          <td class="paramname"><em>pathname</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns opened file's file descriptor. </p>
-<p>This function will return the file's file descriptor</p>
-<dl class="section author"><dt>Author</dt><dd>Yasha Prikhodko </dd>
-<dd>
-Cedric Leong </dd>
-<dd>
-Arezou Mousavi</dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">*pathname</td><td>The pathname of the file to get the file descriptor of </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>0 for success -1 for failure</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>0 for success</dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>GNU Public License. </dd></dl>
 
 </div>
@@ -310,7 +322,7 @@ Arezou Mousavi</dd></dl>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="open__file__table_8h.html">open_file_table.h</a></li>
+    <li class="navelem"><a class="el" href="super__block_8h.html">super_block.h</a></li>
     <li class="footer">Generated on Sun Dec 1 2013 05:46:23 for Yet Another File System by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.3.1 </li>

@@ -206,7 +206,7 @@ int
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'size';
       sec-mem-desc-file = '/home/yasha/github/filesystem/src/super_block.h';
-      sec-mem-desc-line = '5';
+      sec-mem-desc-line = '10';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -224,7 +224,7 @@ int
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'blocksize';
       sec-mem-desc-file = '/home/yasha/github/filesystem/src/super_block.h';
-      sec-mem-desc-line = '6';
+      sec-mem-desc-line = '11';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -242,7 +242,7 @@ int
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'free_blocks';
       sec-mem-desc-file = '/home/yasha/github/filesystem/src/super_block.h';
-      sec-mem-desc-line = '7';
+      sec-mem-desc-line = '12';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -260,7 +260,7 @@ int
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'root';
       sec-mem-desc-file = '/home/yasha/github/filesystem/src/super_block.h';
-      sec-mem-desc-line = '8';
+      sec-mem-desc-line = '13';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -270,7 +270,7 @@ _EnD_oF_dEf_TeXt_;
     }; /* sec-member */
   }; /* cp-section */
   cp-filename  = '/home/yasha/github/filesystem/src/super_block.h';
-  cp-fileline  = '4';
+  cp-fileline  = '9';
   cp-briefdesc = <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -734,10 +734,10 @@ _EnD_oF_dEf_TeXt_;
       func-mem-desc-file = '/home/yasha/github/filesystem/src/i_node.c';
       func-mem-desc-line = '46';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-: Adds an inode to the inode_table and writes it to disk.
+Adds an inode to the inode_table and writes it to disk.
 _EnD_oF_dEf_TeXt_;
       func-mem-documentation = <<_EnD_oF_dEf_TeXt_
-: Inserts provided inode into the inode_table array and then rewrites the information back to the disk.
+Inserts provided inode into the inode_table array and then rewrites the information back to the disk.
 
 @author Yasha Prikhodko
 @author Cedric Leong
@@ -827,7 +827,7 @@ void
 _EnD_oF_dEf_TeXt_;
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/home/yasha/github/filesystem/src/i_node.c';
-      func-mem-desc-line = '114';
+      func-mem-desc-line = '130';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Gets the inode table from the disk.
 _EnD_oF_dEf_TeXt_;
@@ -859,7 +859,7 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'i_number';
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/home/yasha/github/filesystem/src/i_node.c';
-      func-mem-desc-line = '183';
+      func-mem-desc-line = '199';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Gets the smallest available i_number.
 _EnD_oF_dEf_TeXt_;
@@ -899,7 +899,7 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'parent';
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/home/yasha/github/filesystem/src/i_node.c';
-      func-mem-desc-line = '196';
+      func-mem-desc-line = '212';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Return true or false (0 or -1) of whether the file is found.
 _EnD_oF_dEf_TeXt_;
@@ -947,7 +947,7 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'contents';
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/home/yasha/github/filesystem/src/i_node.c';
-      func-mem-desc-line = '211';
+      func-mem-desc-line = '227';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Retrieves the file contents from the disk.
 _EnD_oF_dEf_TeXt_;
@@ -995,7 +995,7 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'parent';
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/home/yasha/github/filesystem/src/i_node.c';
-      func-mem-desc-line = '250';
+      func-mem-desc-line = '266';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Saves the file contents to disk.
 _EnD_oF_dEf_TeXt_;
@@ -1037,7 +1037,7 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'bytes';
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/home/yasha/github/filesystem/src/i_node.c';
-      func-mem-desc-line = '332';
+      func-mem-desc-line = '348';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -1061,7 +1061,7 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'pathname';
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/home/yasha/github/filesystem/src/i_node.c';
-      func-mem-desc-line = '366';
+      func-mem-desc-line = '382';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Gets the size of the file.
 _EnD_oF_dEf_TeXt_;
@@ -1108,7 +1108,7 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'type';
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/home/yasha/github/filesystem/src/i_node.c';
-      func-mem-desc-line = '401';
+      func-mem-desc-line = '417';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Finds the appropriate file and saves its type to the pointer provided.
 _EnD_oF_dEf_TeXt_;
@@ -1157,7 +1157,7 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'i_number';
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/home/yasha/github/filesystem/src/i_node.c';
-      func-mem-desc-line = '415';
+      func-mem-desc-line = '431';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Returns the i_number of the file.
 _EnD_oF_dEf_TeXt_;
@@ -1200,7 +1200,7 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'children';
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/home/yasha/github/filesystem/src/i_node.c';
-      func-mem-desc-line = '427';
+      func-mem-desc-line = '443';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Reads the inode_table and returns a directory's children.
 _EnD_oF_dEf_TeXt_;
@@ -1383,10 +1383,10 @@ _EnD_oF_dEf_TeXt_;
       func-mem-desc-file = '/home/yasha/github/filesystem/src/i_node.h';
       func-mem-desc-line = '38';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-: Adds an inode to the inode_table and writes it to disk.
+Adds an inode to the inode_table and writes it to disk.
 _EnD_oF_dEf_TeXt_;
       func-mem-documentation = <<_EnD_oF_dEf_TeXt_
-: Inserts provided inode into the inode_table array and then rewrites the information back to the disk.
+Inserts provided inode into the inode_table array and then rewrites the information back to the disk.
 
 @author Yasha Prikhodko
 @author Cedric Leong
@@ -2581,10 +2581,10 @@ _EnD_oF_dEf_TeXt_;
       func-mem-desc-file = '/home/yasha/github/filesystem/src/sfs_delete.c';
       func-mem-desc-line = '8';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-: Deletes the file from the disk
+Deletes the file from the disk.
 _EnD_oF_dEf_TeXt_;
       func-mem-documentation = <<_EnD_oF_dEf_TeXt_
-: Makes sure the file is not opened and does not contain any children, then deletes its inode and frees up the blocks
+Makes sure the file is not opened and does not contain any children, then deletes its inode and frees up the blocks
 
 @author Yasha Prikhodko
 @author Cedric Leong
@@ -2629,10 +2629,10 @@ _EnD_oF_dEf_TeXt_;
       func-mem-desc-file = '/home/yasha/github/filesystem/src/sfs_delete.h';
       func-mem-desc-line = '25';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-: Deletes the file from the disk
+Deletes the file from the disk.
 _EnD_oF_dEf_TeXt_;
       func-mem-documentation = <<_EnD_oF_dEf_TeXt_
-: Makes sure the file is not opened and does not contain any children, then deletes its inode and frees up the blocks
+Makes sure the file is not opened and does not contain any children, then deletes its inode and frees up the blocks
 
 @author Yasha Prikhodko
 @author Cedric Leong
@@ -2678,10 +2678,10 @@ _EnD_oF_dEf_TeXt_;
       func-mem-desc-file = '/home/yasha/github/filesystem/src/sfs_getsize.c';
       func-mem-desc-line = '5';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-: Gets the size of the file
+Gets the size of the file.
 _EnD_oF_dEf_TeXt_;
       func-mem-documentation = <<_EnD_oF_dEf_TeXt_
-: Iterates through the pathname making sure each level exists, then finds the target file and returns its size.
+Iterates through the pathname making sure each level exists, then finds the target file and returns its size.
 
 @author Yasha Prikhodko
 @author Cedric Leong
@@ -2742,10 +2742,10 @@ _EnD_oF_dEf_TeXt_;
       func-mem-desc-file = '/home/yasha/github/filesystem/src/sfs_getsize.h';
       func-mem-desc-line = '24';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-: Gets the size of the file
+Gets the size of the file.
 _EnD_oF_dEf_TeXt_;
       func-mem-documentation = <<_EnD_oF_dEf_TeXt_
-: Iterates through the pathname making sure each level exists, then finds the target file and returns its size.
+Iterates through the pathname making sure each level exists, then finds the target file and returns its size.
 
 @author Yasha Prikhodko
 @author Cedric Leong
@@ -2790,10 +2790,10 @@ _EnD_oF_dEf_TeXt_;
       func-mem-desc-file = '/home/yasha/github/filesystem/src/sfs_gettype.c';
       func-mem-desc-line = '8';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-: File function to check the type of the file
+File function to check the type of the file.
 _EnD_oF_dEf_TeXt_;
       func-mem-documentation = <<_EnD_oF_dEf_TeXt_
-: Iterates over the pathname making sure the path is existent. Then gets the type of the file and returns it
+Iterates over the pathname making sure the path is existent. Then gets the type of the file and returns it
 
 @author Yasha Prikhodko
 @author Cedric Leong
@@ -2839,10 +2839,10 @@ _EnD_oF_dEf_TeXt_;
       func-mem-desc-file = '/home/yasha/github/filesystem/src/sfs_gettype.h';
       func-mem-desc-line = '26';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-: File function to check the type of the file
+File function to check the type of the file.
 _EnD_oF_dEf_TeXt_;
       func-mem-documentation = <<_EnD_oF_dEf_TeXt_
-: Iterates over the pathname making sure the path is existent. Then gets the type of the file and returns it
+Iterates over the pathname making sure the path is existent. Then gets the type of the file and returns it
 
 @author Yasha Prikhodko
 @author Cedric Leong
@@ -2889,10 +2889,10 @@ _EnD_oF_dEf_TeXt_;
       func-mem-desc-file = '/home/yasha/github/filesystem/src/sfs_initialize.c';
       func-mem-desc-line = '11';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-: Initialize the free block list.
+Initialize the free block list.
 _EnD_oF_dEf_TeXt_;
       func-mem-documentation = <<_EnD_oF_dEf_TeXt_
-: It creates a new file system, then creates a new super block with size 512 and initialize this free blocks list.
+It creates a new file system, then creates a new super block with size 512 and initialize this free blocks list.
 
 @author Yasha Prikhodko
 @author Cedric Leong
@@ -2921,10 +2921,10 @@ _EnD_oF_dEf_TeXt_;
       func-mem-desc-file = '/home/yasha/github/filesystem/src/sfs_initialize.c';
       func-mem-desc-line = '44';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-: Create a null block of data
+Create a null block of data.
 _EnD_oF_dEf_TeXt_;
       func-mem-documentation = <<_EnD_oF_dEf_TeXt_
-: Allocates 0's to the disk in order to override it
+Allocates 0's to the disk in order to override it
 
 @author Yasha Prikhodko
 @author Cedric Leong
@@ -2984,10 +2984,10 @@ _EnD_oF_dEf_TeXt_;
       func-mem-desc-file = '/home/yasha/github/filesystem/src/sfs_initialize.h';
       func-mem-desc-line = '24';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-: Initialize the free block list.
+Initialize the free block list.
 _EnD_oF_dEf_TeXt_;
       func-mem-documentation = <<_EnD_oF_dEf_TeXt_
-: It creates a new file system, then creates a new super block with size 512 and initialize this free blocks list.
+It creates a new file system, then creates a new super block with size 512 and initialize this free blocks list.
 
 @author Yasha Prikhodko
 @author Cedric Leong
@@ -3016,10 +3016,10 @@ _EnD_oF_dEf_TeXt_;
       func-mem-desc-file = '/home/yasha/github/filesystem/src/sfs_initialize.h';
       func-mem-desc-line = '40';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-: Create a null block of data
+Create a null block of data.
 _EnD_oF_dEf_TeXt_;
       func-mem-documentation = <<_EnD_oF_dEf_TeXt_
-: Allocates 0's to the disk in order to override it
+Allocates 0's to the disk in order to override it
 
 @author Yasha Prikhodko
 @author Cedric Leong
@@ -3193,10 +3193,10 @@ _EnD_oF_dEf_TeXt_;
       func-mem-desc-file = '/home/yasha/github/filesystem/src/sfs_read.c';
       func-mem-desc-line = '8';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-: Reads the contents of the file from the disk and outputs it
+Reads the contents of the file from the disk and outputs it.
 _EnD_oF_dEf_TeXt_;
       func-mem-documentation = <<_EnD_oF_dEf_TeXt_
-: Reads the file blocks at the given start position and an appropriate length and saves the result to buffer
+Reads the file blocks at the given start position and an appropriate length and saves the result to buffer
 
 @author Yasha Prikhodko
 @author Cedric Leong
@@ -3279,10 +3279,10 @@ _EnD_oF_dEf_TeXt_;
       func-mem-desc-file = '/home/yasha/github/filesystem/src/sfs_read.h';
       func-mem-desc-line = '28';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-: Reads the contents of the file from the disk and outputs it
+Reads the contents of the file from the disk and outputs it.
 _EnD_oF_dEf_TeXt_;
       func-mem-documentation = <<_EnD_oF_dEf_TeXt_
-: Reads the file blocks at the given start position and an appropriate length and saves the result to buffer
+Reads the file blocks at the given start position and an appropriate length and saves the result to buffer
 
 @author Yasha Prikhodko
 @author Cedric Leong
@@ -3331,10 +3331,10 @@ _EnD_oF_dEf_TeXt_;
       func-mem-desc-file = '/home/yasha/github/filesystem/src/sfs_readdir.c';
       func-mem-desc-line = '5';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-: Reads and returns a directory's children
+Reads and returns a directory's children.
 _EnD_oF_dEf_TeXt_;
       func-mem-documentation = <<_EnD_oF_dEf_TeXt_
-: Looks up the file in the open_file_table by its fd, checks the file type. If it's a folder - outputs the file names of the files that have this directory as a parent.
+Looks up the file in the open_file_table by its fd, checks the file type. If it's a folder - outputs the file names of the files that have this directory as a parent.
 
 @author Yasha Prikhodko
 @author Cedric Leong
@@ -3378,10 +3378,10 @@ _EnD_oF_dEf_TeXt_;
       func-mem-desc-file = '/home/yasha/github/filesystem/src/sfs_readdir.h';
       func-mem-desc-line = '24';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-: Reads and returns a directory's children
+Reads and returns a directory's children.
 _EnD_oF_dEf_TeXt_;
       func-mem-documentation = <<_EnD_oF_dEf_TeXt_
-: Looks up the file in the open_file_table by its fd, checks the file type. If it's a folder - outputs the file names of the files that have this directory as a parent.
+Looks up the file in the open_file_table by its fd, checks the file type. If it's a folder - outputs the file names of the files that have this directory as a parent.
 
 @author Yasha Prikhodko
 @author Cedric Leong
@@ -3444,10 +3444,10 @@ _EnD_oF_dEf_TeXt_;
       func-mem-desc-file = '/home/yasha/github/filesystem/src/sfs_write.c';
       func-mem-desc-line = '8';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-: Writes the buffer to the file and save it to the disc
+Writes the buffer to the file and save it to the disc.
 _EnD_oF_dEf_TeXt_;
       func-mem-documentation = <<_EnD_oF_dEf_TeXt_
-: It checks the size before writing then writes and saves them to the disc while increasing the size if needed. Also in order to write the file need to be opened
+It checks the size before writing then writes and saves them to the disc while increasing the size if needed. Also in order to write the file need to be opened
 
 @author Yasha Prikhodko
 @author Cedric Leong
@@ -3530,10 +3530,10 @@ _EnD_oF_dEf_TeXt_;
       func-mem-desc-file = '/home/yasha/github/filesystem/src/sfs_write.h';
       func-mem-desc-line = '28';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-: Writes the buffer to the file and save it to the disc
+Writes the buffer to the file and save it to the disc.
 _EnD_oF_dEf_TeXt_;
       func-mem-documentation = <<_EnD_oF_dEf_TeXt_
-: It checks the size before writing then writes and saves them to the disc while increasing the size if needed. Also in order to write the file need to be opened
+It checks the size before writing then writes and saves them to the disc while increasing the size if needed. Also in order to write the file need to be opened
 
 @author Yasha Prikhodko
 @author Cedric Leong
@@ -3850,10 +3850,10 @@ _EnD_oF_dEf_TeXt_;
       func-mem-desc-file = '/home/yasha/github/filesystem/src/super_block.c';
       func-mem-desc-line = '16';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-: Writes the super_block from memory onto the disk
+Writes the super_block from memory onto the disk.
 _EnD_oF_dEf_TeXt_;
       func-mem-documentation = <<_EnD_oF_dEf_TeXt_
-: It takes 4 block statuses (busy/free) from the disk_bitmap and convert it to decimal and then writes the result on to disk
+It takes 4 block statuses (busy/free) from the disk_bitmap and convert it to decimal and then writes the result on to disk
 
 @author Yasha Prikhodko
 @author Cedric Leong
@@ -3881,10 +3881,10 @@ _EnD_oF_dEf_TeXt_;
       func-mem-desc-file = '/home/yasha/github/filesystem/src/super_block.c';
       func-mem-desc-line = '41';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-: Gets the super block from disk and loads it into memory
+Gets the super block from disk and loads it into memory.
 _EnD_oF_dEf_TeXt_;
       func-mem-documentation = <<_EnD_oF_dEf_TeXt_
-: Reads the values from disk and loads them into memory by converting in from decimal into binary to fill up the disk_bitmap arrsay correctly
+Reads the values from disk and loads them into memory by converting in from decimal into binary to fill up the disk_bitmap arrsay correctly
 
 @author Yasha Prikhodko
 @author Cedric Leong
@@ -3913,10 +3913,10 @@ _EnD_oF_dEf_TeXt_;
       func-mem-desc-file = '/home/yasha/github/filesystem/src/super_block.c';
       func-mem-desc-line = '67';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-: Gets the first non-busy block from the disk and returns its id
+Gets the first non-busy block from the disk and returns its id.
 _EnD_oF_dEf_TeXt_;
       func-mem-documentation = <<_EnD_oF_dEf_TeXt_
-: Reads memory to find the first id of a free block. Then sets it to busy and saves the block_num to the parameter provided.
+Reads memory to find the first id of a free block. Then sets it to busy and saves the block_num to the parameter provided.
 
 @author Yasha Prikhodko
 @author Cedric Leong
@@ -3946,10 +3946,19 @@ _EnD_oF_dEf_TeXt_;
       func-mem-desc-file = '/home/yasha/github/filesystem/src/super_block.c';
       func-mem-desc-line = '80';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-
+Marks the block on disk as free.
 _EnD_oF_dEf_TeXt_;
       func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+Looks up the block in disk_bitmap and marks it as free, then recalculates super_blk_buf and writes it to disk. 
 
+@author Yasha Prikhodko
+@author Cedric Leong
+@author Arezou Mousavi
+
+@param *release_blk_no Block number to release
+@return 0 for success
+
+@copyright GNU Public License.
 _EnD_oF_dEf_TeXt_;
     }; /* func-member */
     func-member = {
@@ -3970,10 +3979,10 @@ _EnD_oF_dEf_TeXt_;
       func-mem-desc-file = '/home/yasha/github/filesystem/src/super_block.c';
       func-mem-desc-line = '115';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-: Sets the appropriate location in disk_bitmap to busy (only used for inode table)
+Sets the appropriate location in disk_bitmap to busy (only used for inode table)
 _EnD_oF_dEf_TeXt_;
       func-mem-documentation = <<_EnD_oF_dEf_TeXt_
-: Sets the block to busy and then writes the super block to disk.
+Sets the block to busy and then writes the super block to disk.
 
 @author Yasha Prikhodko
 @author Cedric Leong
@@ -4073,12 +4082,12 @@ void
 _EnD_oF_dEf_TeXt_;
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/home/yasha/github/filesystem/src/super_block.h';
-      func-mem-desc-line = '29';
+      func-mem-desc-line = '34';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-: Writes the super_block from memory onto the disk
+Writes the super_block from memory onto the disk.
 _EnD_oF_dEf_TeXt_;
       func-mem-documentation = <<_EnD_oF_dEf_TeXt_
-: It takes 4 block statuses (busy/free) from the disk_bitmap and convert it to decimal and then writes the result on to disk
+It takes 4 block statuses (busy/free) from the disk_bitmap and convert it to decimal and then writes the result on to disk
 
 @author Yasha Prikhodko
 @author Cedric Leong
@@ -4104,12 +4113,12 @@ void
 _EnD_oF_dEf_TeXt_;
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/home/yasha/github/filesystem/src/super_block.h';
-      func-mem-desc-line = '46';
+      func-mem-desc-line = '51';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-: Gets the super block from disk and loads it into memory
+Gets the super block from disk and loads it into memory.
 _EnD_oF_dEf_TeXt_;
       func-mem-documentation = <<_EnD_oF_dEf_TeXt_
-: Reads the values from disk and loads them into memory by converting in from decimal into binary to fill up the disk_bitmap arrsay correctly
+Reads the values from disk and loads them into memory by converting in from decimal into binary to fill up the disk_bitmap arrsay correctly
 
 @author Yasha Prikhodko
 @author Cedric Leong
@@ -4136,12 +4145,12 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'blk_no';
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/home/yasha/github/filesystem/src/super_block.h';
-      func-mem-desc-line = '65';
+      func-mem-desc-line = '70';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-: Sets the appropriate location in disk_bitmap to busy (only used for inode table)
+Sets the appropriate location in disk_bitmap to busy (only used for inode table)
 _EnD_oF_dEf_TeXt_;
       func-mem-documentation = <<_EnD_oF_dEf_TeXt_
-: Sets the block to busy and then writes the super block to disk.
+Sets the block to busy and then writes the super block to disk.
 
 @author Yasha Prikhodko
 @author Cedric Leong
@@ -4170,18 +4179,51 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'free_blk_no';
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/home/yasha/github/filesystem/src/super_block.h';
-      func-mem-desc-line = '83';
+      func-mem-desc-line = '88';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-: Gets the first non-busy block from the disk and returns its id
+Gets the first non-busy block from the disk and returns its id.
 _EnD_oF_dEf_TeXt_;
       func-mem-documentation = <<_EnD_oF_dEf_TeXt_
-: Reads memory to find the first id of a free block. Then sets it to busy and saves the block_num to the parameter provided.
+Reads memory to find the first id of a free block. Then sets it to busy and saves the block_num to the parameter provided.
 
 @author Yasha Prikhodko
 @author Cedric Leong
 @author Arezou Mousavi
 
 @param *free_blk_no Pointer to char to save the block number to
+@return 0 for success
+
+@copyright GNU Public License.
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'super__block_8h_1aedef4886af840b77d8044dfbbaf5a9e1';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'release_block';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'release_blk_no';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/home/yasha/github/filesystem/src/super_block.h';
+      func-mem-desc-line = '106';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Marks the block on disk as free.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+Looks up the block in disk_bitmap and marks it as free, then recalculates super_blk_buf and writes it to disk. 
+
+@author Yasha Prikhodko
+@author Cedric Leong
+@author Arezou Mousavi
+
+@param *release_blk_no Block number to release
 @return 0 for success
 
 @copyright GNU Public License.
@@ -4199,7 +4241,7 @@ short int
 _EnD_oF_dEf_TeXt_;
       var-mem-name = 'disk_bitmap';
       var-mem-desc-file = '/home/yasha/github/filesystem/src/super_block.h';
-      var-mem-desc-line = '12';
+      var-mem-desc-line = '17';
       var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -4217,7 +4259,7 @@ short int
 _EnD_oF_dEf_TeXt_;
       var-mem-name = 'super_blk_buf';
       var-mem-desc-file = '/home/yasha/github/filesystem/src/super_block.h';
-      var-mem-desc-line = '13';
+      var-mem-desc-line = '18';
       var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -4232,6 +4274,7 @@ _EnD_oF_dEf_TeXt_;
 
 _EnD_oF_dEf_TeXt_;
   file-documentation = <<_EnD_oF_dEf_TeXt_
-
+Stores the information about the disk on the disk
+Keeps track of the blocks on the disk and write the super block to disk.
 _EnD_oF_dEf_TeXt_;
 }; /* file */
